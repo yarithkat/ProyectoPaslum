@@ -1,14 +1,26 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Administrador/IndexAdministrador.master" AutoEventWireup="true" CodeBehind="Maestrosadmin.aspx.cs" Inherits="ProjectPaslum.Administrador.Maestrosadmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
     <style type="text/css">
-         .table-title {
+        .table-title {
             padding-bottom: 15px;
             background: #435d7d;
             color: #fff;
             padding: 16px 30px;
             margin: -20px -25px 10px;
             border-radius: 3px 3px 0 0;
+        }
+
+        .button {
+            text-align: left;
         }
           </style>
     
@@ -21,19 +33,20 @@
                                 </b>
                         </h2>
                     </div>
+                     <div class="button">
                     <div class="col-sm-6">
                         <a class="btn btn-success" data-toggle="modal" href="#addMaestroModal">
-                            <i class="material-icons">
+                            <i class="material-icons"> 
                             </i>
-                            <span>Agregar nuevo Maestro
-                            </span>
+                            <asp:Label ID="Label1" runat="server" Text="Agregar nuevo Maestro"></asp:Label>
                         </a>
                     </div>
+                         </div>
                 </div>
             </div>
 
     </div>
-      <!-- Edit Modal HTML -->
+      <!-- Agregar Modal Maestros-->
     <div class="modal fade" id="addMaestroModal">
         <div class="modal-dialog  modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -81,7 +94,7 @@
                                 Sexo
                             <div class="dropdown">
                                 <button runat="server" id="cmbMaestro" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                                    Seleccione Maestro <span class="caret"></span>
+                                    --Seleccione-- <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
                                   
@@ -223,11 +236,12 @@
                     <div class="modal-footer">
                          <div class="col-xs-5">
                         <input class="btn btn-default" data-dismiss="modal" type="button" value="Cancel" />
-                            <asp:Button id="btnAceptarAgregar" runat="server" class="btn btn-success" type="submit" value="Aceptar" />
+                            <asp:Button id="btnAceptarAgregar" runat="server" class="btn btn-success" value="Aceptar" />
                        </div>
                    </div>
             </div>
         </div>
           </div>
+            </div>
 </asp:Content>
 
