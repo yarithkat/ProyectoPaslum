@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="header_top">
                             <div class="top_right">
                                 <ul>       
-                                    <li><a href="PrincipalAdministrador.aspx"> >Inicio</></li>
+                                    <li><a href="PrincipalAdministrador.aspx">Inicio</></li>
                                     <li><a href="../IndexPaslum.aspx">Salir</a></li>     
                                 </ul>
                             </div>

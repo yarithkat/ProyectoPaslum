@@ -80,13 +80,13 @@
                           <div class="form-group">
                     <asp:Label ID="Label1" runat="server" Text="Usuario"></asp:Label>
                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control input-sm"
-                        placeholder="Ingresa tu usuario"></asp:TextBox>
+                        ></asp:TextBox>
                 </div>
                           <div class="form-group ">
 
                     <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
                     <asp:TextBox ID="txtContra" runat="server" CssClass="form-control input-sm"
-                        placeholder="Ingresa la contraseña: " TextMode="Password"></asp:TextBox>
+                         TextMode="Password"></asp:TextBox>
 
                 </div>     
                              <div class="modal-body">
@@ -106,8 +106,8 @@
                          
                         </div>
                         <div class="modal-footer">
-                            <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-default" data-dismiss="modal" />
-                            <asp:Button ID="btnLogin" runat="server"  Text="Ingresar" class="btn btn-primary" type="submit" />
+                            <asp:Button ID="btncancel" runat="server" Text="Cancelar"  />
+                            <asp:Button ID="btnLogin" runat="server"  Text="Ingresar" />
                            
                         </div>
                    

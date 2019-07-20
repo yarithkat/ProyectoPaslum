@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IndexPaslum.aspx.cs" Inherits="ProjectPaslum.Formulario_web1" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IndexPaslum.aspx.cs" Inherits="ProjectPaslum.Formulario_web1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
          <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.jpg);">

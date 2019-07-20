@@ -198,6 +198,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Administrador\Alumnosadmin.aspx" />
     <Content Include="Administrador\css\atlas.css" />
     <Content Include="Administrador\css\bootstrap.min.css" />
     <Content Include="Administrador\css\clndr.css" />
@@ -603,6 +604,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Alumnosadmin.aspx.cs">
+      <DependentUpon>Alumnosadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Alumnosadmin.aspx.designer.cs">
+      <DependentUpon>Alumnosadmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\Maestrosadmin.aspx.cs">
       <DependentUpon>Maestrosadmin.aspx</DependentUpon>
