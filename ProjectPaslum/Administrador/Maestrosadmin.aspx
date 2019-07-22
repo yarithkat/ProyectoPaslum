@@ -93,9 +93,11 @@
                             <div class="col-xs-3">
                                 Sexo
                             <div class="dropdown">
-                                <button runat="server" id="cmbMaestro" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                                    --Seleccione-- <span class="caret"></span>
-                                </button>
+                                <asp:DropDownList ID="cmbSexo" runat="server" >
+                                    <asp:ListItem Selected="True" Value="HOMBRE"> Hombre </asp:ListItem>
+                                    <asp:ListItem Value="MUJER"> Mujer </asp:ListItem>
+                                    <asp:ListItem Value="PREFIERO NO DECIR"> Prefiero no decir </asp:ListItem>
+                                </asp:DropDownList>
                                 <ul class="dropdown-menu">
                                   
                                 </ul>
@@ -120,7 +122,7 @@
                                                     ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                                                </div>
                          <div class="col-xs-3">
-                                                <label>Casa: </label>
+                                                <label>Tel. Casa: </label>
                                                 <asp:TextBox ID="txtTelCasa" runat="server" CssClass="form-control input-sm" >
                                                 </asp:TextBox>
                                                   <asp:RegularExpressionValidator ID="validarcasa" runat="server" ControlToValidate="txtTelCasa"
@@ -168,65 +170,65 @@
                     </div>
                           <!-- Direccion -->
                               
-                                             <div class="form-group">
-                                                 <div class="col-xs-6">
-                                               Estado:
-                                                <asp:TextBox ID="txtDirecEstado" runat="server" CssClass="form-control input-sm" >
-                                                </asp:TextBox>
-                                             </div> 
-                                              </div>
-                                             <div class="form-group">
-                                                  <div class="col-xs-6">
-                                                Municipio: 
-                                                <asp:TextBox ID="txtDirecMunicipio" runat="server" CssClass="form-control input-sm" >
-                                                </asp:TextBox>
-                                            </div>
-                                                 </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                            Estado:
+                            <asp:TextBox ID="txtDirecEstado" runat="server" CssClass="form-control input-sm" >
+                            </asp:TextBox>
+                            </div> 
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                            Municipio: 
+                            <asp:TextBox ID="txtDirecMunicipio" runat="server" CssClass="form-control input-sm" >
+                            </asp:TextBox>
+                        </div>
+                                </div>
                                           
-                                            <div class="form-group">
-                                                 <div class="col-xs-5">
-                                                Calle: 
-                                                <asp:TextBox ID="txtDirecCalle" runat="server" CssClass="form-control input-sm" >
-                                                </asp:TextBox>
-                                             </div>
-                                                   </div>
-                                             <div class="form-group">
-                                                  <div class="col-xs-5">
-                                               Colonia: 
-                                                <asp:TextBox ID="txtDirecColonia" runat="server" CssClass="form-control input-sm">
-                                                </asp:TextBox>
-                                             </div>
-                                            </div>
+                        <div class="form-group">
+                                <div class="col-xs-5">
+                            Calle: 
+                            <asp:TextBox ID="txtDirecCalle" runat="server" CssClass="form-control input-sm" >
+                            </asp:TextBox>
+                            </div>
+                                </div>
+                            <div class="form-group">
+                                <div class="col-xs-5">
+                            Colonia: 
+                            <asp:TextBox ID="txtDirecColonia" runat="server" CssClass="form-control input-sm">
+                            </asp:TextBox>
+                            </div>
+                        </div>
 
 
-                                            <div class="form-group">
-                                                <div class="col-xs-3">
-                                                Numero Int:
-                                                <asp:TextBox ID="txtDirecInter" runat="server" CssClass="form-control input-sm" >
-                                                </asp:TextBox>
-                                             </div>
-                                              </div>
-                                            <div class="form-group">
-                                                  <div class="col-xs-3">
-                                               Numero Ext: 
-                                                <asp:TextBox ID="txtDirecExt" runat="server" CssClass="form-control input-sm">
-                                                </asp:TextBox>
-                                                </div>   
-                                              </div>  
-                                            <div class="form-group">
-                                                  <div class="col-xs-3">
-                                               Codigo Postal: 
-                                                <asp:TextBox ID="txtpostal" runat="server" CssClass="form-control input-sm">
-                                                </asp:TextBox>
-                                                </div>  
-                                                   </div>  
-                                            <div class="form-group">
-                                               <div class="col-xs-5">
-                                              Referencias: 
-                                                <asp:TextBox ID="TxtReferencia" runat="server" CssClass="form-control input-sm">
-                                                </asp:TextBox>
-                                                </div>  
-                                                 </div>    
+                        <div class="form-group">
+                            <div class="col-xs-3">
+                            Numero Int:
+                            <asp:TextBox ID="txtDirecInter" runat="server" CssClass="form-control input-sm" >
+                            </asp:TextBox>
+                            </div>
+                            </div>
+                        <div class="form-group">
+                                <div class="col-xs-3">
+                            Numero Ext: 
+                            <asp:TextBox ID="txtDirecExt" runat="server" CssClass="form-control input-sm">
+                            </asp:TextBox>
+                            </div>   
+                            </div>  
+                        <div class="form-group">
+                                <div class="col-xs-3">
+                            Codigo Postal: 
+                            <asp:TextBox ID="txtpostal" runat="server" CssClass="form-control input-sm">
+                            </asp:TextBox>
+                            </div>  
+                                </div>  
+                        <div class="form-group">
+                            <div class="col-xs-5">
+                            Referencias: 
+                            <asp:TextBox ID="TxtReferencia" runat="server" CssClass="form-control input-sm">
+                            </asp:TextBox>
+                            </div>  
+                                </div>    
                 
                   <br /> <br />  <br /> <br />
                          <br /> <br />  <br /> <br />
@@ -236,7 +238,7 @@
                     <div class="modal-footer">
                          <div class="col-xs-5">
                         <input class="btn btn-default" data-dismiss="modal" type="button" value="Cancel" />
-                            <asp:Button id="btnAceptarAgregar" runat="server" class="btn btn-success" value="Aceptar" />
+                            <asp:Button id="btnAceptarAgregar" runat="server" class="btn btn-success" value="Aceptar" OnClick="btnAceptarAgregar_Click" />
                        </div>
                    </div>
             </div>

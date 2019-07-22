@@ -1,0 +1,6 @@
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\bin\Debug\Modelo.pdb
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\obj\Debug\Modelo.dll
+C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\Modelo\obj\Debug\Modelo.pdb

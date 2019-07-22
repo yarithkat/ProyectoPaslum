@@ -703,6 +703,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\ProfeRegistrado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{cb3bff00-7f52-411b-875b-c88afc967f42}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{2b1ae017-b74a-4f81-9999-71eeee6f5d57}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
