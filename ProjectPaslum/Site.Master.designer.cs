@@ -49,42 +49,6 @@ namespace ProjectPaslum {
         protected global::System.Web.UI.WebControls.TextBox txtContra;
         
         /// <summary>
-        /// Control lbMensaje.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMensaje;
-        
-        /// <summary>
-        /// Control RBUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RBUsuario;
-        
-        /// <summary>
-        /// Control RBProveedor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RBProveedor;
-        
-        /// <summary>
-        /// Control RadioButton1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
-        
-        /// <summary>
         /// Control btncancel.
         /// </summary>
         /// <remarks>

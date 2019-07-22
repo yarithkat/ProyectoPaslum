@@ -7,11 +7,15 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Modelo;
+using Controller;
 
 namespace ProjectPaslum
 {
     public partial class SiteMaster : MasterPage
     {
+        private PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
+
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -75,6 +79,54 @@ namespace ProjectPaslum
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            ValidarLogin(GetDatosVista());
+        }
+
+        protected TblUser GetDatosVista()
+        {
+            String user = txtUsuario.Text;
+            String pass = txtContra.Text;
+
+            TblUser usuario = new TblUser();
+            usuario.strusuario = user;
+            usuario.strpass = pass;
+            return usuario;
+
+        }
+
+        protected void ValidarLogin(TblUser usuario)
+        {
+            if (this.txtUsuario.Text.Equals("administrador") && this.txtContra.Text.Equals("1234"))
+            {
+                Session["user"] = txtUsuario.Text;
+                this.Response.Redirect("./Administrador/PrincipalAdministrador.aspx", true);
+            }
+            ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
+            TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
+            //var padre = (from pa in contexto.TblProfesor where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+            if (UsuarioLoggeado != null)
+            {
+                //Session["id"] = padre.id;
+                if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
+                {
+                    Response.Redirect("./About.aspx", true);
+                }
+                else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
+                {
+                    Response.Redirect("./Contact.aspx", true);
+                }
+            }
+            else
+            {
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Usuario o contraseña incorrecta');</script>");
+                Response.Redirect("IndexPaslum.aspx", true);
+                this.Response.Write("<script lenguage='JavaScript'>windows.alert('Fallo')</script>");
+            }
         }
     }
 
