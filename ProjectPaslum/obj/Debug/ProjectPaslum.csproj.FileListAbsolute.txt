@@ -281,3 +281,7 @@ C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\ProjectPaslum\bin\Controlle
 C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\ProjectPaslum\bin\Modelo.dll
 C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\ProjectPaslum\bin\Controller.pdb
 C:\Users\RodrigoM\Desktop\Integradora\ProyectoPaslum\ProjectPaslum\bin\Modelo.pdb
+C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\ProjectPaslum\bin\Controller.dll
+C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\ProjectPaslum\bin\Modelo.dll
+C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\ProjectPaslum\bin\Controller.pdb
+C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\ProjectPaslum\bin\Modelo.pdb

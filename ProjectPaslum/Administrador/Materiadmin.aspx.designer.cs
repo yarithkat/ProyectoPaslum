@@ -10,7 +10,7 @@
 namespace ProjectPaslum.Administrador {
     
     
-    public partial class CarrerasAdmin {
+    public partial class Materiadmin {
         
         /// <summary>
         /// Control Label1.
@@ -22,31 +22,31 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control txtClaveAgregar.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaveAgregar;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// Control txtNombreAgregar.
+        /// Control txtDescribirNota.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreAgregar;
+        protected global::System.Web.UI.WebControls.TextBox txtDescribirNota;
         
         /// <summary>
-        /// Control txtAreaAgregar.
+        /// Control cmbParcial.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAreaAgregar;
+        protected global::System.Web.UI.HtmlControls.HtmlButton cmbParcial;
         
         /// <summary>
         /// Control btncancel.
@@ -58,12 +58,12 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.Button btncancel;
         
         /// <summary>
-        /// Control btnAceptarAgregar.
+        /// Control btnaceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAceptarAgregar;
+        protected global::System.Web.UI.WebControls.Button btnaceptar;
     }
 }

@@ -58,13 +58,13 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.TextBox txtEdadAgregar;
         
         /// <summary>
-        /// Control cmbAlumno.
+        /// Control cmbSexo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton cmbAlumno;
+        protected global::System.Web.UI.WebControls.DropDownList cmbSexo;
         
         /// <summary>
         /// Control FotoMaestro.
@@ -74,6 +74,15 @@ namespace ProjectPaslum.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FotoMaestro;
+        
+        /// <summary>
+        /// Control txtMatriculaAgregar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMatriculaAgregar;
         
         /// <summary>
         /// Control txtTelCelular.
@@ -130,15 +139,6 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validaroficina;
         
         /// <summary>
-        /// Control txtMatriculaAgregar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMatriculaAgregar;
-        
-        /// <summary>
         /// Control txtCorreoAgregar.
         /// </summary>
         /// <remarks>
@@ -175,15 +175,6 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.TextBox txtDirecMunicipio;
         
         /// <summary>
-        /// Control txtDirecCalle.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDirecCalle;
-        
-        /// <summary>
         /// Control txtDirecColonia.
         /// </summary>
         /// <remarks>
@@ -191,6 +182,15 @@ namespace ProjectPaslum.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDirecColonia;
+        
+        /// <summary>
+        /// Control txtDirecCalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDirecCalle;
         
         /// <summary>
         /// Control txtDirecInter.
@@ -227,6 +227,15 @@ namespace ProjectPaslum.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtReferencia;
+        
+        /// <summary>
+        /// Control btncancel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncancel;
         
         /// <summary>
         /// Control btnAceptarAgregar.

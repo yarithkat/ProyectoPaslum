@@ -209,10 +209,13 @@
     <Content Include="Administrador\css\font-awesome.css" />
     <Content Include="Administrador\css\graph.css" />
     <Content Include="Administrador\css\icon-font.min.css" />
+    <Content Include="Administrador\css\modales.css" />
     <Content Include="Administrador\css\owl.carousel.css" />
     <Content Include="Administrador\css\style.css" />
+    <Content Include="Administrador\CuatriAdmin.aspx" />
     <Content Include="Administrador\fonts\fontawesome-webfont.svg" />
     <Content Include="Administrador\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administrador\GruposAdmin.aspx" />
     <Content Include="Administrador\Imagenes\asistencia_aula.jpg" />
     <Content Include="Administrador\Imagenes\images.jpg" />
     <Content Include="Administrador\Imagenes\nilños.png" />
@@ -238,6 +241,7 @@
     <Content Include="Administrador\js\site.js" />
     <Content Include="Administrador\js\underscore-min.js" />
     <Content Include="Administrador\Maestrosadmin.aspx" />
+    <Content Include="Administrador\Materiadmin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -621,12 +625,33 @@
     <Compile Include="Administrador\CarrerasAdmin.aspx.designer.cs">
       <DependentUpon>CarrerasAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\CuatriAdmin.aspx.cs">
+      <DependentUpon>CuatriAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CuatriAdmin.aspx.designer.cs">
+      <DependentUpon>CuatriAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GruposAdmin.aspx.cs">
+      <DependentUpon>GruposAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GruposAdmin.aspx.designer.cs">
+      <DependentUpon>GruposAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\Maestrosadmin.aspx.cs">
       <DependentUpon>Maestrosadmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administrador\Maestrosadmin.aspx.designer.cs">
       <DependentUpon>Maestrosadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Materiadmin.aspx.cs">
+      <DependentUpon>Materiadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Materiadmin.aspx.designer.cs">
+      <DependentUpon>Materiadmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
