@@ -27,6 +27,90 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+    
+<style type="text/css">
+   body{
+    margin: 0;
+    padding: 0;
+    background: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+   .transpatxt  {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+}
+.login-box{
+    width: 320px;
+    height: 500px;
+    background:#fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    color:#000000;
+    font-weight: bold;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000000
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+.login-box a:hover
+{
+    color: #39dc79;
+}
+    </style>
+
   <body>
          <form runat="server">
 	<div class="py-2 bg-primary">
@@ -68,33 +152,32 @@
 	      </div>
 	    </div>
 	  </nav>
-     <div class="modal fade" id="popUpWindow">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">
-                               Acceso al Sistema
-                            </h4>
+       <div class="modal fade" id="popUpWindow">
+            <div class="modal-dialog-centered">
+               
+                    <div class="login-box">
+                        <img src="images/avatar.png" class="avatar">
+                     
+                        <h1 class="modal-title">Iniciar Sesión</h1>
+                  
+                     <div class="modal-body">
+                        <div class="form-group">
+                            <asp:Label ID="lblUsuario" runat="server" Text="Usuario:"></asp:Label>
+                            <asp:TextBox ID="txtUsuario" runat="server" CssClass="transpatxt"
+                                placeholder="Ingresa tu usuario"></asp:TextBox>
                         </div>
-                
-                <div class="modal-body">
-                    <div class="form-group">
-                        <asp:Label ID="Label1" runat="server" Text="Usuario"></asp:Label>
-                        <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control input-sm"></asp:TextBox>
-                    </div>
-                
-                    <div class="form-group ">
-                        <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
-                        <asp:TextBox ID="txtContra" runat="server" CssClass="form-control input-sm" TextMode="Password"></asp:TextBox>
-                    </div>
-
-               </div>
-                    <div class="modal-footer">
-                        <asp:Button ID="btncancel" runat="server" Text="Cancelar"  />
-                        <asp:Button ID="btnLogin" runat="server"  Text="Ingresar" OnClick="btnLogin_Click" />
-                           
-                    </div>
-                </div>
+                        <div class="form-group ">
+                            <asp:Label ID="lblPass" runat="server" Text="Contraseña:"></asp:Label>
+                            <asp:TextBox ID="txtPass" runat="server" CssClass="transpatxt"
+                                placeholder="Ingresa tu contraseña " TextMode="Password"></asp:TextBox>
+                        </div>
+                      <div class="form-group ">
+                        <asp:Button ID="btnLogin" runat="server" href="PrincipalAdmon.aspx" OnClick="btnLogin_Click" Text="Ingresar" class="btn btn-primary" type="submit" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancelar" class="btn btn-default" data-dismiss="modal" />
+                       
+                      </div>
+         </div>
+        </div>
             </div>
         </div>
             

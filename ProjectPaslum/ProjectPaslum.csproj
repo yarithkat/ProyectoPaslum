@@ -281,6 +281,7 @@
     <Content Include="fonts\ionicons\css\ionicons.min.css" />
     <Content Include="fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="fonts\open-iconic\open-iconic.svg" />
+    <Content Include="images\avatar.png" />
     <Content Include="IndexPaslum.aspx" />
     <Content Include="images\.DS_Store" />
     <Content Include="fonts\flaticon\.DS_Store" />
