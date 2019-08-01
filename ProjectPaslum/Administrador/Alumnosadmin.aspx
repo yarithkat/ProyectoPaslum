@@ -102,7 +102,7 @@
                              <div class="col-xs-3">
                                     <br />
                             <label>Foto: </label>
-                            <asp:FileUpload ID="FotoMaestro" runat="server" required="required" CssClass="form-control input-sm" />  
+                            <asp:FileUpload ID="FotoAlumno" runat="server" required="required" CssClass="form-control input-sm" />  
                            </div>
                     </div>
                         <div class="form-group">

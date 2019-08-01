@@ -115,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="../IndexPaslum.aspx"><i class="fa fa-tachometer"></i><span>Inicio</span></a></li>
                     <li><a href="Maestrosadmin.aspx"> <i class="lnr lnr-pencil"></i><span>Maestros</span></a></li>
                     <li><a href="Alumnosadmin.aspx"><i class="lnr lnr-pencil"></i><span>Alumnos</span></a></li>
-                     <li><a href="CarrerasAdmin.aspx"> <i class="lnr lnr-pencil"></i><span>Carreras</span></a></li>
+                    <li><a href="CarrerasAdmin.aspx"> <i class="lnr lnr-pencil"></i><span>Carreras</span></a></li>
                     <li><a href="Materiadmin.aspx"> <i class="lnr lnr-pencil"></i><span>Materias</span></a></li>
                     <li><a href="CuatriAdmin.aspx"><i class="lnr lnr-pencil"></i><span>Cuatrimestres</span></a></li>
                     <li><a href="GruposAdmin.aspx"><i class="lnr lnr-pencil"></i><span>Grupos</span></></li>

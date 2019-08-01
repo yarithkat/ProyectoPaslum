@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllerAlumno.cs" />
     <Compile Include="ControllerAutenticacion.cs" />
+    <Compile Include="ControllerCarrera.cs" />
     <Compile Include="ControllerMaestro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

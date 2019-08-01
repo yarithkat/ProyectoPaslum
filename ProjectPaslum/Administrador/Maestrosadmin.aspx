@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
     
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+
+    
     <div class="content">
             <div class="table-title">
                 <div class="row">
@@ -290,7 +294,51 @@
       </div>
           </div>
          
-     
-  
+        <%-- Editar o eliminar Grupo --%>   
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consulta de profesores registrados
+                </a>
+            </h4>
+        </div>
+        <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" DataKeyNames="id">
+                     <Columns>
+                          
+                         <asp:CommandField CancelImageUrl="~/images/Iconos/IconCancelar.png" DeleteImageUrl="~/images/Iconos/IconEliminar.png" EditImageUrl="~/images/Iconos/IconEditar.png" ShowDeleteButton="True" ShowEditButton="True" UpdateImageUrl="~/images/Iconos/IconGuardar.png" />
+                          
+                         <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
+                         <asp:BoundField DataField="strApellidoP" HeaderText="ApellidoP" SortExpression="strApellidoP" />
+                         <asp:BoundField DataField="strApellidoM" HeaderText="ApellidoM" SortExpression="strApellidoM" />
+                         <asp:BoundField DataField="strCorreo" HeaderText="Correo" SortExpression="strCorreo" />
+                         <asp:BoundField DataField="strCedula" HeaderText="Cedula" SortExpression="strCedula" />
+                          
+                         <asp:BoundField DataField="strEspecialidad" HeaderText="Especialidad" SortExpression="strEspecialidad" />
+                         <asp:BoundField DataField="strcelular" HeaderText="celular" SortExpression="strcelular" />
+                         <asp:BoundField DataField="strtelCasa" HeaderText="Casa" SortExpression="strtelCasa" />
+                          
+                     </Columns>
+                   <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
+                </asp:GridView>
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
+                     SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
+	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
+	   pro.strEspecialidad, tel.strcelular, tel.strtelCasa 
+FROM TblProfesor as pro
+inner join TblTelefono  as tel 
+on pro.idTelefono = tel.id;" 
+                     UpdateCommand="UPDATE TblProfesor SET strCorreo = @correo, strCedula = @cedula, strEspecialidad = @especialidad WHERE (id = @id)">
+                     <UpdateParameters>
+                         <asp:Parameter Name="correo" />
+                         <asp:Parameter Name="cedula" />
+                         <asp:Parameter Name="especialidad" />
+                         <asp:Parameter Name="id" />
+                     </UpdateParameters>
+                 </asp:SqlDataSource>
+            </div>
+        </div>
+      </div>
 </asp:Content>
 

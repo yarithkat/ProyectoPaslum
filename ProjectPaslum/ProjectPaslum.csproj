@@ -282,6 +282,10 @@
     <Content Include="fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="fonts\open-iconic\open-iconic.svg" />
     <Content Include="images\avatar.png" />
+    <Content Include="images\Iconos\IconCancelar.png" />
+    <Content Include="images\Iconos\IconEditar.png" />
+    <Content Include="images\Iconos\IconEliminar.png" />
+    <Content Include="images\Iconos\IconGuardar.png" />
     <Content Include="IndexPaslum.aspx" />
     <Content Include="images\.DS_Store" />
     <Content Include="fonts\flaticon\.DS_Store" />
@@ -730,6 +734,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\AlumRegistrado\" />
     <Folder Include="images\ProfeRegistrado\" />
   </ItemGroup>
   <ItemGroup>

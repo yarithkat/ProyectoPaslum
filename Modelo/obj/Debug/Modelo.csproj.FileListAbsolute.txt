@@ -10,3 +10,9 @@ C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Modelo\bin\Debug\Modelo.pdb
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Modelo\obj\Debug\Modelo.dll
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Modelo\obj\Debug\Modelo.pdb
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\bin\Debug\Modelo.pdb
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.dll
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.pdb

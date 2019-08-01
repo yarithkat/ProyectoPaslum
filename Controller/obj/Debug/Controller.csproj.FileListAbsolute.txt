@@ -12,3 +12,10 @@ C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\bin\Debug\Modelo.pdb
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.dll
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.pdb
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Controller.dll
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Controller.pdb
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Modelo.dll
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Modelo.pdb
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.dll
+C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.pdb
