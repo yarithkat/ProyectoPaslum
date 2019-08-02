@@ -99,8 +99,11 @@
                                     <asp:ListItem Value="DISTINTO"> Distinto </asp:ListItem>
                                 </asp:DropDownList>
                                 <ul class="dropdown-menu">
+                                  
                                 </ul>
                             </div>
+                            </div>
+                               
                         </div>
                         <div class="form-group">
                              <div class="col-xs-4">
@@ -159,16 +162,6 @@
                                              </div>
                                              </div>
 
-                        </div>
-                        <div class="col-xs-3">
-                            <div class="form-group">
-                                <label>Otro: </label>
-                                <asp:TextBox ID="txtTelotro" runat="server" CssClass="form-control input-sm">
-                                </asp:TextBox>
-                                <asp:RegularExpressionValidator ID="validaroficina" runat="server" ControlToValidate="txtTelotro"
-                                    ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
-                            </div>
-                        </div>
                     </div>
                          <br />
                           <!-- datos User -->
