@@ -12,6 +12,7 @@ C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\bin\Debug\Modelo.pdb
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.dll
 C:\Users\Katia\Desktop\PASLUM\ProyectoPaslum\Controller\obj\Debug\Controller.pdb
+<<<<<<< Updated upstream
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Controller.dll
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Controller.pdb
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Modelo.dll
@@ -19,3 +20,15 @@ C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\bin\Debug\Modelo.pdb
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.dll
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Controller\obj\Debug\Controller.pdb
+=======
+C:\Developer\Paslum\ProyectoPaslum\Controller\bin\Debug\Controller.dll
+C:\Developer\Paslum\ProyectoPaslum\Controller\bin\Debug\Controller.pdb
+C:\Developer\Paslum\ProyectoPaslum\Controller\bin\Debug\Modelo.dll
+C:\Developer\Paslum\ProyectoPaslum\Controller\bin\Debug\Modelo.pdb
+C:\Developer\Paslum\ProyectoPaslum\Controller\bin\Debug\Modelo.dll.config
+C:\Developer\Paslum\ProyectoPaslum\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+C:\Developer\Paslum\ProyectoPaslum\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Developer\Paslum\ProyectoPaslum\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Developer\Paslum\ProyectoPaslum\Controller\obj\Debug\Controller.dll
+C:\Developer\Paslum\ProyectoPaslum\Controller\obj\Debug\Controller.pdb
+>>>>>>> Stashed changes
