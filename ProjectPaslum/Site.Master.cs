@@ -118,7 +118,7 @@ namespace ProjectPaslum
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
                 {
-                    Response.Redirect("./Contact.aspx", true);
+                    Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }
             else

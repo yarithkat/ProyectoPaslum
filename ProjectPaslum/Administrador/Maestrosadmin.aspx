@@ -8,10 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
-    
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/jquery-1.10.2.min.js"></script>
-
     
     <div class="content">
             <div class="table-title">
@@ -53,7 +50,7 @@
                                 Nombre(s)
                             <asp:TextBox runat="server" ID="txtNombreAgregar" class="form-control" required="required" type="text"></asp:TextBox>
                                 <asp:RegularExpressionValidator ID="validarNombre" runat="server" ControlToValidate="txtNombreAgregar"
-                                    ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                                    ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*$">
                                 </asp:RegularExpressionValidator>
                             </div>
                         </div>
@@ -64,7 +61,7 @@
                                 Apellido Paterno
                             <asp:TextBox  id="txtPaternoAgregar" class="form-control" required="required" type="text" runat="server"></asp:TextBox>
                                   <asp:RegularExpressionValidator ID="ValidarApaterno" runat="server" ControlToValidate="txtPaternoAgregar"
-                                    ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                                    ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*$">
                                 </asp:RegularExpressionValidator>
                         </div>
                              </div>
@@ -73,7 +70,7 @@
                                Apellido Materno
                             <asp:TextBox runat="server" id="txtMaternoAgregar" class="form-control" required="required" type="text" > </asp:TextBox>
                               <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMaternoAgregar"
-                               ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                               ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*$">
                              </asp:RegularExpressionValidator>
                         </div>
                                </div>
@@ -293,8 +290,7 @@
             </div>
       </div>
           </div>
-         
-        <%-- Editar o eliminar Grupo --%>   
+      <%-- Editar o eliminar Grupo --%>   
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
             <h4 class="panel-title">
@@ -304,41 +300,34 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" DataKeyNames="id">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%"  AllowPaging="True" DataKeyNames="id" DataSourceID="SqlDataSource1">
                      <Columns>
-                          
-                         <asp:CommandField CancelImageUrl="~/images/Iconos/IconCancelar.png" DeleteImageUrl="~/images/Iconos/IconEliminar.png" EditImageUrl="~/images/Iconos/IconEditar.png" ShowDeleteButton="True" ShowEditButton="True" UpdateImageUrl="~/images/Iconos/IconGuardar.png" />
-                          
+                         
+                         <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                          <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
-                         <asp:BoundField DataField="strApellidoP" HeaderText="ApellidoP" SortExpression="strApellidoP" />
-                         <asp:BoundField DataField="strApellidoM" HeaderText="ApellidoM" SortExpression="strApellidoM" />
+                         <asp:BoundField DataField="strApellidoP" HeaderText="Apellido P." SortExpression="strApellidoP" />
+                         <asp:BoundField DataField="strApellidoM" HeaderText="Apellido M." SortExpression="strApellidoM" />
                          <asp:BoundField DataField="strCorreo" HeaderText="Correo" SortExpression="strCorreo" />
                          <asp:BoundField DataField="strCedula" HeaderText="Cedula" SortExpression="strCedula" />
-                          
                          <asp:BoundField DataField="strEspecialidad" HeaderText="Especialidad" SortExpression="strEspecialidad" />
-                         <asp:BoundField DataField="strcelular" HeaderText="celular" SortExpression="strcelular" />
-                         <asp:BoundField DataField="strtelCasa" HeaderText="Casa" SortExpression="strtelCasa" />
-                          
+                         <asp:BoundField DataField="strcelular" HeaderText="Celular" SortExpression="strcelular" />
+                         <asp:BoundField DataField="strtelCasa" HeaderText="Tel.Casa" SortExpression="strtelCasa" />
+                         
                      </Columns>
                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
                 </asp:GridView>
-                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
-                     SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
+                 
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
 	   pro.strEspecialidad, tel.strcelular, tel.strtelCasa 
 FROM TblProfesor as pro
 inner join TblTelefono  as tel 
-on pro.idTelefono = tel.id;" 
-                     UpdateCommand="UPDATE TblProfesor SET strCorreo = @correo, strCedula = @cedula, strEspecialidad = @especialidad WHERE (id = @id)">
-                     <UpdateParameters>
-                         <asp:Parameter Name="correo" />
-                         <asp:Parameter Name="cedula" />
-                         <asp:Parameter Name="especialidad" />
-                         <asp:Parameter Name="id" />
-                     </UpdateParameters>
-                 </asp:SqlDataSource>
+on pro.idTelefono = tel.id;"></asp:SqlDataSource>
+                 
             </div>
         </div>
       </div>
+     
+  
 </asp:Content>
 

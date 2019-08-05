@@ -242,6 +242,7 @@
     <Content Include="Administrador\js\underscore-min.js" />
     <Content Include="Administrador\Maestrosadmin.aspx" />
     <Content Include="Administrador\Materiadmin.aspx" />
+    <Content Include="Alumno\PrincipalAlumno.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -320,6 +321,7 @@
     <Content Include="Administrador\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Administrador\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Administrador\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Alumno\Alumno.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\bg_1.jpg" />
     <Content Include="images\bg_2.jpg" />
@@ -657,6 +659,20 @@
     </Compile>
     <Compile Include="Administrador\Materiadmin.aspx.designer.cs">
       <DependentUpon>Materiadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Alumno.Master.cs">
+      <DependentUpon>Alumno.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Alumno.Master.designer.cs">
+      <DependentUpon>Alumno.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\PrincipalAlumno.aspx.cs">
+      <DependentUpon>PrincipalAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\PrincipalAlumno.aspx.designer.cs">
+      <DependentUpon>PrincipalAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

@@ -156,6 +156,9 @@ select * from TblPadre;
 select * from TblDireccion;
 select * from TblTelefono;
 select * from TblProfesor;
+<<<<<<< HEAD
+select * from TblUser;
+=======
 select * from TblUser;
 select * from TblCarrera;
 
@@ -165,3 +168,4 @@ SELECT pro.id ,pro.strNombre, pro.strApellidoP,
 FROM TblProfesor as pro
 inner join TblTelefono  as tel 
 on pro.idTelefono = tel.id;
+>>>>>>> master

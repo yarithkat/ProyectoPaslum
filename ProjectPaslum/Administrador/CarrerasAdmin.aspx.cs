@@ -18,6 +18,7 @@ namespace ProjectPaslum.Administrador
 
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
         {
+
             var carre = cmbArea.SelectedItem.Value;
 
             TblCarrera alum = new TblCarrera();
@@ -26,7 +27,7 @@ namespace ProjectPaslum.Administrador
             alum.strArea = carre;
             ControllerCarrera ctrlCar = new ControllerCarrera();
             ctrlCar.InsertarCarrera(alum);
-            this.Response.Redirect("./CarrerasAdmin.aspx", true); 
+            this.Response.Redirect("./CarrerasAdmin.aspx", true);
         }
     }
 }

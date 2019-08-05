@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-
     <link href="css/modales.css" rel="stylesheet" />
+
+     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
    
     
     <div class="content">
@@ -83,7 +83,7 @@
                                     <asp:ListItem Value="MANUFACTURA"> Manufactura </asp:ListItem> 
                                     <asp:ListItem Value="TECNOLOGIA AMBIENTAL"> Tecnologia Ambiental </asp:ListItem> 
                                     <asp:ListItem Value="ENERGIA SOLAR"> Energia Solar </asp:ListItem> 
-                             </asp:DropDownList>                            
+                             </asp:DropDownList> 
                         </div>
                                </div>
                      
@@ -110,11 +110,11 @@
         </div>
           </div>
             </div>
-            <%-- Editar o eliminar Grupo --%>   
+    <%-- Editar o eliminar Carrera --%>   
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
             <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consulta de profesores registrados
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consulta de Carreras Registradas
                 </a>
             </h4>
         </div>
@@ -122,21 +122,20 @@
             <div class="panel-body">
                  <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True">
                      <Columns>
+                       
                           
-                          
-                         <asp:BoundField DataField="strClave" HeaderText="Clave" SortExpression="strClave" />
                          <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
-                         <asp:BoundField DataField="strArea" HeaderText="Area Asignada" SortExpression="strArea" />
-                          
+                         <asp:BoundField DataField="strArea" HeaderText="Area" SortExpression="strArea" />
+                         <asp:BoundField DataField="strClave" HeaderText="Clave" SortExpression="strClave" />
+                       
                           
                      </Columns>
                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
                 </asp:GridView>
-                 
-                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="select strClave, strNombre, strArea
-from TblCarrera"></asp:SqlDataSource>
-                 
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
+                     SelectCommand="select strNombre, strArea, strClave from TblCarrera;" 
+                     UpdateCommand="select strNombre, strArea, strClave from TblCarrera;"></asp:SqlDataSource>
+                 </div>
             </div>
         </div>
-      </div>
 </asp:Content>

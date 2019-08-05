@@ -235,7 +235,7 @@
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
                             </div>
                             <div class="col-xs-3">
-                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-block btn-sm btn-success" Text="Aceptar" />
+                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-block btn-sm btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
                             </div>
                         </div>
                             </div>
