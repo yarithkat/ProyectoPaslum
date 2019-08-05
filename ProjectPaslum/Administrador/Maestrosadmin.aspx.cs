@@ -13,17 +13,7 @@ namespace ProjectPaslum.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                this.LlenarSexo();
-            }
         }
-
-        private void LlenarSexo()
-        {
-            
-        }
-
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
         {
             var sex = cmbSexo.SelectedItem.Value;
@@ -46,11 +36,14 @@ namespace ProjectPaslum.Administrador
                 ControllerMaestro ctrlProfe = new ControllerMaestro();
                 ctrlProfe.InsertarProfe(GetDatosVista(prof));
             }
-            this.Response.Redirect("./PrincipalAdministrador.aspx", true);
+            this.Response.Redirect("./Maestrosadmin.aspx", true);
         }
 
         protected TblProfesor GetDatosVista(TblProfesor prof)
         {
+            var random = new Random();
+            var value = random.Next(0, 999999);
+
             TblDireccion direccion = new TblDireccion();
             direccion.strestado = txtDirecEstado.Text.ToUpper();
             direccion.strmunicipio = txtDirecMunicipio.Text.ToUpper();
@@ -67,8 +60,8 @@ namespace ProjectPaslum.Administrador
             telefono.strotro = txtTelotro.Text.ToUpper();
 
             TblUser login = new TblUser();
-            login.strusuario = txtCorreoAgregar.Text.ToString();
-            login.strpass = txtContraseña.Text.ToString();
+            login.strusuario = "UTTT" + login.id;
+            login.strpass = value.ToString();
             login.strtipoUsuario = "PROFESOR";
 
             prof.TblDireccion = direccion;

@@ -152,12 +152,7 @@
                             <asp:TextBox  id="txtCorreoAgregar" class="form-control" required="required" type="text" placeholder="Ejemplo@gmail.com" runat="server" TextMode="Email"></asp:TextBox>
                                
                         </div>
-                        
-                            <div class="col-xs-6">
-                                <br />
-                                Contraseña
-                            <asp:TextBox  id="txtContraseña" class="form-control" required="required" type="text" placeholder="Contraseña" runat="server" TextMode="Password"></asp:TextBox>
-                                </div>
+                       
                     </div>
                           <!-- Direccion -->
                          <div class="form-group">

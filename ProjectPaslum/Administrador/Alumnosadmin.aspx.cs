@@ -42,6 +42,8 @@ namespace ProjectPaslum.Administrador
 
         protected TblAlumno GetDatosVista(TblAlumno alum)
         {
+            var random = new Random();
+            var value = random.Next(0, 999999);
             TblDireccion direccion = new TblDireccion();
             direccion.strestado = txtDirecEstado.Text.ToUpper();
             direccion.strmunicipio = txtDirecMunicipio.Text.ToUpper();
@@ -59,7 +61,7 @@ namespace ProjectPaslum.Administrador
 
             TblUser login = new TblUser();
             login.strusuario = txtCorreoAgregar.Text.ToString();
-            login.strpass = txtContraseña.Text.ToString();
+            login.strpass = value.ToString();
             login.strtipoUsuario = "ALUMNO";
 
             alum.TblDireccion = direccion;

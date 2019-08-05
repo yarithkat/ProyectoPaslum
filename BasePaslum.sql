@@ -66,9 +66,11 @@ strDescripcion varchar(200),
 bStatus varchar(10),
 idCatalogoParcial int,
 idNota int,
+idCarrera int,
 constraint pk_Materia primary key(id),
 constraint fkIdCatalogoParcial_Materia foreign key(idCatalogoParcial) references TblCatalogoParcial(id),
 constraint fkIdNota_Materia foreign key(idNota) references TblNota(id),
+constraint fkIdCarrera_Materia foreign key(idCarrera) references TblCarrera(id),
 );
 
 create table TblGrupo(
@@ -125,10 +127,12 @@ strEspecialidad varchar(200),
 idDireccion int,
 idTelefono int,
 idUser int,
+idGrupo int,
 constraint pk_Profesor primary key (Id),
 constraint fkIdDireccion_Profesor foreign key(idDireccion) references TblDireccion(id),
 constraint fkIdTelefono_Profesor foreign key(idTelefono) references TblTelefono(id),
-constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id)
+constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id),
+constraint fkIdGrupo_Profesor foreign key(idGrupo) references TblGrupo(id)
 );
 
 create table TblAsistencia(
@@ -152,13 +156,9 @@ constraint fkIdMateria_AlumnoMateria foreign key(idMateria) references TblMateri
 constraint fkIdNotas_AlumnoMateria foreign key(idNotas) references TblNota(id),
 );
 
-select * from TblPadre;
 select * from TblDireccion;
 select * from TblTelefono;
 select * from TblProfesor;
-<<<<<<< HEAD
-select * from TblUser;
-=======
 select * from TblUser;
 select * from TblCarrera;
 
@@ -168,4 +168,3 @@ SELECT pro.id ,pro.strNombre, pro.strApellidoP,
 FROM TblProfesor as pro
 inner join TblTelefono  as tel 
 on pro.idTelefono = tel.id;
->>>>>>> master

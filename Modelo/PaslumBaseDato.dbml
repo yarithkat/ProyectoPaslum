@@ -50,6 +50,7 @@
       <Column Name="strArea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Association Name="TblCarrera_TblCuatri" Member="TblCuatri" ThisKey="id" OtherKey="idCarrera" Type="TblCuatri" />
       <Association Name="TblCarrera_TblGrupo" Member="TblGrupo" ThisKey="id" OtherKey="idCarrera" Type="TblGrupo" />
+      <Association Name="TblCarrera_TblMateria" Member="TblMateria" ThisKey="id" OtherKey="idCarrera" Type="TblMateria" />
     </Type>
   </Table>
   <Table Name="dbo.TblCatalogoEvaluacion" Member="TblCatalogoEvaluacion">
@@ -101,6 +102,7 @@
       <Column Name="strNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="strCapacidad" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="idCarrera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblGrupo_TblProfesor" Member="TblProfesor" ThisKey="id" OtherKey="idGrupo" Type="TblProfesor" />
       <Association Name="TblCarrera_TblGrupo" Member="TblCarrera" ThisKey="idCarrera" OtherKey="id" Type="TblCarrera" IsForeignKey="true" />
     </Type>
   </Table>
@@ -112,9 +114,11 @@
       <Column Name="bStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="idCatalogoParcial" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idNota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCarrera" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TblMateria_TblAlumnoMateria" Member="TblAlumnoMateria" ThisKey="id" OtherKey="idMateria" Type="TblAlumnoMateria" />
       <Association Name="TblMateria_TblAsistencia" Member="TblAsistencia" ThisKey="id" OtherKey="idMateria" Type="TblAsistencia" />
       <Association Name="TblMateria_TblCuatri" Member="TblCuatri" ThisKey="id" OtherKey="idMateria" Type="TblCuatri" />
+      <Association Name="TblCarrera_TblMateria" Member="TblCarrera" ThisKey="idCarrera" OtherKey="id" Type="TblCarrera" IsForeignKey="true" />
       <Association Name="TblCatalogoParcial_TblMateria" Member="TblCatalogoParcial" ThisKey="idCatalogoParcial" OtherKey="id" Type="TblCatalogoParcial" IsForeignKey="true" />
       <Association Name="TblNota_TblMateria" Member="TblNota" ThisKey="idNota" OtherKey="id" Type="TblNota" IsForeignKey="true" />
     </Type>
@@ -142,8 +146,9 @@
       <Column Name="idDireccion" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idTelefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="idTaller" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idGrupo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TblDireccion_TblProfesor" Member="TblDireccion" ThisKey="idDireccion" OtherKey="id" Type="TblDireccion" IsForeignKey="true" />
+      <Association Name="TblGrupo_TblProfesor" Member="TblGrupo" ThisKey="idGrupo" OtherKey="id" Type="TblGrupo" IsForeignKey="true" />
       <Association Name="TblTelefono_TblProfesor" Member="TblTelefono" ThisKey="idTelefono" OtherKey="id" Type="TblTelefono" IsForeignKey="true" />
       <Association Name="TblUser_TblProfesor" Member="TblUser" ThisKey="idUser" OtherKey="id" Type="TblUser" IsForeignKey="true" />
     </Type>
