@@ -2,6 +2,12 @@ CREATE DATABASE pase_lista;
 USE pase_lista;
 drop database pase_lista;
 
+create table TblJustificante(
+id  int not null primary key identity(1,1), 
+strMotivo varchar(50),
+strArchivo varchar(200)
+);
+
 create table TblNota(
 id int not null identity(1,1),
 strDescripcion varchar(1000),
@@ -127,22 +133,27 @@ strEspecialidad varchar(200),
 idDireccion int,
 idTelefono int,
 idUser int,
+idNotas int,
 idGrupo int,
 constraint pk_Profesor primary key (Id),
 constraint fkIdDireccion_Profesor foreign key(idDireccion) references TblDireccion(id),
 constraint fkIdTelefono_Profesor foreign key(idTelefono) references TblTelefono(id),
 constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id),
+constraint fkIdNotas_Profesor foreign key(idNotas) references TblNota(id),
 constraint fkIdGrupo_Profesor foreign key(idGrupo) references TblGrupo(id)
 );
+
 
 create table TblAsistencia(
 id int not null identity(1,1),
 dteFecha dateTime,
 idMateria int,
 idAlumno int,
+idJustificante int,
 constraint pk_Asistencia primary key (id),
 constraint fkIdMateria_Asistencia foreign key(idMateria) references TblMateria(id),
 constraint fkIdAlumno_Asistencia foreign key(idAlumno) references TblAlumno(id),
+constraint fkIdJustificante_Asistencia foreign key(idJustificante) references TblJustificante(id),
 );
 
 create table TblAlumnoMateria(
@@ -153,8 +164,10 @@ idNotas int,
 constraint pk_AlumnoMateria primary key (id),
 constraint fkIdAlumno_AlumnoMateria foreign key(idAlumno) references TblAlumno(id),
 constraint fkIdMateria_AlumnoMateria foreign key(idMateria) references TblMateria(id),
-constraint fkIdNotas_AlumnoMateria foreign key(idNotas) references TblNota(id),
+constraint fkIdNotas_AlumnoMateria foreign key(idNotas) references TblNota(id)
 );
+
+
 
 select * from TblDireccion;
 select * from TblTelefono;

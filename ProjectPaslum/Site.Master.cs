@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Modelo;
 using Controller;
+using System.Linq;
 
 namespace ProjectPaslum
 {
@@ -108,16 +109,22 @@ namespace ProjectPaslum
             }
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
-            //var padre = (from pa in contexto.TblProfesor where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+            
             if (UsuarioLoggeado != null)
             {
-                //Session["id"] = padre.id;
                 if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {
                     Response.Redirect("./About.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
-                {
+                {                    
+                    var alumno = (from alum in contexto.TblAlumno where alum.idUser == UsuarioLoggeado.id select alum).FirstOrDefault();
+                    //*var alumnoNum = (from alumN int contexto.TblTelefono where alumN.idTelefono == )
+                    Session["nombre"] = alumno.strNombre;
+                    Session["apellido1"] = alumno.strApellidoP;
+                    Session["apellido2"] = alumno.strApellidoM;
+                    Session["matricula"] = alumno.intMatricula;
+                    Session["correo"] = alumno.strCorreo;
                     Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }

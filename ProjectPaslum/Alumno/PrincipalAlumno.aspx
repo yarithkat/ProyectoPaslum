@@ -1,5 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Alumno/Alumno.Master" AutoEventWireup="true" CodeBehind="PrincipalAlumno.aspx.cs" Inherits="ProjectPaslum.Alumno.PrincipalAlumno" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
      <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/ut6.jpg);">
       	<div class="overlay"></div>
@@ -42,7 +59,7 @@
             		<span class="flaticon-reading"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                  <a href="ListaAsistencia.aspx"><h3 class="heading">Lista Asistecia</h3></a>
+                  <a href="ListaAsistencia.aspx"><h3 class="heading">Lista Asistencia</h3></a>
                 <p>Consulta tu lista de asistencia de acuerdo a tu periodo escolar.</p>
               </div>
             </div>    
@@ -53,7 +70,7 @@
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="../IndexPaslum.aspx"><h3 class="heading">Datos Escolares</h3></a>
+                <a href="./DatosEscolares.aspx"><h3 class="heading">Datos Escolares</h3></a>
                 <p>Cosulta tus calificaciones y notas asignadas.</p>
               </div>
             </div>      
@@ -64,7 +81,7 @@
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="../IndexPaslum.aspx"><h3 class="heading">Pase de Lista</h3></a>
+                <a href="./PaseLista.aspx"><h3 class="heading">Pase de Lista</h3></a>
                 <p>Tomar asistencia, Generador de QR.</p>
               </div>
             </div>      
@@ -85,19 +102,4 @@
 		</section>
           <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
 </asp:Content>

@@ -1,222 +1,242 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 22.125" name="PaslumBaseDato">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 22" name="PaslumBaseDato">
   <DataContextMoniker Name="/PaslumBaseDatoDataContext" />
   <nestedChildShapes>
-    <classShape Id="54e119ee-b547-4794-9b5d-7ab98d438afd" absoluteBounds="6.5, 13.75, 2, 3.1170068359375023">
+    <classShape Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" absoluteBounds="3.5, 16.25, 2, 3.1170068359375023">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblAlumno" />
       <nestedChildShapes>
-        <elementListCompartment Id="2a1004ed-a1a3-4ed1-8f7c-faeafce1a9ec" absoluteBounds="6.515, 14.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7982094f-1858-4625-b616-83efba904bfb" absoluteBounds="3.515, 16.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="64085b6f-4f9a-46bf-9f32-c9534660ecf5" absoluteBounds="6.25, 10.5, 2, 1.5785953776041666">
+    <classShape Id="53f73303-ac64-4193-bfa3-4173398c856e" absoluteBounds="3.5, 6.125, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblAlumnoMateria" />
       <nestedChildShapes>
-        <elementListCompartment Id="4ff1a895-7883-4499-8121-31d13765b8b0" absoluteBounds="6.265, 10.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0ed77ee3-e0f4-4bbf-8f03-a8203e919012" absoluteBounds="3.515, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6614344d-5675-4fd8-926d-590af520e66c" absoluteBounds="9.25, 9.5, 2, 1.5785953776041666">
+    <classShape Id="cb2c6e77-53db-4cf9-a9aa-4f84f1ed6721" absoluteBounds="6.25, 2, 2, 1.7708968098958327">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblAsistencia" />
       <nestedChildShapes>
-        <elementListCompartment Id="d5413552-7662-43b1-90f0-d6e686eb6582" absoluteBounds="9.265, 9.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="98d57b07-cd85-4102-b195-ef9673c0b5f9" absoluteBounds="6.265, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a333caad-624f-4bbf-9df3-2288e601c5ba" absoluteBounds="0.75, 6.5, 2, 1.5785953776041675">
+    <classShape Id="f28e8c69-0a34-4086-abce-f4072b0ce5de" absoluteBounds="0.75, 2, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblCarrera" />
       <nestedChildShapes>
-        <elementListCompartment Id="5427c99b-8e00-47c4-9007-d56f02950c6c" absoluteBounds="0.765, 6.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="459dbd76-a6fb-4b0a-b07b-49019ad0d5d3" absoluteBounds="0.765, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="8fd399e9-53ec-43e7-a662-6a4b02c46c1b" absoluteBounds="1.5, 14.75, 2, 1.1939925130208344">
+    <classShape Id="6ae2243f-4c94-4190-85bf-c2547edb61e9" absoluteBounds="1.5, 11.5, 2, 1.1939925130208344">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblCatalogoEvaluacion" />
       <nestedChildShapes>
-        <elementListCompartment Id="864245fd-7334-42e2-9182-8d864a663554" absoluteBounds="1.5150000000000001, 15.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="178f4a96-44b4-4c8f-b111-0669533ca5b6" absoluteBounds="1.5150000000000001, 11.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1e89c78b-9e09-4293-ab25-9d315e935c62" absoluteBounds="0.75, 11.5, 2, 1.5785953776041666">
+    <classShape Id="18af88db-48e3-44de-b913-62a366a52001" absoluteBounds="0.75, 8.25, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblCatalogoParcial" />
       <nestedChildShapes>
-        <elementListCompartment Id="6555ba78-4749-4bf4-9da8-a9e5305a8efe" absoluteBounds="0.765, 11.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="93e9cb72-5309-4e42-9aaa-7f51002b0b6f" absoluteBounds="0.765, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6bc9d193-f6df-46e3-b103-4b3fc85ec8e0" absoluteBounds="3.5, 3.5, 2, 1.7708968098958327">
+    <classShape Id="0e3848f0-92fd-4db6-945e-f791b02bc66b" absoluteBounds="9.25, 3, 2, 1.7708968098958327">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblCuatri" />
       <nestedChildShapes>
-        <elementListCompartment Id="292fd30d-35dc-4e1e-89d7-a00b669a6b32" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9e86fac8-4bfa-4d40-b7c1-69087ab8c9bf" absoluteBounds="9.265, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0264f9d2-134e-4ede-a9c4-74d0bfdd09c5" absoluteBounds="3.5, 19.375, 2, 2.5401025390625023">
+    <classShape Id="b037bca7-16f1-4b71-a2eb-53fdd70f9be3" absoluteBounds="0.75, 18.875, 2, 2.5401025390625023">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblDireccion" />
       <nestedChildShapes>
-        <elementListCompartment Id="58072acd-61e8-4941-806e-2e43a0bb5c07" absoluteBounds="3.515, 19.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="34b51282-f550-46ee-b184-aa8274546ce1" absoluteBounds="0.765, 19.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2d05f12f-4d4c-420b-91b6-1f8ed4e31de6" absoluteBounds="3.5, 6.5, 2, 1.5785953776041675">
+    <classShape Id="a786e4a0-1c3d-4737-af3e-c06dae825330" absoluteBounds="3.75, 20.125, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblGrupo" />
       <nestedChildShapes>
-        <elementListCompartment Id="4727c66c-7ff8-4302-b02d-2f366e585c48" absoluteBounds="3.515, 6.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="01f60027-6df7-4e2a-96a8-fb4382243935" absoluteBounds="3.765, 20.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="56c8bc9c-56f5-406c-8102-28515a5170d2" absoluteBounds="3.5, 9.25, 2, 2.1554996744791666">
+    <classShape Id="167528e4-a696-47f2-8ac3-bd846b13c571" absoluteBounds="3.5, 9, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblJustificante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73ab02bb-2f76-4850-b026-47daa03cc087" absoluteBounds="3.515, 9.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" absoluteBounds="3.5, 2.875, 2, 2.1554996744791666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblMateria" />
       <nestedChildShapes>
-        <elementListCompartment Id="a02c5aa9-53f8-4a8d-9d18-b046a4a4afbf" absoluteBounds="3.515, 9.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f275461-b81d-464f-8dc8-03bd15d97e5a" absoluteBounds="3.515, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="905df8ec-4531-49cf-bda1-2bd8a272da33" absoluteBounds="0.75, 9.625, 2, 1.1939925130208344">
+    <classShape Id="869797eb-4f90-4c4b-93ea-8ff19547f553" absoluteBounds="0.75, 6.375, 2, 1.1939925130208344">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblNota" />
       <nestedChildShapes>
-        <elementListCompartment Id="9790a9d0-7de6-4c88-ad6b-8d17aca54a63" absoluteBounds="0.765, 10.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4c4dcd86-4127-410e-8ce0-173f8258ec3a" absoluteBounds="0.765, 6.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="784fdd58-049f-4301-a6bb-058809185459" absoluteBounds="6.25, 5.625, 2, 3.5016097005208326">
+    <classShape Id="c396c043-af04-4f73-9471-74c90ae75a73" absoluteBounds="6.5, 5.125, 2, 3.6939111328124987">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblProfesor" />
       <nestedChildShapes>
-        <elementListCompartment Id="32c246eb-4d47-4e83-a0b0-a1cac9517cb5" absoluteBounds="6.265, 6.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a77370e1-adfc-4217-80e7-3241d5e9c383" absoluteBounds="6.515, 5.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="641b0dad-82e1-445d-9484-6a00e44a5b00" absoluteBounds="3.5, 0.75, 2, 1.5785953776041666">
+    <classShape Id="b79de9b8-9172-4a85-b1bf-c03562ba6c27" absoluteBounds="0.75, 14.125, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblTelefono" />
       <nestedChildShapes>
-        <elementListCompartment Id="b298f548-ce59-49fd-8284-f0a4394916c0" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3d8950ac-2329-480d-ad27-01ca33dc3134" absoluteBounds="0.765, 14.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="69c91859-dc19-4c7d-8de6-534bb9b8ac16" absoluteBounds="3.5, 17.125, 2, 1.5785953776041666">
+    <classShape Id="07ce7a67-a6fd-4f04-a8fd-a4925d5ee077" absoluteBounds="0.75, 16.5, 2, 1.5785953776041666">
       <DataClassMoniker Name="/PaslumBaseDatoDataContext/TblUser" />
       <nestedChildShapes>
-        <elementListCompartment Id="e5014b47-423b-4438-bf98-b441cecaa143" absoluteBounds="3.515, 17.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f553af23-dc8f-4105-8164-439fc8da2d10" absoluteBounds="0.765, 16.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.375 : 13.75); (7.375 : 12.0785953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 16.25); (5.59732443490112 : 16.1526755650989 : JumpStart); (5.74642806509888 : 16.0035719349011 : JumpEnd); (5.875 : 15.875); (5.875 : 8.07859537760417); (5.71517556509888 : 7.91877094270304 : JumpStart); (5.59732443490112 : 7.80091981250529 : JumpEnd); (5.5 : 7.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblAlumno/TblAlumno_TblAlumnoMateria" />
       <nodes>
-        <classShapeMoniker Id="54e119ee-b547-4794-9b5d-7ab98d438afd" />
-        <classShapeMoniker Id="64085b6f-4f9a-46bf-9f32-c9534660ecf5" />
+        <classShapeMoniker Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" />
+        <classShapeMoniker Id="53f73303-ac64-4193-bfa3-4173398c856e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.40625 : 13.75); (8.40625 : 9.96875); (9.25 : 9.96875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 17.8397559179688); (5.57291666666667 : 17.8397559179688 : JumpStart); (5.77083583333333 : 17.8397559179688 : JumpEnd); (6.34375 : 17.8397559179688); (6.34375 : 3.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblAlumno/TblAlumno_TblAsistencia" />
       <nodes>
-        <classShapeMoniker Id="54e119ee-b547-4794-9b5d-7ab98d438afd" />
-        <classShapeMoniker Id="6614344d-5675-4fd8-926d-590af520e66c" />
+        <classShapeMoniker Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" />
+        <classShapeMoniker Id="cb2c6e77-53db-4cf9-a9aa-4f84f1ed6721" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.125 : 14.75); (2.125 : 13.0785953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.125 : 11.5); (2.125 : 9.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblCatalogoEvaluacion/TblCatalogoEvaluacion_TblCatalogoParcial" />
       <nodes>
-        <classShapeMoniker Id="8fd399e9-53ec-43e7-a662-6a4b02c46c1b" />
-        <classShapeMoniker Id="1e89c78b-9e09-4293-ab25-9d315e935c62" />
+        <classShapeMoniker Id="6ae2243f-4c94-4190-85bf-c2547edb61e9" />
+        <classShapeMoniker Id="18af88db-48e3-44de-b913-62a366a52001" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 6.5); (1.75 : 4.38544840494792); (3.5 : 4.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.78929768880208); (3.25 : 2.78929768880208); (3.25 : 1.75); (10.25 : 1.75); (10.25 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblCarrera/TblCarrera_TblCuatri" />
       <nodes>
-        <classShapeMoniker Id="a333caad-624f-4bbf-9df3-2288e601c5ba" />
-        <classShapeMoniker Id="6bc9d193-f6df-46e3-b103-4b3fc85ec8e0" />
+        <classShapeMoniker Id="f28e8c69-0a34-4086-abce-f4072b0ce5de" />
+        <classShapeMoniker Id="0e3848f0-92fd-4db6-945e-f791b02bc66b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 20.6450512695313); (7.5 : 20.6450512695313); (7.5 : 16.8670068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 19.1210034179688); (3.5 : 19.1210034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblDireccion/TblDireccion_TblAlumno" />
       <nodes>
-        <classShapeMoniker Id="0264f9d2-134e-4ede-a9c4-74d0bfdd09c5" />
-        <classShapeMoniker Id="54e119ee-b547-4794-9b5d-7ab98d438afd" />
+        <classShapeMoniker Id="b037bca7-16f1-4b71-a2eb-53fdd70f9be3" />
+        <classShapeMoniker Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 7.28929768880208); (3.04166666666667 : 7.28929768880208 : JumpStart); (3.20833333333333 : 7.28929768880208 : JumpEnd); (3.5 : 7.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.36339634440104); (3.16666666666667 : 2.36339634440104 : JumpStart); (3.33333333333333 : 2.36339634440104 : JumpEnd); (5.65625 : 2.36339634440104); (5.65625 : 20.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblCarrera/TblCarrera_TblGrupo" />
       <nodes>
-        <classShapeMoniker Id="a333caad-624f-4bbf-9df3-2288e601c5ba" />
-        <classShapeMoniker Id="2d05f12f-4d4c-420b-91b6-1f8ed4e31de6" />
+        <classShapeMoniker Id="f28e8c69-0a34-4086-abce-f4072b0ce5de" />
+        <classShapeMoniker Id="a786e4a0-1c3d-4737-af3e-c06dae825330" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 10.9527498372396); (5.79166666666667 : 10.9527498372396 : JumpStart); (5.95833333333333 : 10.9527498372396 : JumpEnd); (5.97916666666667 : 10.9527498372396 : JumpStart); (6.14583333333333 : 10.9527498372396 : JumpEnd); (6.25 : 10.9527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 9.69314697265625); (5.57291666666667 : 9.69314697265625 : JumpStart); (5.77083583333333 : 9.69314697265625 : JumpEnd); (5.79166666666667 : 9.69314697265625 : JumpStart); (5.95833333333333 : 9.69314697265625 : JumpEnd); (6.3124975 : 9.69314697265625); (6.3124975 : 3.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblJustificante/TblJustificante_TblAsistencia" />
+      <nodes>
+        <classShapeMoniker Id="167528e4-a696-47f2-8ac3-bd846b13c571" />
+        <classShapeMoniker Id="cb2c6e77-53db-4cf9-a9aa-4f84f1ed6721" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 5.03049967447917); (4.5 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblMateria/TblMateria_TblAlumnoMateria" />
       <nodes>
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
-        <classShapeMoniker Id="64085b6f-4f9a-46bf-9f32-c9534660ecf5" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
+        <classShapeMoniker Id="53f73303-ac64-4193-bfa3-4173398c856e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 10.265625); (5.79166666666667 : 10.265625 : JumpStart); (5.95833333333333 : 10.265625 : JumpEnd); (5.97916666666667 : 10.265625 : JumpStart); (6.14583333333333 : 10.265625 : JumpEnd); (8.29166416666667 : 10.265625 : JumpStart); (8.48958333333333 : 10.265625 : JumpEnd); (9.25 : 10.265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.32294840494792); (5.57291666666667 : 3.32294840494792 : JumpStart); (5.73958333333333 : 3.32294840494792 : JumpEnd); (6.25 : 3.32294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblMateria/TblMateria_TblAsistencia" />
       <nodes>
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
-        <classShapeMoniker Id="6614344d-5675-4fd8-926d-590af520e66c" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
+        <classShapeMoniker Id="cb2c6e77-53db-4cf9-a9aa-4f84f1ed6721" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.50153746153846 : 9.25); (3.37142556509888 : 9.11988810356042 : JumpStart); (3.25357443490112 : 9.00203697336266 : JumpEnd); (3.125 : 8.87346253846154); (3.125 : 5.64589680989583); (3.5 : 5.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 4.30214680989583); (5.57291666666667 : 4.30214680989583 : JumpStart); (5.73958333333333 : 4.30214680989583 : JumpEnd); (6.22916416666667 : 4.30214680989583 : JumpStart); (6.42708333333333 : 4.30214680989583 : JumpEnd); (9.25 : 4.30214680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblMateria/TblMateria_TblCuatri" />
       <nodes>
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
-        <classShapeMoniker Id="6bc9d193-f6df-46e3-b103-4b3fc85ec8e0" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
+        <classShapeMoniker Id="0e3848f0-92fd-4db6-945e-f791b02bc66b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 8.01666486663662); (3.06607443490112 : 8.33273930153774 : JumpStart); (3.18392556509888 : 8.4505904317355 : JumpEnd); (3.3125 : 8.57916486663662); (3.3125 : 10.3277498372396); (3.5 : 10.3277498372396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.22679768880208); (3.5 : 3.22679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblCarrera/TblCarrera_TblMateria" />
       <nodes>
-        <classShapeMoniker Id="a333caad-624f-4bbf-9df3-2288e601c5ba" />
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
+        <classShapeMoniker Id="f28e8c69-0a34-4086-abce-f4072b0ce5de" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.2892976888021); (3.04166666666667 : 12.2892976888021 : JumpStart); (3.20833333333333 : 12.2892976888021 : JumpEnd); (4.5 : 12.2892976888021); (4.5 : 11.4054996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 8.25121330413662); (3.125 : 7.87621330413662); (3.125 : 4.15990068164063); (3.5 : 4.15990068164063)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblCatalogoParcial/TblCatalogoParcial_TblMateria" />
       <nodes>
-        <classShapeMoniker Id="1e89c78b-9e09-4293-ab25-9d315e935c62" />
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
+        <classShapeMoniker Id="18af88db-48e3-44de-b913-62a366a52001" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 10.8180730572416); (3.125 : 11.1930730572416); (3.125 : 12.4535953776042); (5.875 : 12.4535953776042); (6.00357443490112 : 12.325020942703 : JumpStart); (6.12142556509888 : 12.2071698125053 : JumpEnd); (6.25 : 12.0785953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 6.97199625651042); (3.04166666666667 : 6.97199625651042 : JumpStart); (3.20833333333333 : 6.97199625651042 : JumpEnd); (3.5 : 6.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblNota/TblNota_TblAlumnoMateria" />
       <nodes>
-        <classShapeMoniker Id="905df8ec-4531-49cf-bda1-2bd8a272da33" />
-        <classShapeMoniker Id="64085b6f-4f9a-46bf-9f32-c9534660ecf5" />
+        <classShapeMoniker Id="869797eb-4f90-4c4b-93ea-8ff19547f553" />
+        <classShapeMoniker Id="53f73303-ac64-4193-bfa3-4173398c856e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 9.91387491861979); (3.22916666666667 : 9.91387491861979 : JumpStart); (3.39583333333333 : 9.91387491861979 : JumpEnd); (3.5 : 9.91387491861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.40714495227364); (3.06607443490112 : 6.09107051737251 : JumpStart); (3.18392556509888 : 5.97321938717476 : JumpEnd); (3.28125 : 5.87589495227364); (3.28125 : 4.6264521780599); (3.5 : 4.6264521780599)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblNota/TblNota_TblMateria" />
       <nodes>
-        <classShapeMoniker Id="905df8ec-4531-49cf-bda1-2bd8a272da33" />
-        <classShapeMoniker Id="56c8bc9c-56f5-406c-8102-28515a5170d2" />
+        <classShapeMoniker Id="869797eb-4f90-4c4b-93ea-8ff19547f553" />
+        <classShapeMoniker Id="c7a8ba33-adb2-4358-bf0d-b85df365b094" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 19.375); (5.875 : 19); (5.875 : 7.37580485026042); (6.25 : 7.37580485026042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 19.7460034179688); (5.57291666666667 : 19.7460034179688 : JumpStart); (5.77083583333333 : 19.7460034179688 : JumpEnd); (7.5 : 19.7460034179688); (7.5 : 8.8189111328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblDireccion/TblDireccion_TblProfesor" />
       <nodes>
-        <classShapeMoniker Id="0264f9d2-134e-4ede-a9c4-74d0bfdd09c5" />
-        <classShapeMoniker Id="784fdd58-049f-4301-a6bb-058809185459" />
+        <classShapeMoniker Id="b037bca7-16f1-4b71-a2eb-53fdd70f9be3" />
+        <classShapeMoniker Id="c396c043-af04-4f73-9471-74c90ae75a73" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.87540242513021); (6.25 : 6.87540242513021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.6875025 : 20.125); (5.6875025 : 8.29250325520833); (5.79166666666667 : 8.29250325520833 : JumpStart); (5.95833333333333 : 8.29250325520833 : JumpEnd); (6.22916416666667 : 8.29250325520833 : JumpStart); (6.42708333333333 : 8.29250325520833 : JumpEnd); (6.5 : 8.29250325520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblGrupo/TblGrupo_TblProfesor" />
       <nodes>
-        <classShapeMoniker Id="2d05f12f-4d4c-420b-91b6-1f8ed4e31de6" />
-        <classShapeMoniker Id="784fdd58-049f-4301-a6bb-058809185459" />
+        <classShapeMoniker Id="a786e4a0-1c3d-4737-af3e-c06dae825330" />
+        <classShapeMoniker Id="c396c043-af04-4f73-9471-74c90ae75a73" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 1.53929768880208); (8.3749975 : 1.53929768880208); (8.3749975 : 13.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 6.375); (1.75 : 5.59375); (3.04166666666667 : 5.59375 : JumpStart); (3.36458333333333 : 5.59375 : JumpEnd); (4.41666666666667 : 5.59375 : JumpStart); (4.58333333333333 : 5.59375 : JumpEnd); (5.57291666666667 : 5.59375 : JumpStart); (5.73958333333333 : 5.59375 : JumpEnd); (6.22916416666667 : 5.59375 : JumpStart); (6.42708333333333 : 5.59375 : JumpEnd); (6.5 : 5.59375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblNota/TblNota_TblProfesor" />
+      <nodes>
+        <classShapeMoniker Id="869797eb-4f90-4c4b-93ea-8ff19547f553" />
+        <classShapeMoniker Id="c396c043-af04-4f73-9471-74c90ae75a73" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.9142976888021); (4.4687475 : 14.9142976888021); (4.4687475 : 16.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblTelefono/TblTelefono_TblAlumno" />
       <nodes>
-        <classShapeMoniker Id="641b0dad-82e1-445d-9484-6a00e44a5b00" />
-        <classShapeMoniker Id="54e119ee-b547-4794-9b5d-7ab98d438afd" />
+        <classShapeMoniker Id="b79de9b8-9172-4a85-b1bf-c03562ba6c27" />
+        <classShapeMoniker Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 1.96519903320312); (7.25 : 1.96519903320312); (7.25 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 14.488396344401); (5.57291666666667 : 14.488396344401 : JumpStart); (5.77083583333333 : 14.488396344401 : JumpEnd); (5.79166666666667 : 14.488396344401 : JumpStart); (5.95833333333333 : 14.488396344401 : JumpEnd); (6.26041666666667 : 14.488396344401 : JumpStart); (6.42708333333333 : 14.488396344401 : JumpEnd); (6.9687475 : 14.488396344401); (6.9687475 : 8.8189111328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblTelefono/TblTelefono_TblProfesor" />
       <nodes>
-        <classShapeMoniker Id="641b0dad-82e1-445d-9484-6a00e44a5b00" />
-        <classShapeMoniker Id="784fdd58-049f-4301-a6bb-058809185459" />
+        <classShapeMoniker Id="b79de9b8-9172-4a85-b1bf-c03562ba6c27" />
+        <classShapeMoniker Id="c396c043-af04-4f73-9471-74c90ae75a73" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 17.9142976888021); (5.79166666666667 : 17.9142976888021 : JumpStart); (5.95833333333333 : 17.9142976888021 : JumpEnd); (6.9687475 : 17.9142976888021); (6.9687475 : 16.8670068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 17.2892976888021); (3.5 : 17.2892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblUser/TblUser_TblAlumno" />
       <nodes>
-        <classShapeMoniker Id="69c91859-dc19-4c7d-8de6-534bb9b8ac16" />
-        <classShapeMoniker Id="54e119ee-b547-4794-9b5d-7ab98d438afd" />
+        <classShapeMoniker Id="07ce7a67-a6fd-4f04-a8fd-a4925d5ee077" />
+        <classShapeMoniker Id="69045523-0a1f-4ea7-9b62-0a9a7c1c28b3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 17.1869285109675); (5.81607443490112 : 16.8708540760664 : JumpStart); (5.93392556509888 : 16.7530029458687 : JumpEnd); (6.0625 : 16.6244285109675); (6.0625 : 8.28245927539063); (6.25 : 8.28245927539063)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 16.863396844401); (3.25 : 16.863396844401); (3.25 : 16); (4.38541416666667 : 16 : JumpStart); (4.55208083333333 : 16 : JumpEnd); (5.57291666666667 : 16 : JumpStart); (5.83333333333333 : 16 : JumpEnd); (6.26041666666667 : 16 : JumpStart); (6.42708333333333 : 16 : JumpEnd); (7.41666666666667 : 16 : JumpStart); (7.58333333333333 : 16 : JumpEnd); (8.031252 : 16); (8.031252 : 8.8189111328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PaslumBaseDatoDataContext/TblUser/TblUser_TblProfesor" />
       <nodes>
-        <classShapeMoniker Id="69c91859-dc19-4c7d-8de6-534bb9b8ac16" />
-        <classShapeMoniker Id="784fdd58-049f-4301-a6bb-058809185459" />
+        <classShapeMoniker Id="07ce7a67-a6fd-4f04-a8fd-a4925d5ee077" />
+        <classShapeMoniker Id="c396c043-af04-4f73-9471-74c90ae75a73" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
