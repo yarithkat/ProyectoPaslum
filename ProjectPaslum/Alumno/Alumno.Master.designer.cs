@@ -31,13 +31,13 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control txtUsuario.
+        /// Control LbUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.Label LbUsuario;
         
         /// <summary>
         /// Control Label2.
@@ -49,13 +49,13 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control txtContra.
+        /// Control LbContraseña.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContra;
+        protected global::System.Web.UI.WebControls.Label LbContraseña;
         
         /// <summary>
         /// Control Label4.
@@ -67,13 +67,13 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// Control txtTipoUsuario.
+        /// Control LbTipoUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoUsuario;
+        protected global::System.Web.UI.WebControls.Label LbTipoUsuario;
         
         /// <summary>
         /// Control btncancel.
