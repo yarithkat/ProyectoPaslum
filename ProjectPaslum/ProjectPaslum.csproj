@@ -242,25 +242,7 @@
     <Content Include="Administrador\js\underscore-min.js" />
     <Content Include="Administrador\Maestrosadmin.aspx" />
     <Content Include="Administrador\Materiadmin.aspx" />
-<<<<<<< Updated upstream
-=======
-    <Content Include="Alumno\DatosEscolares.aspx" />
-    <Content Include="Alumno\DatosPersonales.aspx" />
-    <Content Include="Alumno\images\Im1.jpg" />
-    <Content Include="Alumno\images\Im2.jpg" />
-    <Content Include="Alumno\images\Im3.jpg" />
-    <Content Include="Alumno\images\Profile.jpg" />
-    <Content Include="Alumno\images\ut1.jpg" />
-    <Content Include="Alumno\images\ut2.jpg" />
-    <Content Include="Alumno\images\ut3.jpg" />
-    <Content Include="Alumno\images\ut4.jpg" />
-    <Content Include="Alumno\images\ut5.jpg" />
-    <Content Include="Alumno\images\ut6.jpg" />
-    <Content Include="Alumno\ListaAsistencia.aspx" />
-    <Content Include="Alumno\PaseLista.aspx" />
->>>>>>> Stashed changes
     <Content Include="Alumno\PrincipalAlumno.aspx" />
-    <Content Include="Alumno\scss\PersoDatos.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -685,37 +667,6 @@
     <Compile Include="Alumno\Alumno.Master.designer.cs">
       <DependentUpon>Alumno.Master</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
-    <Compile Include="Alumno\DatosEscolares.aspx.cs">
-      <DependentUpon>DatosEscolares.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Alumno\DatosEscolares.aspx.designer.cs">
-      <DependentUpon>DatosEscolares.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\DatosPersonales.aspx.cs">
-      <DependentUpon>DatosPersonales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Alumno\DatosPersonales.aspx.designer.cs">
-      <DependentUpon>DatosPersonales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\ListaAsistencia.aspx.cs">
-      <DependentUpon>ListaAsistencia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Alumno\ListaAsistencia.aspx.designer.cs">
-      <DependentUpon>ListaAsistencia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\PaseLista.aspx.cs">
-      <DependentUpon>PaseLista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Alumno\PaseLista.aspx.designer.cs">
-      <DependentUpon>PaseLista.aspx</DependentUpon>
-    </Compile>
->>>>>>> Stashed changes
     <Compile Include="Alumno\PrincipalAlumno.aspx.cs">
       <DependentUpon>PrincipalAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

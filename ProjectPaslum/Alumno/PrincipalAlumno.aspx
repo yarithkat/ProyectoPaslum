@@ -42,7 +42,7 @@
             		<span class="flaticon-reading"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                  <a href="ListaAsistencia.aspx"><h3 class="heading">Lista Asistencia</h3></a>
+                  <a href="ListaAsistencia.aspx"><h3 class="heading">Lista Asistecia</h3></a>
                 <p>Consulta tu lista de asistencia de acuerdo a tu periodo escolar.</p>
               </div>
             </div>    
@@ -53,8 +53,8 @@
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="DatosEscolares.aspx"><h3 class="heading">Datos Escolares</h3></a>
-                <p>Consulta tus calificaciones y notas asignadas.</p>
+                <a href="../IndexPaslum.aspx"><h3 class="heading">Datos Escolares</h3></a>
+                <p>Cosulta tus calificaciones y notas asignadas.</p>
               </div>
             </div>      
           </div>
@@ -64,7 +64,7 @@
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="PaseLista.aspx"><h3 class="heading">Pase de Lista</h3></a>
+                <a href="../IndexPaslum.aspx"><h3 class="heading">Pase de Lista</h3></a>
                 <p>Tomar asistencia, Generador de QR.</p>
               </div>
             </div>      
