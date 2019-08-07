@@ -9,7 +9,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-
+       <style>
+    #mdialTamanio{
+      width: 150% !important;
+    }
+  </style>
     <div class="content">
         <div class="table-title">
             <div class="row">
@@ -31,8 +35,9 @@
         </div>
     </div>
 <!-- Agregar Modal Maestros-->
-<div class="modal fade" id="addMaestroModal">
-    <div class="modal-dialog  modal-lg modal-dialog-centered">
+ <div class="modal fade" tabindex="-1" role="dialog" id="addMaestroModal">
+       <div class="left">
+             <div class="modal-dialog"  id="mdialTamanio">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -42,7 +47,7 @@
                 </button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" style = "position:relative; overflow: scroll; height: 550px;">
                 <div class="form-group">
                     <div class="col-xs-10">
                         Nombre(s)
@@ -270,10 +275,8 @@
                 <br />
                 <div class="modal-footer">
                     <div class="modalfooter">
-
-                        <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-success" data-dismiss="modal" />
-
-                        <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-primary" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
+                        <asp:Button ID="btncancel" runat="server" Text="Cancelar" CssClass="btn btn-primary" data-dismiss="modal" />
+                        <asp:Button ID="btnAceptarAgregar" runat="server" Text="Aceptar" class="btn btn-success" />
 
                     </div>
                 </div>
@@ -281,6 +284,7 @@
         </div>
     </div>
 </div>
+    </div>
     <%-- Editar o eliminar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
@@ -291,8 +295,24 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" AllowPaging="True" DataKeyNames="id" DataSourceID="SqlDataSource1">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" AllowPaging="True" DataKeyNames="id" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
                     <Columns>
+                        
+                            <asp:TemplateField HeaderText="Editar">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="imgEditar" CommandName="Editar" ImageUrl="Imagenes/editar.png" />
+                                </ItemTemplate>
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" Width="50px" />
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Eliminar" Visible="True">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="imgEliminar" CommandName="Eliminar" ImageUrl="Imagenes/borrar.png"
+                   OnClientClick="javascript:return confirm('¿Está seguro de querer eliminar el registro seleccionado?', 'Mensaje de sistema')" />
+                                </ItemTemplate>
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" Width="50px" />
+                            </asp:TemplateField>
 
                         <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                         <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
@@ -305,7 +325,15 @@
                         <asp:BoundField DataField="strtelCasa" HeaderText="Tel.Casa" SortExpression="strtelCasa" />
 
                     </Columns>
-                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
+                     <FooterStyle BackColor="White" ForeColor="#000066" />
+                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"/>
+                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Center" />
+                        <RowStyle ForeColor="#000066" />
+                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#00547E" />
                 </asp:GridView>
 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 

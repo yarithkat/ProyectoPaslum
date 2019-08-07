@@ -12,6 +12,11 @@
 
      <link href="../Content/bootstrap.min.css" rel="stylesheet" />
    
+   <style>
+    #mdialTamanio{
+      width: 150% !important;
+    }
+  </style>   
     
     <div class="content">
             <div class="table-title">
@@ -98,12 +103,10 @@
                         <br /> <br />  
                       <div class="modal-footer">
                             <div class="modalfooter">
-                            <div class="col-xs-3">
+                          
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                            </div>
-                            <div class="col-xs-3">
                                 <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-block btn-sm btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
-                            </div>
+                          
                         </div>
                             </div>
             </div>
@@ -120,17 +123,40 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
                      <Columns>
                        
-                          
+                            <asp:TemplateField HeaderText="Editar">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="imgEditar" CommandName="Editar" ImageUrl="Imagenes/editar.png" />
+                                </ItemTemplate>
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" Width="50px" />
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Eliminar" Visible="True">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="imgEliminar" CommandName="Eliminar" ImageUrl="Imagenes/borrar.png"
+                   OnClientClick="javascript:return confirm('¿Está seguro de querer eliminar el registro seleccionado?', 'Mensaje de sistema')" />
+                                </ItemTemplate>
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" Width="50px" />
+                            </asp:TemplateField>
                          <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
                          <asp:BoundField DataField="strArea" HeaderText="Area" SortExpression="strArea" />
                          <asp:BoundField DataField="strClave" HeaderText="Clave" SortExpression="strClave" />
                        
                           
                      </Columns>
-                   <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
+                     <FooterStyle BackColor="White" ForeColor="#000066" />
+                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"/>
+                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Center" />
+                        <RowStyle ForeColor="#000066" />
+                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                   
                 </asp:GridView>
                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
                      SelectCommand="select strNombre, strArea, strClave from TblCarrera;" 

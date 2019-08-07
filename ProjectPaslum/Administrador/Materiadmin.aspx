@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
 
-    
+       <style>
+    #mdialTamanio{
+      width: 150% !important;
+    }
+  </style>
     
     <div class="content">
             <div class="table-title">
@@ -95,8 +99,8 @@
                    <div class="modal-footer">
                             <div class="modalfooter">
                              
-                                  <asp:Button ID="btncancel" runat="server"  Text="Cancelar" data-dismiss="modal"  />
-                                 <asp:Button ID="btnaceptar" runat="server"   Text="Aceptar"  />
+                                  <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary"  Text="Cancelar" data-dismiss="modal"  />
+                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar"  />
                               </div>
                            </div>
                             </div> </div>

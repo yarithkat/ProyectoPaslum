@@ -9,7 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
-    
+         <style>
+    #mdialTamanio{
+      width: 150% !important;
+    }
+  </style>
     <div class="content">
             <div class="table-title">
                 <div class="row">
@@ -32,9 +36,10 @@
             </div>
 
     </div>
-      <!-- Agregar Modal alumno-->
-    <div class="modal fade" id="addAlumnoModal">
-        <div class="modal-dialog  modal-lg modal-dialog-centered">
+      <!-- Agregar Modal alumno-->   
+    <div class="modal fade" tabindex="-1" role="dialog" id="addAlumnoModal">
+        <div class="left">
+        <div class="modal-dialog" id="mdialTamanio">
             <div class="modal-content">
                
                     <div class="modal-header">
@@ -45,7 +50,7 @@
                    
                          </div>
                 
-                    <div class="modal-body">
+                    <div class="modal-body" style = "position:relative; overflow: scroll; height: 550px; ">
                         <div class="form-group">
                                 <div class="col-xs-10">
                                        <br />
@@ -152,7 +157,12 @@
                             <asp:TextBox  id="txtCorreoAgregar" class="form-control" required="required" type="text" placeholder="Ejemplo@gmail.com" runat="server" TextMode="Email"></asp:TextBox>
                                
                         </div>
-                       
+                        
+                            <div class="col-xs-6">
+                                <br />
+                                Contraseña
+                            <asp:TextBox  id="txtContraseña" class="form-control" required="required" type="text" placeholder="Contraseña" runat="server" TextMode="Password"></asp:TextBox>
+                                </div>
                     </div>
                           <!-- Direccion -->
                          <div class="form-group">
@@ -226,17 +236,16 @@
                         <br /> <br />  
                     <div class="modal-footer">
                             <div class="modalfooter">
-                            <div class="col-xs-3">
+                          
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
+                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" />
                             </div>
-                            <div class="col-xs-3">
-                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-block btn-sm btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
-                            </div>
-                        </div>
+                      
                             </div>
             </div>
         </div>
           </div>
                   </div>
+           </div>
 </asp:Content>
 

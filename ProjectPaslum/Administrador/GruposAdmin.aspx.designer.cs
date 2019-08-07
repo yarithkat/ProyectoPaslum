@@ -58,12 +58,12 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.Button btncancel;
         
         /// <summary>
-        /// Control btnAceptarAgregar.
+        /// Control btnaceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAceptarAgregar;
+        protected global::System.Web.UI.WebControls.Button btnaceptar;
     }
 }
