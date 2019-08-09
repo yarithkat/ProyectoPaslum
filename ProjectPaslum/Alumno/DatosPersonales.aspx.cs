@@ -18,6 +18,11 @@ namespace ProjectPaslum.Alumno
                 txtApellidoM.Text = Session["apellido2"].ToString();
                 TxtMatricula.Text = Session["matricula"].ToString();
                 TxtCorreo.Text = Session["correo"].ToString();
+                TxtTelefono.Text = Session["telefono1"].ToString();
+                txtCelular.Text = Session["telefono2"].ToString();
+                txtOtro.Text = Session["telefono3"].ToString();
+                TxtCarrera.Text = Session["carrera"].ToString();
+                TxtArea.Text = Session["area"].ToString();
             }
         }
     }

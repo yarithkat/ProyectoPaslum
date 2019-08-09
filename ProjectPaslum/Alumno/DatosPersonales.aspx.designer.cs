@@ -49,6 +49,15 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.TextBox TxtCarrera;
         
         /// <summary>
+        /// Control TxtArea.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtArea;
+        
+        /// <summary>
         /// Control TxtCuatrimestre.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,24 @@ namespace ProjectPaslum.Alumno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtTelefono;
+        
+        /// <summary>
+        /// Control txtCelular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCelular;
+        
+        /// <summary>
+        /// Control txtOtro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOtro;
         
         /// <summary>
         /// Control BtnEditar.

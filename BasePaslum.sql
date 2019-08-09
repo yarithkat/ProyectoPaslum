@@ -174,6 +174,7 @@ select * from TblTelefono;
 select * from TblProfesor;
 select * from TblUser;
 select * from TblCarrera;
+select * from TblAlumno;
 
 SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,

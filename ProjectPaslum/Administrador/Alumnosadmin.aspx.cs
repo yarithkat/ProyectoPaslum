@@ -13,12 +13,27 @@ namespace ProjectPaslum.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                this.LlenarCarrera();
+            }
 
         }
+        private void LlenarCarrera()
+        {
+            ControllerAlumno CtrlAsignarC = new ControllerAlumno();
+            List<TblCarrera> carrera = CtrlAsignarC.ConsultaCarrera();
+            ddlCarrera.Items.Add("Seleccionar");
+            ddlCarrera.DataSource = carrera;
+            ddlCarrera.DataValueField = "id";
+            ddlCarrera.DataTextField = "strNombre";
+            ddlCarrera.DataBind();
 
+        }
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
         {
             var sex = cmbSexo.SelectedItem.Value;
+            var carrera = ddlCarrera.SelectedValue;
 
             if (FotoAlumno.HasFile)
             {
@@ -34,6 +49,7 @@ namespace ProjectPaslum.Administrador
                 alum.strCorreo = txtCorreoAgregar.Text;
                 alum.intMatricula = Int32.Parse(txtMatriculaAgregar.Text);
                 alum.bitFoto = path;
+                alum.idCarrera = int.Parse(carrera);
                 ControllerAlumno ctrlAlum = new ControllerAlumno();
                 ctrlAlum.InsertarAlum(GetDatosVista(alum));
             }

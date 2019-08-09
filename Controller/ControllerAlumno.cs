@@ -29,6 +29,11 @@ namespace Controller
             return respuesta;
 
         }
+
+        public List<TblCarrera> ConsultaCarrera()
+        {
+            return contexto.TblCarrera.ToList<TblCarrera>();
+        }
     }
 }
 

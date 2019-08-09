@@ -116,6 +116,13 @@
                                 Matricula
                             <asp:TextBox  id="txtMatriculaAgregar" class="form-control" required="required" type="text" runat="server"></asp:TextBox>
                         </div>
+                        <div class="form-grouo">
+                            <div class="col-xs-3">
+                                 <br />
+                                Carrera
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                              </div>
+                            </div>
                              </div>
                           <!-- Telefonos -->
                         <div class="form-group">
@@ -158,11 +165,7 @@
                                
                         </div>
                         
-                            <div class="col-xs-6">
-                                <br />
-                                Contraseña
-                            <asp:TextBox  id="txtContraseña" class="form-control" required="required" type="text" placeholder="Contraseña" runat="server" TextMode="Password"></asp:TextBox>
-                                </div>
+                          
                     </div>
                           <!-- Direccion -->
                          <div class="form-group">
@@ -238,7 +241,7 @@
                             <div class="modalfooter">
                           
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" />
+                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
                             </div>
                       
                             </div>

@@ -109,7 +109,7 @@ namespace ProjectPaslum
             }
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
-            
+
             if (UsuarioLoggeado != null)
             {
                 if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
@@ -119,12 +119,18 @@ namespace ProjectPaslum
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
                 {                    
                     var alumno = (from alum in contexto.TblAlumno where alum.idUser == UsuarioLoggeado.id select alum).FirstOrDefault();
-                    //*var alumnoNum = (from alumN int contexto.TblTelefono where alumN.idTelefono == )
+                    var alumnoTel = (from al in contexto.TblAlumno join tel in contexto.TblTelefono on al.idTelefono equals tel.id select new { celular = tel.strcelular, casa = tel.strtelCasa, otro =tel.strotro }).FirstOrDefault();
+                    var alumnoCar = (from alcar in contexto.TblAlumno join car in contexto.TblCarrera on alcar.idCarrera equals car.id select new { nombre = car.strNombre, area = car.strArea }).FirstOrDefault();
                     Session["nombre"] = alumno.strNombre;
                     Session["apellido1"] = alumno.strApellidoP;
                     Session["apellido2"] = alumno.strApellidoM;
                     Session["matricula"] = alumno.intMatricula;
                     Session["correo"] = alumno.strCorreo;
+                    Session["telefono1"] = alumnoTel.celular;
+                    Session["telefono2"] = alumnoTel.casa;
+                    Session["telefono3"] = alumnoTel.otro;
+                    Session["carrera"] = alumnoCar.nombre;
+                    Session["area"] = alumnoCar.area;
                     Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }
