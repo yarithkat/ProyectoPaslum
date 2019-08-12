@@ -112,10 +112,12 @@ bitFoto varchar(max),
 idDireccion int,
 idTelefono int,
 idUser int,
+idCarrera int,
 constraint pk_Alumno primary key (Id),
 constraint fkIdDireccion_Alumno foreign key(idDireccion) references TblDireccion(id),
 constraint fkIdTelefono_Alumno foreign key(idTelefono) references TblTelefono(id),
-constraint fkIdUser_Alumno foreign key(idUser) references TblUser(id)
+constraint fkIdUser_Alumno foreign key(idUser) references TblUser(id),
+constraint fkIdCarrera_Alumno foreign key(idCarrera) references TblCarrera(id)
 );
 
 

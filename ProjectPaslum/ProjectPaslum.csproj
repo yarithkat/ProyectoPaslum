@@ -263,6 +263,7 @@
     <Content Include="Alumno\css\style.css" />
     <Content Include="Alumno\DatosEscolares.aspx" />
     <Content Include="Alumno\DatosPersonales.aspx" />
+    <Content Include="Alumno\DatosPersonales1.aspx" />
     <Content Include="Alumno\fonts\flaticon\backup.txt" />
     <Content Include="Alumno\fonts\flaticon\font\flaticon.css" />
     <Content Include="Alumno\fonts\flaticon\font\flaticon.html" />
@@ -333,6 +334,7 @@
     <Content Include="Alumno\js\scrollax.min.js" />
     <Content Include="Alumno\PaseLista.aspx" />
     <Content Include="Alumno\PrincipalAlumno.aspx" />
+    <Content Include="Alumno\scss\PersoDatos.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -796,6 +798,13 @@
     </Compile>
     <Compile Include="Alumno\DatosPersonales.aspx.designer.cs">
       <DependentUpon>DatosPersonales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\DatosPersonales1.aspx.cs">
+      <DependentUpon>DatosPersonales1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\DatosPersonales1.aspx.designer.cs">
+      <DependentUpon>DatosPersonales1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Alumno\PaseLista.aspx.cs">
       <DependentUpon>PaseLista.aspx</DependentUpon>

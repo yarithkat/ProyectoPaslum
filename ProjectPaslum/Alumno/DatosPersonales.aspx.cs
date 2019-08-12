@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Controller;
+using Modelo;
 
 namespace ProjectPaslum.Alumno
 {
@@ -24,6 +26,11 @@ namespace ProjectPaslum.Alumno
                 TxtCarrera.Text = Session["carrera"].ToString();
                 TxtArea.Text = Session["area"].ToString();
             }
+        }
+
+        protected void BtnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
