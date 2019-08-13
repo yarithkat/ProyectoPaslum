@@ -58,6 +58,12 @@
                             <asp:TextBox runat="server" ID="txtNombre" class="form-control" required="" type="text"></asp:TextBox>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="col-xs-10">
+                            Descripción
+                            <asp:TextBox runat="server" ID="txtDescrip" class="form-control" required="" type="text"></asp:TextBox>
+                        </div>
+                    </div>
 
                     <br />
                     <br />
@@ -94,13 +100,31 @@
                             </div>
                                
                         </div>
+
+                         <!-- Seleccion de Carrera  -->
+                        <div class="form-grouo">
+                            <div class="col-xs-3">
+                                 <br />
+                                Carrera
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                              </div>
+                         </div>
+
+                         <!-- Seleccion de Carrera  -->
+                        <div class="form-grouo">
+                            <div class="col-xs-3">
+                                 <br />
+                                Cuatrimestre
+                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                              </div>
+                         </div>
                  
                   <br /> <br />  <br /> <br />
                    <div class="modal-footer">
                             <div class="modalfooter">
                              
                                   <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary"  Text="Cancelar" data-dismiss="modal"  />
-                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar"  />
+                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar" OnClick="btnaceptar_Click" />
                               </div>
                            </div>
                             </div> </div>

@@ -2,6 +2,14 @@ CREATE DATABASE pase_lista;
 USE pase_lista;
 drop database pase_lista;
 
+create table TblCuatri(
+id int not null identity(1,1),
+strNombre varchar(200),
+strFechaInicio date,
+strFechaFin date,
+constraint pk_Cuatri primary key(id)
+);
+
 create table TblJustificante(
 id  int not null primary key identity(1,1), 
 strMotivo varchar(50),
@@ -73,10 +81,12 @@ bStatus varchar(10),
 idCatalogoParcial int,
 idNota int,
 idCarrera int,
+idCuatri int,
 constraint pk_Materia primary key(id),
 constraint fkIdCatalogoParcial_Materia foreign key(idCatalogoParcial) references TblCatalogoParcial(id),
 constraint fkIdNota_Materia foreign key(idNota) references TblNota(id),
 constraint fkIdCarrera_Materia foreign key(idCarrera) references TblCarrera(id),
+constraint fkIdCuatri_Materia foreign key(idCuatri) references TblCuatri(id),
 );
 
 create table TblGrupo(
@@ -88,16 +98,6 @@ constraint pk_Grupo primary key(id),
 constraint fkIdCarrera_Grupo foreign key(idCarrera) references TblCarrera(id),
 );
 
-create table TblCuatri(
-id int not null identity(1,1),
-strNombre varchar(200),
-strPeriodo varchar(200),
-idCarrera int,
-idMateria int
-constraint pk_Cuatri primary key(id),
-constraint fkIdCarrera_Cuatri foreign key(idCarrera) references TblCarrera(id),
-constraint fkIdMateria_Cuatri foreign key(idMateria) references TblMateria(id)
-);
 
 create table TblAlumno(
 id int not null identity(1,1),
@@ -113,11 +113,13 @@ idDireccion int,
 idTelefono int,
 idUser int,
 idCarrera int,
+idCuatri int,
 constraint pk_Alumno primary key (Id),
 constraint fkIdDireccion_Alumno foreign key(idDireccion) references TblDireccion(id),
 constraint fkIdTelefono_Alumno foreign key(idTelefono) references TblTelefono(id),
 constraint fkIdUser_Alumno foreign key(idUser) references TblUser(id),
-constraint fkIdCarrera_Alumno foreign key(idCarrera) references TblCarrera(id)
+constraint fkIdCarrera_Alumno foreign key(idCarrera) references TblCarrera(id),
+constraint fkIdCuatri_Alumno foreign key(idCuatri) references TblCuatri(id),
 );
 
 
@@ -177,6 +179,9 @@ select * from TblProfesor;
 select * from TblUser;
 select * from TblCarrera;
 select * from TblAlumno;
+select * from tblMateria;
+select * from TblCuatri;
+select * from TblGrupo;
 
 SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,

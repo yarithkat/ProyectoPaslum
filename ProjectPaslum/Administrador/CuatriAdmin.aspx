@@ -33,6 +33,7 @@
                             <asp:Label ID="Label1" runat="server" Text="Agregar nuevo Cuatrimestre"></asp:Label>
                         </a>
                     </div>
+                         
                          </div>
                 </div>
             </div>
@@ -56,38 +57,22 @@
                                 Nombre
                             <asp:TextBox runat="server" ID="txtNombre" class="form-control" required="required" type="text"></asp:TextBox>
                             </div>
-                       
-                              <div class="col-xs-6">
-                               Periodo
-                            <asp:TextBox  id="txtperiodo" class="form-control" required="required" type="text" runat="server"></asp:TextBox>
-                                  
                         </div>
-                             </div>
                         <br />
                         <br />
                         <br />
                         <div class="form-group">
                    
                                <div class="col-xs-3">
-                               Carrera
-                           <asp:DropDownList ID="DropDownList1" runat="server" required="required">
-                                     <asp:ListItem Selected="True" Value="SELECCIONA"> --SELECCIONA-- </asp:ListItem>
-                                     <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                </asp:DropDownList>
+                               Fecha Inicio:
+                           <asp:Calendar ID="calInicio" runat="server"></asp:Calendar>
                             
                         </div>
                      
                                <div class="col-xs-3">
-                             Materia
-                            
-                                <asp:DropDownList ID="DropDownList2" runat="server" required="required">
-                                     <asp:ListItem Selected="True" Value="SELECCIONA"> --SELECCIONA-- </asp:ListItem>
-                                     <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                </asp:DropDownList>
+                                Fecha Fin:
+                            <asp:Calendar ID="calFin" runat="server"></asp:Calendar>
+                                
                             </div>
 
                             </div>
@@ -101,7 +86,7 @@
                             <div class="modalfooter">
                            
                                   <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary"  Text="Cancelar" data-dismiss="modal"  />
-                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar"  />
+                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar" OnClick="btnaceptar_Click" />
                           
                         </div>
                             </div>

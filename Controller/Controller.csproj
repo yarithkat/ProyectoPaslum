@@ -44,7 +44,10 @@
     <Compile Include="ControllerAlumno.cs" />
     <Compile Include="ControllerAutenticacion.cs" />
     <Compile Include="ControllerCarrera.cs" />
+    <Compile Include="ControllerCuatri.cs" />
+    <Compile Include="ControllerGrupo.cs" />
     <Compile Include="ControllerMaestro.cs" />
+    <Compile Include="ControllerMateria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

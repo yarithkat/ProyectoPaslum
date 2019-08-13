@@ -65,19 +65,13 @@
                         <br />
                         <br />
                         <br />
-                        <div class="form-group">
-                   
-                               <div class="col-xs-6">
-                               Carrera
-                           <asp:DropDownList ID="DropDownList1" runat="server" required="required">
-                                     <asp:ListItem Selected="True" Value="SELECCIONA"> --SELECCIONA-- </asp:ListItem>
-                                     <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                    <asp:ListItem Value="">  </asp:ListItem>
-                                </asp:DropDownList>
-                            
-                        </div>
-                            </div>
+                        <div class="form-grouo">
+                            <div class="col-xs-3">
+                                 <br />
+                                Carrera
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                              </div>
+                         </div>
                       
                         <br />
                         <br />
@@ -88,7 +82,7 @@
                             <div class="modalfooter">
                         
                                    <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary"  Text="Cancelar" data-dismiss="modal"  />
-                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar"  />
+                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar" OnClick="btnaceptar_Click" />
                           
                         </div>
                             </div>
