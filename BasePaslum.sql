@@ -107,7 +107,6 @@ strApellidoM varchar(200),
 intEdad int,
 strSexo varchar(100),
 strCorreo varchar(200),
-intMatricula int,
 bitFoto varchar(max),
 idDireccion int,
 idTelefono int,
@@ -189,3 +188,14 @@ SELECT pro.id ,pro.strNombre, pro.strApellidoP,
 FROM TblProfesor as pro
 inner join TblTelefono  as tel 
 on pro.idTelefono = tel.id;
+
+select al.id, al.strNombre, al.strApellidoP, al.strApellidoM, al.intMatricula,
+		us.strusuario, us.strpass,
+		car.strNombre, car.strArea		
+from TblAlumno as al
+inner join TblUser as us
+on al.idUser = us.id
+inner join TblCarrera as car
+on al.idCarrera = car.id
+order by al.id desc;
+

@@ -16,13 +16,16 @@ namespace ProjectPaslum.Alumno
             if (Session["nombre"] != null)
             {
                 TxtNombre.Text = Session["nombre"].ToString();
-                txtApellidoP.Text = Session["apellido1"].ToString();
-                txtApellidoM.Text = Session["apellido2"].ToString();
+                TxtApellidoP.Text = Session["apellido1"].ToString();
+                TxtApellidoM.Text = Session["apellido2"].ToString();
                 TxtMatricula.Text = Session["matricula"].ToString();
                 TxtCorreo.Text = Session["correo"].ToString();
+                TxtCalle.Text = Session["calle"].ToString();
+                TxtColonia.Text = Session["colonia"].ToString();
+                TxtMunicipio.Text = Session["municipio"].ToString();
                 TxtTelefono.Text = Session["telefono1"].ToString();
-                txtCelular.Text = Session["telefono2"].ToString();
-                txtOtro.Text = Session["telefono3"].ToString();
+                TxtCelular.Text = Session["telefono2"].ToString();
+                TxtOtro.Text = Session["telefono3"].ToString();
                 TxtCarrera.Text = Session["carrera"].ToString();
                 TxtArea.Text = Session["area"].ToString();
             }

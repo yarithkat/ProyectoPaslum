@@ -121,16 +121,20 @@ namespace ProjectPaslum
                     var alumno = (from alum in contexto.TblAlumno where alum.idUser == UsuarioLoggeado.id select alum).FirstOrDefault();
                     var alumnoTel = (from al in contexto.TblAlumno join tel in contexto.TblTelefono on al.idTelefono equals tel.id select new { celular = tel.strcelular, casa = tel.strtelCasa, otro =tel.strotro }).FirstOrDefault();
                     var alumnoCar = (from alcar in contexto.TblAlumno join car in contexto.TblCarrera on alcar.idCarrera equals car.id select new { nombre = car.strNombre, area = car.strArea }).FirstOrDefault();
+                    var alumnoDir = (from aldir in contexto.TblAlumno join dir in contexto.TblDireccion on aldir.idDireccion equals dir.id select new { calle = dir.strcalle, colonia = dir.strcolonia, municipio = dir.strmunicipio}).FirstOrDefault();
                     Session["nombre"] = alumno.strNombre;
                     Session["apellido1"] = alumno.strApellidoP;
                     Session["apellido2"] = alumno.strApellidoM;
-                    Session["matricula"] = alumno.intMatricula;
+                    Session["matricula"] = alumno.id;
                     Session["correo"] = alumno.strCorreo;
                     Session["telefono1"] = alumnoTel.celular;
                     Session["telefono2"] = alumnoTel.casa;
                     Session["telefono3"] = alumnoTel.otro;
                     Session["carrera"] = alumnoCar.nombre;
                     Session["area"] = alumnoCar.area;
+                    Session["calle"] = alumnoDir.calle;
+                    Session["colonia"] = alumnoDir.colonia;
+                    Session["municipio"] = alumnoDir.municipio;
                     Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }

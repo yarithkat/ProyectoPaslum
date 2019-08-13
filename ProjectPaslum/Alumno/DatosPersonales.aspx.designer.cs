@@ -22,22 +22,22 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.TextBox TxtNombre;
         
         /// <summary>
-        /// Control txtApellidoP.
+        /// Control TxtApellidoP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidoP;
+        protected global::System.Web.UI.WebControls.TextBox TxtApellidoP;
         
         /// <summary>
-        /// Control txtApellidoM.
+        /// Control TxtApellidoM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidoM;
+        protected global::System.Web.UI.WebControls.TextBox TxtApellidoM;
         
         /// <summary>
         /// Control TxtCarrera.
@@ -58,15 +58,6 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.TextBox TxtArea;
         
         /// <summary>
-        /// Control TxtCuatrimestre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCuatrimestre;
-        
-        /// <summary>
         /// Control TxtCorreo.
         /// </summary>
         /// <remarks>
@@ -85,6 +76,33 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.TextBox TxtMatricula;
         
         /// <summary>
+        /// Control TxtCalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCalle;
+        
+        /// <summary>
+        /// Control TxtColonia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtColonia;
+        
+        /// <summary>
+        /// Control TxtMunicipio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtMunicipio;
+        
+        /// <summary>
         /// Control TxtTelefono.
         /// </summary>
         /// <remarks>
@@ -94,22 +112,22 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.TextBox TxtTelefono;
         
         /// <summary>
-        /// Control txtCelular.
+        /// Control TxtCelular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCelular;
+        protected global::System.Web.UI.WebControls.TextBox TxtCelular;
         
         /// <summary>
-        /// Control txtOtro.
+        /// Control TxtOtro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOtro;
+        protected global::System.Web.UI.WebControls.TextBox TxtOtro;
         
         /// <summary>
         /// Control BtnEditar.

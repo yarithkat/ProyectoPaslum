@@ -14,22 +14,28 @@
               <label for="fname">Nombre: </label>
               <asp:TextBox ID="TxtNombre" runat="server" Enabled="false"></asp:TextBox>
               <label for="fname">Apellido Paterno: </label>
-              <asp:TextBox ID="TxtApellidoP" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TxtApellidoP" runat="server" Enabled="false"></asp:TextBox>
               <label for="fname">Apellido Materno: </label>
-              <asp:TextBox ID="TxtApellidoM" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TxtApellidoM" runat="server" Enabled="false"></asp:TextBox>
               <label for="lname">Carrera: </label>
-              <asp:TextBox ID="TxtCarrera" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TxtCarrera" runat="server" Enabled="false"></asp:TextBox>
               <label for="lname">Area: </label>
-              <asp:TextBox ID="TxtArea" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TxtArea" runat="server" Enabled="false"></asp:TextBox>
               <label for="country">Correo: </label>
               <asp:TextBox ID="TxtCorreo" runat="server"></asp:TextBox>
               <label for="subject">Matricula: </label>
-              <asp:TextBox ID="TxtMatricula" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TxtMatricula" runat="server" Enabled="false"></asp:TextBox>
+              <label for="subject">Calle: </label>
+              <asp:TextBox ID="TxtCalle" runat="server"></asp:TextBox>
+              <label for="subject">Colonia: </label>
+              <asp:TextBox ID="TxtColonia" runat="server"></asp:TextBox>
+              <label for="subject">Municipio: </label>
+              <asp:TextBox ID="TxtMunicipio" runat="server"></asp:TextBox>
               <label for="subject">Telefono: </label>
               <asp:TextBox ID="TxtTelefono" runat="server"></asp:TextBox>
                <label for="subject">Celular: </label>
               <asp:TextBox ID="TxtCelular" runat="server"></asp:TextBox>
-               <label for="subject">Otro: </label>
+               <label for="subject">Otro Telefono: </label>
               <asp:TextBox ID="TxtOtro" runat="server"></asp:TextBox>
               <asp:Button ID="BtnEditar" class="btn btn-info" runat="server" Text="Editar Datos"></asp:Button>
           </form>

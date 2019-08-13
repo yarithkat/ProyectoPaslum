@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
+    
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
          <style>
     #mdialTamanio{
       width: 150% !important;
@@ -110,12 +112,7 @@
                             <asp:FileUpload ID="FotoAlumno" runat="server" required="required" CssClass="form-control input-sm" />  
                            </div>
                     </div>
-                        <div class="form-group">
-                             <div class="col-xs-3">
-                                 <br />
-                                Matricula
-                            <asp:TextBox  id="txtMatriculaAgregar" class="form-control" required="required" type="text" runat="server"></asp:TextBox>
-                        </div>
+                        
                         <div class="form-grouo">
                             <div class="col-xs-3">
                                  <br />
@@ -123,7 +120,15 @@
                                 <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
                               </div>
                             </div>
-                             </div>
+
+                        <div class="form-grouo">
+                            <div class="col-xs-3">
+                                 <br />
+                                Cuatri
+                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                              </div>
+                            </div>
+                             
                           <!-- Telefonos -->
                         <div class="form-group">
                          <div class="col-xs-3">
@@ -250,5 +255,54 @@
           </div>
                   </div>
            </div>
+    
+    <%-- Editar o eliminar Carrera --%>   
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consulta de Carreras Registradas
+                </a>
+            </h4>
+        </div>
+        <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" DataKeyNames="id">
+                     <Columns>
+                       
+                         <asp:BoundField DataField="id" HeaderText="Matricula" SortExpression="id" />
+                         <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
+                         <asp:BoundField DataField="strApellidoP" HeaderText="Apellido P." SortExpression="strApellidoP" />
+                         <asp:BoundField DataField="strApellidoM" HeaderText="Apellido M." SortExpression="strApellidoM" />
+                         <asp:BoundField DataField="strusuario" HeaderText="Usuario" SortExpression="strusuario" />
+                         <asp:BoundField DataField="strpass" HeaderText="Contraseña" SortExpression="strpass" />
+                         <asp:BoundField DataField="strNombre1" HeaderText="Carrera" SortExpression="strNombre1" />
+                         <asp:BoundField DataField="strArea" HeaderText="Area" SortExpression="strArea" />
+                       
+                          
+                     </Columns>
+                     <FooterStyle BackColor="White" ForeColor="#000066" />
+                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"/>
+                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Center" />
+                        <RowStyle ForeColor="#000066" />
+                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                   
+                </asp:GridView>
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
+                     SelectCommand="select al.id, al.strNombre, al.strApellidoP, al.strApellidoM, 
+		us.strusuario, us.strpass,
+		car.strNombre, car.strArea		
+from TblAlumno as al
+inner join TblUser as us
+on al.idUser = us.id
+inner join TblCarrera as car
+on al.idCarrera = car.id
+order by al.id desc;"></asp:SqlDataSource>
+                 </div>
+            </div>
+        </div>
 </asp:Content>
 

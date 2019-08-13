@@ -34,6 +34,13 @@ namespace Controller
         {
             return contexto.TblCarrera.ToList<TblCarrera>();
         }
+
+        public List<TblCuatri> ConsultaCuatri()
+        {
+            return contexto.TblCuatri.ToList<TblCuatri>();
+        }
+
+
     }
 }
 
