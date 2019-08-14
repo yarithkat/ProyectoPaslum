@@ -123,24 +123,15 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" DataKeyNames="id">
                      <Columns>
                        
-                            <asp:TemplateField HeaderText="Editar">
-                                <ItemTemplate>
-                                    <asp:ImageButton runat="server" ID="imgEditar" CommandName="Editar" ImageUrl="Imagenes/editar.png" />
-                                </ItemTemplate>
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" Width="50px" />
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Eliminar" Visible="True">
-                                <ItemTemplate>
-                                    <asp:ImageButton runat="server" ID="imgEliminar" CommandName="Eliminar" ImageUrl="Imagenes/borrar.png"
-                   OnClientClick="javascript:return confirm('¿Está seguro de querer eliminar el registro seleccionado?', 'Mensaje de sistema')" />
-                                </ItemTemplate>
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" Width="50px" />
-                            </asp:TemplateField>
+                         <asp:CommandField ButtonType="Image" 
+                             CancelImageUrl="~/images/Iconos/IconCancelar.png" 
+                             DeleteImageUrl="~/images/Iconos/IconEliminar.png" ShowDeleteButton="True"
+                             EditImageUrl="~/images/Iconos/IconEditar.png" ShowEditButton="True"
+                             UpdateImageUrl="~/images/Iconos/IconGuardar.png" />
+                       
                          <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
                          <asp:BoundField DataField="strArea" HeaderText="Area" SortExpression="strArea" />
                          <asp:BoundField DataField="strClave" HeaderText="Clave" SortExpression="strClave" />
@@ -159,8 +150,18 @@
                    
                 </asp:GridView>
                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
-                     SelectCommand="select strNombre, strArea, strClave from TblCarrera;" 
-                     UpdateCommand="select strNombre, strArea, strClave from TblCarrera;"></asp:SqlDataSource>
+                     SelectCommand="SELECT id, strNombre, strArea, strClave FROM TblCarrera WHERE (bStatus = 1)" 
+                     DeleteCommand="UPDATE TblCarrera SET bStatus = '0' WHERE (id = @id)" 
+                     UpdateCommand="UPDATE TblCarrera SET strNombre = @strNombre, strArea = @strArea WHERE (id = @id)">
+                     <DeleteParameters>
+                         <asp:Parameter Name="id" />
+                     </DeleteParameters>
+                     <UpdateParameters>
+                         <asp:Parameter Name="strNombre" />
+                         <asp:Parameter Name="strArea" />
+                         <asp:Parameter Name="id" />
+                     </UpdateParameters>
+                 </asp:SqlDataSource>
                  </div>
             </div>
         </div>

@@ -189,7 +189,7 @@ FROM TblProfesor as pro
 inner join TblTelefono  as tel 
 on pro.idTelefono = tel.id;
 
-select al.id, al.strNombre, al.strApellidoP, al.strApellidoM, al.intMatricula,
+select al.id, al.strNombre, al.strApellidoP, al.strApellidoM,
 		us.strusuario, us.strpass,
 		car.strNombre, car.strArea		
 from TblAlumno as al
@@ -199,3 +199,16 @@ inner join TblCarrera as car
 on al.idCarrera = car.id
 order by al.id desc;
 
+select strNombre, strFechaInicio, strFechaFin from TblCuatri;
+
+select g.strNombre, g.strCapacidad, c.strnombre
+from TblGrupo g
+inner join TblCarrera c
+on g.idCarrera = c.id;
+
+select m.strNombre, m.strDescripcion, c.strnombre,cu.strnombre 
+from TblMateria m
+inner join TblCarrera c 
+on m.idCarrera = c.id
+inner join TblCuatri cu
+on m.idCuatri = cu.id;
