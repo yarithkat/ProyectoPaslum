@@ -48,6 +48,7 @@
     <Compile Include="ControllerGrupo.cs" />
     <Compile Include="ControllerMaestro.cs" />
     <Compile Include="ControllerMateria.cs" />
+    <Compile Include="ControllerQr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

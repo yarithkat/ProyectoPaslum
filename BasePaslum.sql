@@ -30,7 +30,8 @@ create table TblCarrera(
 id int not null identity(1,1),
 strClave varchar(200),
 strNombre varchar(200),
-strArea varchar(200)
+strArea varchar(200),
+bStatus varchar(10),
 constraint pk_Carrera primary key(id));
 
 create table TblUser(
@@ -170,6 +171,20 @@ constraint fkIdMateria_AlumnoMateria foreign key(idMateria) references TblMateri
 constraint fkIdNotas_AlumnoMateria foreign key(idNotas) references TblNota(id)
 );
 
+create table TblQR(
+id int not null identity(1,1),
+qr varchar(1000),
+fecha datetime,
+idProfesor int,
+idGrupo int,
+idMateria int,
+idCarrera int,
+constraint pk_QR primary key (id),
+constraint fkIdProfesor_QR foreign key(idProfesor) references TblProfesor(id),
+constraint fkIdGrupo_QR foreign key(idGrupo) references TblGrupo(id),
+constraint fkIdMateria_QR foreign key(idMateria) references TblMateria(id),
+constraint fkIdCarrera_QR foreign key(idCarrera) references TblCarrera(id),
+);
 
 
 select * from TblDireccion;
@@ -212,3 +227,7 @@ inner join TblCarrera c
 on m.idCarrera = c.id
 inner join TblCuatri cu
 on m.idCuatri = cu.id;
+
+update TblCarrera 
+set bStatus = 1
+where id = 2;
