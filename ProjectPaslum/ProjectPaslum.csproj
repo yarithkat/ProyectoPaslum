@@ -447,6 +447,10 @@
     <Content Include="Alumno\fonts\open-iconic\open-iconic.woff" />
     <Content Include="Alumno\js\.DS_Store" />
     <Content Include="Alumno\scss\style.scss" />
+    <Content Include="Profesor\DatosPersonales.aspx" />
+    <Content Include="Profesor\PaseLista.aspx" />
+    <Content Include="Profesor\PrincipalProfesor.aspx" />
+    <Content Include="Profesor\Profesor.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\bg_1.jpg" />
     <Content Include="images\bg_2.jpg" />
@@ -884,6 +888,34 @@
     </Compile>
     <Compile Include="Administrador\PrincipalAdministrador.aspx.designer.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\DatosPersonales.aspx.cs">
+      <DependentUpon>DatosPersonales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\DatosPersonales.aspx.designer.cs">
+      <DependentUpon>DatosPersonales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\PaseLista.aspx.cs">
+      <DependentUpon>PaseLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\PaseLista.aspx.designer.cs">
+      <DependentUpon>PaseLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\PrincipalProfesor.aspx.cs">
+      <DependentUpon>PrincipalProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\PrincipalProfesor.aspx.designer.cs">
+      <DependentUpon>PrincipalProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Profesor.Master.cs">
+      <DependentUpon>Profesor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Profesor.Master.designer.cs">
+      <DependentUpon>Profesor.Master</DependentUpon>
     </Compile>
     <Compile Include="Profesor\PruebaQr.aspx.cs">
       <DependentUpon>PruebaQr.aspx</DependentUpon>

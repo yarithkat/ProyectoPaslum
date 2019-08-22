@@ -114,7 +114,22 @@ namespace ProjectPaslum
             {
                 if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {
-                    Response.Redirect("./About.aspx", true);
+                    var profesor = (from profe in contexto.TblProfesor where profe.idUser == UsuarioLoggeado.id select profe).FirstOrDefault();
+                    var profesorTel = (from profeTel in contexto.TblProfesor join tel in contexto.TblTelefono on profeTel.idTelefono equals tel.id select new { celular = tel.strcelular, casa = tel.strtelCasa, otro = tel.strotro }).FirstOrDefault();
+                    var profesorDir = (from profeDir in contexto.TblProfesor join dir in contexto.TblDireccion on profeDir.idDireccion equals dir.id select new { calle = dir.strcalle, colonia = dir.strcolonia, municipio = dir.strmunicipio }).FirstOrDefault();
+                    Session["id"] = profesor.id;
+                    Session["nombre"] = profesor.strNombre;
+                    Session["apellido1"] = profesor.strApellidoP;
+                    Session["apellido2"] = profesor.strApellidoM;
+                    Session["matricula"] = profesor.id;
+                    Session["correo"] = profesor.strCorreo;
+                    Session["telefono1"] = profesorTel.celular;
+                    Session["telefono2"] = profesorTel.casa;
+                    Session["telefono3"] = profesorTel.otro;
+                    Session["calle"] = profesorDir.calle;
+                    Session["colonia"] = profesorDir.colonia;
+                    Session["municipio"] = profesorDir.municipio;
+                    Response.Redirect("./Profesor/PrincipalProfesor.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
                 {                    

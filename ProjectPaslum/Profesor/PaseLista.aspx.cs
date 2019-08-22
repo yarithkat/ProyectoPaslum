@@ -12,19 +12,18 @@ using Modelo;
 
 namespace ProjectPaslum.Profesor
 {
-    public partial class PruebaQr : System.Web.UI.Page
+    public partial class PaseLista : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["id"] != null)
             {
+                lbId.Text = Session["id"].ToString();
                 this.LlenarCarrera();
                 this.LlenarGrupo();
                 this.LlenarMateria();
-            }
-
+            }           
         }
-
         private void LlenarCarrera()
         {
             ControllerQr CtrlAsignarC = new ControllerQr();
@@ -60,11 +59,10 @@ namespace ProjectPaslum.Profesor
             ddlMateria.DataBind();
 
         }
-
         protected void btnGenerar_Click(object sender, EventArgs e)
         {
             var random = new Random();
-            var value = random.Next(0, 999999);
+            var value = random.Next(0, 999999999);
             var carrera = ddlCarrera.SelectedValue;
             var grupo = ddlGrupo.SelectedValue;
             var materia = ddlMateria.SelectedValue;
@@ -89,11 +87,11 @@ namespace ProjectPaslum.Profesor
             qr.idCarrera = int.Parse(carrera);
             qr.idGrupo = int.Parse(grupo);
             qr.idMateria = int.Parse(materia);
-
+            qr.idProfesor = Int32.Parse(lbId.Text);
             ControllerQr ctrlQr = new ControllerQr();
             ctrlQr.InsertarQr(qr);
 
-            
+
         }
     }
 }

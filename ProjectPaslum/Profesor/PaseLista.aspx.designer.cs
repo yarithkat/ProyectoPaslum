@@ -10,16 +10,7 @@
 namespace ProjectPaslum.Profesor {
     
     
-    public partial class PruebaQr {
-        
-        /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class PaseLista {
         
         /// <summary>
         /// Control ddlCarrera.
@@ -38,6 +29,15 @@ namespace ProjectPaslum.Profesor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlGrupo;
+        
+        /// <summary>
+        /// Control lbId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbId;
         
         /// <summary>
         /// Control ddlMateria.
