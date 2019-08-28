@@ -448,6 +448,7 @@
     <Content Include="Alumno\js\.DS_Store" />
     <Content Include="Alumno\scss\style.scss" />
     <Content Include="Profesor\DatosPersonales.aspx" />
+    <Content Include="Profesor\estilos.css" />
     <Content Include="Profesor\PaseLista.aspx" />
     <Content Include="Profesor\PrincipalProfesor.aspx" />
     <Content Include="Profesor\Profesor.Master" />
@@ -503,7 +504,6 @@
     <Content Include="js\popper.min.js" />
     <Content Include="js\scrollax.min.js" />
     <Content Include="Administrador\PrincipalAdministrador.aspx" />
-    <Content Include="Profesor\PruebaQr.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -916,13 +916,6 @@
     </Compile>
     <Compile Include="Profesor\Profesor.Master.designer.cs">
       <DependentUpon>Profesor.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Profesor\PruebaQr.aspx.cs">
-      <DependentUpon>PruebaQr.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profesor\PruebaQr.aspx.designer.cs">
-      <DependentUpon>PruebaQr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

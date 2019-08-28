@@ -19,6 +19,20 @@
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Paslum</title>
+     
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="estilos.css" rel="stylesheet" />
+      <script type="text/javascript">
+          $(function () {
+              $('.toggle-menu').click(function () {
+                  $('.exo-menu').toggleClass('display');
+
+              });
+
+          });
+      </script>
+ 
 </head>
 <body>
     <form id="form1" runat="server">
@@ -42,23 +56,44 @@
 				    </div>
 			    </div>
 		    </div>
+
+            
 		  </div>
+       
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        <li class="nav-item"><a href="PrincipalProfesor.aspx" class="nav-link pl-0">Inicio</a></li>
-            <li class="nav-item"><a href="PaseLista.aspx" class="nav-link pl-0">Pasar Lista</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#popUpWindow">Perfil</a></li>
-            <li class="nav-item"><a href="../IndexPaslum.aspx" class="nav-link pl-0" >Cerrar Sesion</a></li>	   
-	        </ul>
-	      </div>
+			<ul class="exo-menu">
+			<li><a class="active" href="PrincipalProfesor.aspx"><i class="fa fa-home"></i> Inicio</a></li>
+			<li class="drop-down"><a href="#"><i class="fa fa-cogs"></i>Datos Escolares</a>
+				<!--Drop Down-->
+				<ul class="drop-down-ul animated fadeIn">
+				<li class="flyout-right"><a href="#">Calificaciones</a><!--Flyout Right-->
+					<ul class="animated fadeIn">
+						<li><a href="#">ver</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Alumnos</a></li>
+				<li><a href="#" class="icon-chat"> Justificantes</a></li>
+                <li><a href="#">Asistencia</a></li>
+                <li><a href="#"class="fa fa-calendar-o" >  Calendario de evaluciones</a></li>
+                
+				</ul>
+				<!--//End drop down-->
+			
+			</li>
+                <li><a href="DatosPersonales.aspx"><i class="icon-person"></i>Perfil</a></li>
+			<li><a href="PaseLista.aspx"><i class="fa fa-address-card-o"></i> Pase de Lista</a></li>
+			
+			<li><a href="DatosPersonales.aspx"><i class="fa fa-bell-o"></i>Notificaciones</a></li>		
+	</ul>
+			
 	    </div>
 	  </nav>
+        
      <div class="container body-content">
          <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
