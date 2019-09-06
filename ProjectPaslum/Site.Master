@@ -96,7 +96,7 @@ h1{
 .login-box input[type="submit"]:hover
 {
     cursor: pointer;
-    background: #39dc79;
+    background:#0a0889;
     color: #000000
 }
 
@@ -205,7 +205,7 @@ h1{
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">INFORMES RECIENTES</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(Alumno/images/ut5.jpg);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Servicios:</a></h3>
                   <div class="meta">

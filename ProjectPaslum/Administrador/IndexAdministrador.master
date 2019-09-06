@@ -5,10 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
   <title>PASLUM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+ 
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -16,15 +13,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <!-- Graph CSS -->
     <link href="css/font-awesome.css" rel="stylesheet"/>
-    <!-- jQuery -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css' />
-    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
-    <!-- lined-icons -->
-    <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-    <script src="js/simpleCart.min.js"> </script>
-    <script src="js/amcharts.js"></script>
-    <script src="js/serial.js"></script>
-    <script src="js/light.js"></script>
+    <!--Icons -->
+    <link href="../css/ionicons.min.css" rel="stylesheet" />
+    <link href="../css/icomoon.css" rel="stylesheet" />
     <!-- //lined-icons -->
     <script src="js/jquery-1.10.2.min.js"></script>
     <!--pie-chart--->
@@ -82,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="header_top">
                             <div class="top_right">
                                 <ul>       
-                                    <li><a href="PrincipalAdministrador.aspx">Inicio</></li>
+                                    <li><a href="PrincipalAdministrador.aspx">Inicio</a></></li>
                                     <li><a href="../IndexPaslum.aspx">Salir</a></li>     
                                 </ul>
                             </div>
@@ -112,13 +103,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div style="border-top: 1px ridge rgba(255, 255, 255, 0.15)"></div>
             <div class="menu">
                 <ul id="menu">
-                    <li><a href="../IndexPaslum.aspx"><i class="fa fa-tachometer"></i><span>Inicio</span></a></li>
-                    <li><a href="Maestrosadmin.aspx"> <i class="lnr lnr-pencil"></i><span>Maestros</span></a></li>
-                    <li><a href="Alumnosadmin.aspx"><i class="lnr lnr-pencil"></i><span>Alumnos</span></a></li>
-                     <li><a href="CarrerasAdmin.aspx"> <i class="lnr lnr-pencil"></i><span>Carreras</span></a></li>
-                    <li><a href="Materiadmin.aspx"> <i class="lnr lnr-pencil"></i><span>Materias</span></a></li>
-                    <li><a href="CuatriAdmin.aspx"><i class="lnr lnr-pencil"></i><span>Cuatrimestres</span></a></li>
-                    <li><a href="GruposAdmin.aspx"><i class="lnr lnr-pencil"></i><span>Grupos</span></></li>
+                    <li><a href="PrincipalAdministrador.aspx" class="icon-home"><span> Inicio</span></a></li>
+                    <li><a href="Maestrosadmin.aspx" class="icon-pencil"><span> Maestros</span></a></li>
+                    <li><a href="Alumnosadmin.aspx"  class="icon-pencil"><span> Alumnos</span></a></li>
+                    <li><a href="CarrerasAdmin.aspx" class="icon-pencil"><span> Carreras</span></a></li>
+                    <li><a href="CuatriAdmin.aspx"  class="icon-pencil"><span> Cuatrimestres</span></a></li>
+                    <li><a href="Materiadmin.aspx"  class="icon-pencil"><span> Materias</span></a></li>
+                    <li><a href="GruposAdmin.aspx"  class="icon-pencil"><span> Grupos</span></a></></li>
                    
                 </ul>
             </div>
@@ -361,11 +352,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </script>
     <script src="js/menu_jquery.js"></script>
- 
-
- 
-
-
          </form>
 </body>
 </html>

@@ -2,12 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
     <link href="css/modales.css" rel="stylesheet" />
        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
      <style>
@@ -28,7 +22,7 @@
                      <div class="button">
                     <div class="col-sm-6">
                         <a class="btn btn-success" data-toggle="modal" href="#addgrupoModal">
-                            <i class="material-icons"> 
+                            <i class="icon-add">
                             </i>
                             <asp:Label ID="Label1" runat="server" Text="Agregar nuevo grupo"></asp:Label>
                         </a>
@@ -40,6 +34,7 @@
     </div>
       <!-- Agregar Modal Grupo-->
     <div class="modal fade" id="addgrupoModal">
+                <div class="left">
         <div class="modal-dialog">
             <div class="modal-content">
                
@@ -91,6 +86,7 @@
             </div>
         </div>
     </div>
+            </div>
         <%-- Editar o eliminar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">

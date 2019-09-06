@@ -3,11 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
     
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
@@ -21,15 +16,13 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h2>Administrar
-                                <b>Alumnos
-                                </b>
+                                <b>Alumnos </b>
                         </h2>
                     </div>
                     <div class="button">
                     <div class="col-sm-6">
                         <a class="btn btn-success" data-toggle="modal" href="#addAlumnoModal">
-                            <i class="material-icons"> 
-                            </i>
+                            <i class="icon-add"> </i>
                               <asp:Label ID="Label1" runat="server" Text="Agregar nuevo Alumno"></asp:Label>
                         </a> 
                     </div>
@@ -40,12 +33,12 @@
     </div>
       <!-- Agregar Modal alumno-->   
     <div class="modal fade" tabindex="-1" role="dialog" id="addAlumnoModal">
-        <div class="left">
-        <div class="modal-dialog" id="mdialTamanio">
-            <div class="modal-content">
+       <div class="left">
+             <div class="modal-dialog"  id="mdialTamanio">
+        <div class="modal-content">
                
                     <div class="modal-header">
-                        <h4 class="modal-title">Agregar Alumno</h4>
+                        <h4 class="modal-title">REGISTRAR ALUMNO</h4>
                         <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
                                 ×
                             </button>

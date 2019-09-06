@@ -5,13 +5,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
        <style>
     #mdialTamanio{
-      width: 150% !important;
+      width: 200% !important;
     }
   </style>
     <div class="content">
@@ -25,8 +23,7 @@
                 <div class="button">
                     <div class="col-sm-6">
                         <a class="btn btn-success" data-toggle="modal" href="#addMaestroModal">
-                            <i class="material-icons"> 
-                            </i>
+                            <i class="icon-add"> </i>
                             <asp:Label ID="Label1" runat="server" Text="Agregar nuevo Maestro"></asp:Label>
                         </a>
                     </div>
@@ -41,7 +38,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h4 class="modal-title">Agregar Maestro </h4>
+                <h4 class="modal-title">REGISTRAR MAESTRO</h4>
                 <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
                     ×
                 </button>
@@ -282,9 +279,9 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-    </div>
+      </div>
+             </div>
+       </div>
     <%-- Editar o eliminar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">

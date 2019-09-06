@@ -206,47 +206,24 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Administrador\Alumnosadmin.aspx" />
     <Content Include="Administrador\CarrerasAdmin.aspx" />
-    <Content Include="Administrador\css\atlas.css" />
     <Content Include="Administrador\css\bootstrap.min.css" />
-    <Content Include="Administrador\css\clndr.css" />
-    <Content Include="Administrador\css\fabochart.css" />
-    <Content Include="Administrador\css\flexslider.css" />
     <Content Include="Administrador\css\font-awesome.css" />
-    <Content Include="Administrador\css\graph.css" />
-    <Content Include="Administrador\css\icon-font.min.css" />
     <Content Include="Administrador\css\modales.css" />
-    <Content Include="Administrador\css\owl.carousel.css" />
     <Content Include="Administrador\css\style.css" />
     <Content Include="Administrador\CuatriAdmin.aspx" />
-    <Content Include="Administrador\fonts\fontawesome-webfont.svg" />
-    <Content Include="Administrador\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Administrador\GruposAdmin.aspx" />
     <Content Include="Administrador\Imagenes\asistencia_aula.jpg" />
     <Content Include="Administrador\Imagenes\borrar.png" />
     <Content Include="Administrador\Imagenes\editar.png" />
     <Content Include="Administrador\Imagenes\images.jpg" />
     <Content Include="Administrador\Imagenes\nilños.png" />
-    <Content Include="Administrador\js\amcharts.js" />
     <Content Include="Administrador\js\bootstrap.min.js" />
-    <Content Include="Administrador\js\cbpFWTabs.js" />
-    <Content Include="Administrador\js\Chart.js" />
-    <Content Include="Administrador\js\clndr.js" />
-    <Content Include="Administrador\js\imagezoom.js" />
     <Content Include="Administrador\js\jquery-1.10.2.min.js" />
-    <Content Include="Administrador\js\jquery.flexslider.js" />
-    <Content Include="Administrador\js\jquery.flot.js" />
     <Content Include="Administrador\js\jquery.fn.gantt.js" />
     <Content Include="Administrador\js\jquery.nicescroll.js" />
-    <Content Include="Administrador\js\light.js" />
     <Content Include="Administrador\js\menu_jquery.js" />
-    <Content Include="Administrador\js\moment-2.2.1.js" />
-    <Content Include="Administrador\js\owl.carousel.js" />
     <Content Include="Administrador\js\pie-chart.js" />
     <Content Include="Administrador\js\scripts.js" />
-    <Content Include="Administrador\js\serial.js" />
-    <Content Include="Administrador\js\simpleCart.min.js" />
-    <Content Include="Administrador\js\site.js" />
-    <Content Include="Administrador\js\underscore-min.js" />
     <Content Include="Administrador\Maestrosadmin.aspx" />
     <Content Include="Administrador\Materiadmin.aspx" />
     <Content Include="Alumno\DatosEscolares.aspx" />
@@ -279,6 +256,7 @@
     <Content Include="css\css\bootstrap-reboot.css" />
     <Content Include="css\css\mixins\_text-hide.css" />
     <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.css" />
     <Content Include="css\icomoon.css" />
     <Content Include="css\ionicons.min.css" />
     <Content Include="css\magnific-popup.css" />
@@ -336,16 +314,9 @@
     <Content Include="fonts\ionicons\fonts\ionicons.woff" />
     <Content Include="fonts\ionicons\fonts\ionicons.woff2" />
     <Content Include="Administrador\IndexAdministrador.master" />
-    <Content Include="Administrador\fonts\fontawesome-webfont.eot" />
-    <Content Include="Administrador\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Administrador\fonts\fontawesome-webfont.woff" />
-    <Content Include="Administrador\fonts\FontAwesome.otf" />
-    <Content Include="Administrador\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Administrador\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Administrador\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Administrador\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Alumno\Alumno.Master" />
     <Content Include="Alumno\scss\style.scss" />
+    <Content Include="Profesor\Notificacion.aspx" />
     <Content Include="Profesor\DatosPersonales.aspx" />
     <Content Include="Profesor\estilos.css" />
     <Content Include="Profesor\PaseLista.aspx" />
@@ -787,6 +758,13 @@
     </Compile>
     <Compile Include="Administrador\PrincipalAdministrador.aspx.designer.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Notificacion.aspx.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Notificacion.aspx.designer.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor\DatosPersonales.aspx.cs">
       <DependentUpon>DatosPersonales.aspx</DependentUpon>

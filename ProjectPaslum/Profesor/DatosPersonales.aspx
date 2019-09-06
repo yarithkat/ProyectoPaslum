@@ -10,7 +10,7 @@
       <img src="../Alumno/images/Profile.jpg" style="width:50%">
     </div>
        <div class="column">
-          <form action="/action_page.php">
+ 
               <label for="fname">Nombre: </label>
               <asp:TextBox ID="TxtNombre" runat="server" Enabled="false"></asp:TextBox>
               <label for="fname">Apellido Paterno: </label>
@@ -32,7 +32,7 @@
                <label for="subject">Otro Telefono: </label>
               <asp:TextBox ID="TxtOtro" runat="server"></asp:TextBox>
               <asp:Button ID="BtnEditar" class="btn btn-info" runat="server" Text="Editar Datos"></asp:Button>
-          </form>
+          
       </div>
   </div>
 </div>

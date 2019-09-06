@@ -7,6 +7,9 @@
     border-radius: 3px 3px 0 0;
     vertical-align: text-top;
 }
+.modal-header {
+    background: #435d7d;
+}
 
 .modalfooter {
     float: right;
@@ -30,11 +33,11 @@
 
 .modal .modal-content {
     border-radius: 3px;
-    background-image: url('../../images/bg_4.jpg');
+    
 }
 
 .modal .modal-title {
-    display: inline-block;
+    display:inline
 }
 
 .modal .form-control {

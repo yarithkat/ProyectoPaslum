@@ -1,13 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Administrador/IndexAdministrador.master" AutoEventWireup="true" CodeBehind="Materiadmin.aspx.cs" Inherits="ProjectPaslum.Administrador.Materiadmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/modales.css" rel="stylesheet" />
      <link href="../Content/bootstrap.min.css" rel="stylesheet" />
 
@@ -29,7 +22,7 @@
                     <div class="button">
                     <div class="col-sm-6">
                         <a class="btn btn-success" data-toggle="modal" href="#addMateriaModal">
-                            <i class="material-icons"> 
+                            <i class="icon-add">
                             </i>
                               <asp:Label ID="Label1" runat="server" Text="Agregar nueva Materia"></asp:Label>
                         </a> 
@@ -41,6 +34,7 @@
     </div>
     <!-- Agregar Modal Materia-->
     <div class="modal fade" id="addMateriaModal">
+         <div class="left">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -131,7 +125,7 @@
                             </div> </div>
             </div>
         </div>
-    
+          </div>
        <%-- Editar o eliminar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
