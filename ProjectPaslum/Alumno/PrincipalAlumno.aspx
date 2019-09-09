@@ -53,7 +53,7 @@
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="../IndexPaslum.aspx"><h3 class="heading">Datos Escolares</h3></a>
+                <a href="DatosEscolares.aspx"><h3 class="heading">Datos Escolares</h3></a>
                 <p>Cosulta tus calificaciones y notas asignadas.</p>
               </div>
             </div>      
@@ -64,8 +64,8 @@
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <a href="../IndexPaslum.aspx"><h3 class="heading">Pase de Lista</h3></a>
-                <p>Tomar asistencia, Generador de QR.</p>
+                <a href="Notas.aspx"><h3 class="heading">Notas</h3></a>
+                <p>Visualizar notas importantes</p>
               </div>
             </div>      
           </div>
