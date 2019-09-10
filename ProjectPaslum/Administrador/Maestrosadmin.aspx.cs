@@ -60,7 +60,7 @@ namespace ProjectPaslum.Administrador
             telefono.strotro = txtTelotro.Text.ToUpper();
 
             TblUser login = new TblUser();
-            login.strusuario = "UTTT" + login.id;
+            login.strusuario = txtCorreoAgregar.Text;
             login.strpass = value.ToString();
             login.strtipoUsuario = "PROFESOR";
 

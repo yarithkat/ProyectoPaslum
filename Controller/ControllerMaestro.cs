@@ -30,6 +30,26 @@ namespace Controller
             return respuesta;
 
         }
+        public void Editar(TblProfesor profe, TblTelefono tel)
+        {
+            TblProfesor profeBd = contexto.TblProfesor
+                .Where(t => t.id == profe.id).FirstOrDefault();
+            if (profeBd != null)
+            {
+                profeBd.strCorreo = profe.strCorreo;
+                contexto.SubmitChanges();
+            }
+
+            TblTelefono telBd = contexto.TblTelefono
+                .Where(t => t.id == tel.id).FirstOrDefault();
+            if (telBd != null)
+            {
+                telBd.strcelular = tel.strcelular;
+                telBd.strtelCasa = tel.strtelCasa;
+                telBd.strotro = tel.strotro;
+                contexto.SubmitChanges();
+            }
+        }
     }
 }
 

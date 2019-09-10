@@ -129,6 +129,7 @@ namespace ProjectPaslum
                     Session["calle"] = profesorDir.calle;
                     Session["colonia"] = profesorDir.colonia;
                     Session["municipio"] = profesorDir.municipio;
+                    Session["forTel"] = profesor.idTelefono;
                     Response.Redirect("./Profesor/PrincipalProfesor.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
