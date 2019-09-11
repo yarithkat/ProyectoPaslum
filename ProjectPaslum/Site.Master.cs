@@ -130,6 +130,7 @@ namespace ProjectPaslum
                     Session["colonia"] = profesorDir.colonia;
                     Session["municipio"] = profesorDir.municipio;
                     Session["forTel"] = profesor.idTelefono;
+                    Session["forDom"] = profesor.idDireccion;
                     Response.Redirect("./Profesor/PrincipalProfesor.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "ALUMNO")
@@ -151,6 +152,8 @@ namespace ProjectPaslum
                     Session["calle"] = alumnoDir.calle;
                     Session["colonia"] = alumnoDir.colonia;
                     Session["municipio"] = alumnoDir.municipio;
+                    Session["forTel"] = alumno.idTelefono;
+                    Session["forDom"] = alumno.idDireccion;
                     Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }

@@ -26,24 +26,82 @@ namespace ProjectPaslum.Profesor
                 lbTelefono.Text = Session["telefono1"].ToString();
                 lbCelular.Text = Session["telefono2"].ToString();
                 lbOtro.Text = Session["telefono3"].ToString();
+                lbforTel.Text = Session["forTel"].ToString();
+                lbforDom.Text = Session["forDom"].ToString();
             }
+            
         }
 
         protected void BtnEditar_Click(object sender, EventArgs e)
         {
             TblProfesor prof = new TblProfesor();
             prof.id = Convert.ToInt32(Session["id"]);
-            prof.strCorreo = TxtCorreo.Text;
+            if (TxtCorreo != null)
+            {
+                prof.strCorreo = TxtCorreo.Text;
+            }
+            else if (TxtCorreo == null)
+            {
+                prof.strCorreo = lbcorreo.Text;
+            }
 
             TblTelefono tel = new TblTelefono();
-            prof.idTelefono = Convert.ToInt32(Session["forTel"]);
-            tel.strcelular = TxtCelular.Text;
-            tel.strtelCasa = TxtTelefono.Text;
-            tel.strotro = TxtOtro.Text;
+            tel.id = Convert.ToInt32(Session["forTel"]);
+            if(TxtCelular != null) { 
+                tel.strcelular = TxtCelular.Text;
+            }
+            else if (TxtCelular == null)
+            {
+                tel.strcelular = lbCelular.Text;
+            }
+            if (TxtTelefono != null)
+            {
+                tel.strtelCasa = TxtTelefono.Text;
+            }
+            else if (TxtTelefono == null)
+            {
+                tel.strtelCasa = lbTelefono.Text;
+            }
+            if (TxtOtro != null)
+            {
+                tel.strotro = TxtOtro.Text;
+            }
+            else if (TxtOtro == null)
+            {
+                tel.strotro = lbOtro.Text;
+            }
+
+            TblDireccion dom = new TblDireccion();
+            dom.id = Convert.ToInt32(Session["forDom"]);
+            if (TxtCalle != null)
+            {
+                dom.strcalle = TxtCalle.Text;
+            }
+            else if (TxtCalle == null)
+            {
+                dom.strcalle = lbCalle.Text;
+            }
+            if (TxtColonia != null)
+            {
+                dom.strcolonia = TxtColonia.Text;
+            }
+            else if (TxtColonia == null)
+            {
+                dom.strcolonia = lbColonia.Text;
+            }
+            if (TxtMunicipio != null)
+            {
+                dom.strmunicipio = TxtMunicipio.Text;
+            }
+            else if (TxtMunicipio == null)
+            {
+                dom.strmunicipio = lbMunicipio.Text;
+            }
 
 
             ControllerMaestro ctrlProfe = new ControllerMaestro();
-            ctrlProfe.Editar(prof, tel);
+            ctrlProfe.Editar(prof, tel, dom);
+            this.Response.Redirect("./DatosPersonales.aspx", true);
         }
     }
 }

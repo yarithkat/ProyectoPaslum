@@ -11,9 +11,9 @@
     </div>
        <div class="column">
  
-              <label for="fname">Nombre: </label>
-              <asp:TextBox ID="TxtNombre" runat="server" Enabled="false"></asp:TextBox>
-              <label for="fname">Apellido Paterno: </label>
+              <label for="fname">Nombre: </label><asp:Label ID="lbforTel" runat="server" Text="Label" Visible="false"></asp:Label>
+              <asp:TextBox ID="TxtNombre" runat="server" Enabled="false"></asp:TextBox>              
+              <label for="fname">Apellido Paterno: </label><asp:Label ID="lbforDom" runat="server" Text="Label" Visible="false"></asp:Label>
               <asp:TextBox ID="TxtApellidoP" runat="server" Enabled="false"></asp:TextBox>
               <label for="fname">Apellido Materno: </label>
               <asp:TextBox ID="TxtApellidoM" runat="server" Enabled="false"></asp:TextBox>

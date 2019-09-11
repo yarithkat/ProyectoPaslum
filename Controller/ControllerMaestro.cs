@@ -30,7 +30,7 @@ namespace Controller
             return respuesta;
 
         }
-        public void Editar(TblProfesor profe, TblTelefono tel)
+        public void Editar(TblProfesor profe, TblTelefono tel, TblDireccion dom)
         {
             TblProfesor profeBd = contexto.TblProfesor
                 .Where(t => t.id == profe.id).FirstOrDefault();
@@ -47,6 +47,16 @@ namespace Controller
                 telBd.strcelular = tel.strcelular;
                 telBd.strtelCasa = tel.strtelCasa;
                 telBd.strotro = tel.strotro;
+                contexto.SubmitChanges();
+            }
+
+            TblDireccion domBd = contexto.TblDireccion
+                .Where(t => t.id == dom.id).FirstOrDefault();
+            if (domBd != null)
+            {
+                domBd.strcalle = dom.strcalle;
+                domBd.strcolonia = dom.strcolonia;
+                domBd.strmunicipio = dom.strmunicipio;
                 contexto.SubmitChanges();
             }
         }

@@ -13,6 +13,15 @@ namespace ProjectPaslum.Alumno {
     public partial class DatosPersonales {
         
         /// <summary>
+        /// Control lbforTel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbforTel;
+        
+        /// <summary>
         /// Control TxtNombre.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace ProjectPaslum.Alumno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtNombre;
+        
+        /// <summary>
+        /// Control lbforDom.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbforDom;
         
         /// <summary>
         /// Control TxtApellidoP.

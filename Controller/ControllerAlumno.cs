@@ -39,7 +39,7 @@ namespace Controller
         {
             return contexto.TblCuatri.ToList<TblCuatri>();
         }
-        public void Editar(TblAlumno alum, TblTelefono tel)
+        public void Editar(TblAlumno alum, TblTelefono tel, TblDireccion dom)
         {
             TblAlumno alumBd = contexto.TblAlumno
                 .Where(t => t.id == alum.id).FirstOrDefault();
@@ -56,6 +56,16 @@ namespace Controller
                 telBd.strcelular = tel.strcelular;
                 telBd.strtelCasa = tel.strtelCasa;
                 telBd.strotro = tel.strotro;
+                contexto.SubmitChanges();
+            }
+
+            TblDireccion domBd = contexto.TblDireccion
+                .Where(t => t.id == dom.id).FirstOrDefault();
+            if (domBd != null)
+            {
+                domBd.strcalle = dom.strcalle;
+                domBd.strcolonia = dom.strcolonia;
+                domBd.strmunicipio = dom.strmunicipio;
                 contexto.SubmitChanges();
             }
         }
