@@ -71,7 +71,7 @@
               </label>
               </label>
               <asp:TextBox ID="TxtOtro" runat="server"></asp:TextBox>
-              <asp:Button ID="BtnEditar" class="btn btn-info" runat="server" Text="Editar Datos"></asp:Button>
+              <asp:Button ID="BtnEditar" class="btn btn-info" runat="server" Text="Editar Datos" OnClick="BtnEditar_Click"></asp:Button>
          
       </div>
   </div>

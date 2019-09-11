@@ -37,72 +37,71 @@ namespace ProjectPaslum.Alumno
         {
             TblAlumno alum = new TblAlumno();
             alum.id = Convert.ToInt32(Session["id"]);
-            if (TxtCorreo != null)
+            if (TxtCorreo.Text.Length > 1)
             {
                 alum.strCorreo = TxtCorreo.Text;
             }
-            else if (TxtCorreo == null)
+            else
             {
                 alum.strCorreo = lbcorreo.Text;
             }
 
             TblTelefono tel = new TblTelefono();
             tel.id = Convert.ToInt32(Session["forTel"]);
-            if (TxtCelular != null)
+            if (TxtCelular.Text.Length > 1)
             {
                 tel.strcelular = TxtCelular.Text;
             }
-            else if (TxtCelular == null)
+            else
             {
                 tel.strcelular = lbCelular.Text;
             }
-            if (TxtTelefono != null)
+            if (TxtTelefono.Text.Length > 1)
             {
-                tel.strtelCasa = TxtTelefono.Text;
+                tel.strtelCasa = TxtTelefono.Text;                             
             }
-            else if (TxtTelefono == null)
+            else
             {
                 tel.strtelCasa = lbTelefono.Text;
             }
-            if (TxtOtro != null)
+            if (TxtOtro.Text.Length > 1)
             {
                 tel.strotro = TxtOtro.Text;
             }
-            else if (TxtOtro == null)
+            else
             {
                 tel.strotro = lbOtro.Text;
             }
 
             TblDireccion dom = new TblDireccion();
             dom.id = Convert.ToInt32(Session["forDom"]);
-            if (TxtCalle != null)
+            if (TxtCalle.Text.Length > 1)
             {
                 dom.strcalle = TxtCalle.Text;
             }
-            else if (TxtCalle == null)
+            else
             {
                 dom.strcalle = lbCalle.Text;
             }
-            if (TxtColonia != null)
+            if (TxtColonia.Text.Length > 1)
             {
                 dom.strcolonia = TxtColonia.Text;
             }
-            else if (TxtColonia == null)
+            else
             {
                 dom.strcolonia = lbColonia.Text;
             }
-            if (TxtMunicipio != null)
+            if (TxtMunicipio.Text.Length > 1)
             {
                 dom.strmunicipio = TxtMunicipio.Text;
             }
-            else if (TxtMunicipio == null)
+            else
             {
                 dom.strmunicipio = lbMunicipio.Text;
             }
-
-
             ControllerAlumno ctrlAlum = new ControllerAlumno();
-            ctrlAlum.Editar(alum,tel, dom);
+            ctrlAlum.Editar(alum,tel,dom);
+            this.Response.Redirect("./DatosPersonales.aspx", true);
         }
     }
 }
