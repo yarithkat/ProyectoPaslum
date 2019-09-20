@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
+    
     <link href="css/modales.css" rel="stylesheet" />
     
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
@@ -34,7 +34,7 @@
       <!-- Agregar Modal alumno-->   
     <div class="modal fade" tabindex="-1" role="dialog" id="addAlumnoModal">
        <div class="left">
-             <div class="modal-dialog"  id="mdialTamanio">
+             <div class="modal-dialog modal-sm"  id="mdialTamanio">
         <div class="modal-content">
                
                     <div class="modal-header">

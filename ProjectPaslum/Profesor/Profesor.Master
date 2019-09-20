@@ -67,7 +67,7 @@
                     <li class="drop-down"><a href="#"><i class="icon-cogs"></i>Datos Escolares</a>
                         <!--Drop Down-->
                         <ul class="drop-down-ul animated fadeIn">
-                            <li><a href="#" class="icon-address-book"> Calificaciones</a>
+                            <li class="flyout-right"><a href="#" class="icon-address-book"> Calificaciones</a>
                                 <ul class="animated fadeIn">
                                     <li><a href="#" class="icon-person">&nbsp; ver</a></li>
                                     <li><a href="#" class="icon-person_add">&nbsp; Asignar</a></li>
@@ -82,7 +82,7 @@
                                 </ul>
                                 </li>
                             <li><a href="#" class="icon-calendar-o"> Calendario de evaluciones</a></li>
-
+                              <li><a href="Parciales.aspx" class="ion-ios-bookmark">Parciales</a></li>
                         </ul>
                         <!--//End drop down-->
 
@@ -91,7 +91,7 @@
                     <li><a href="DatosPersonales.aspx"><i class="icon-person"></i>Perfil</a></li>
                     <li><a href="PaseLista.aspx"><i class="fa icon-address-book"></i>Pase de Lista</a></li>
 
-                    <li><a href="Notificacion.aspx"><i class="icon-bell"></i>Notificaciones</a></li>
+                    <li><a href="#"><i class="icon-bell"></i>Notificaciones</a></li>
                       <li><a href="../IndexPaslum.aspx"><i class="icon-sign-out"></i><span>Cerrar Sesión</span></a></li>
                 </ul>
 

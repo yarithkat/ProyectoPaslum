@@ -41,7 +41,7 @@
             <div class="modal-content">
                
                     <div class="modal-header">
-                        <h4 class="modal-title">Agregar Cuatrimestre </h4>
+                        <h4 class="modal-title">AGREGAR CUATRIMESTRE </h4>
                          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
                                 ×
                             </button>
@@ -61,6 +61,7 @@
                         <div class="form-group">
                                <div class="col-xs-6">
                                Fecha Inicio:
+                           <asp:TextBox id="Inicio" runat="server" TextMode="Date" required="required"></asp:TextBox>
                            <asp:Calendar ID="calInicio" runat="server" required="required"></asp:Calendar>
                             
                         </div>
@@ -69,6 +70,7 @@
                         <div class="form-group">
                                <div class="col-xs-6">
                                 Fecha Fin:
+                            <asp:TextBox id="Fin" runat="server" TextMode="Date" required="required"></asp:TextBox>
                             <asp:Calendar ID="calFin" runat="server" required="required"></asp:Calendar>
                                 
                             </div>

@@ -39,7 +39,7 @@
             <div class="modal-content">
                
                     <div class="modal-header">
-                        <h4 class="modal-title">Agregar Grupo </h4>
+                        <h4 class="modal-title">AGREGAR GRUPO </h4>
                          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
                                 ×
                             </button>
