@@ -136,15 +136,11 @@ strCedula varchar(200),
 strEspecialidad varchar(200),
 idDireccion int,
 idTelefono int,
-idUser int,
-idNotas int,
-idGrupo int,
+idUser int
 constraint pk_Profesor primary key (Id),
 constraint fkIdDireccion_Profesor foreign key(idDireccion) references TblDireccion(id),
 constraint fkIdTelefono_Profesor foreign key(idTelefono) references TblTelefono(id),
-constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id),
-constraint fkIdNotas_Profesor foreign key(idNotas) references TblNota(id),
-constraint fkIdGrupo_Profesor foreign key(idGrupo) references TblGrupo(id)
+constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id)
 );
 
 
@@ -186,6 +182,23 @@ constraint fkIdMateria_QR foreign key(idMateria) references TblMateria(id),
 constraint fkIdCarrera_QR foreign key(idCarrera) references TblCarrera(id),
 );
 
+create table TblAsignacionMateria(
+id int not null identity(1,1),
+idProfesor int,
+idMateria int,
+constraint pk_AsignacionMateria primary key (id),
+constraint fkIdProfesor_Asignacion foreign key(idProfesor) references TblProfesor(id),
+constraint fkIdMateria_Asignacion foreign key(idMateria) references TblMateria(id),
+);
+
+create table TblAsignacionGrupo(
+id int not null identity(1,1),
+idGrupo int,
+idAsignacionMateria int,
+constraint fkIdGrupo_AsigGrupo foreign key(idGrupo) references TblGrupo(id),
+constraint fkIdGrupo_AsignMate foreign key(idAsignacionMateria) references TblAsignacionMateria(id),
+);
+
 
 select * from TblDireccion;
 select * from TblTelefono;
@@ -196,6 +209,9 @@ select * from TblAlumno;
 select * from tblMateria;
 select * from TblCuatri;
 select * from TblGrupo;
+select * from TblAlumnoMateria;
+select * from TblCatalogoParcial;
+select * from TblCatalogoEvaluacion
 
 SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
@@ -231,3 +247,10 @@ on m.idCuatri = cu.id;
 update TblCarrera 
 set bStatus = 1
 where id = 2;
+
+select a.strNombre, m.strNombre, m.strDescripcion
+from TblAlumno a
+inner join TblCuatri c 
+on a.idCuatri = c.id
+inner join TblMateria m
+on m.idCuatri = c.id;
