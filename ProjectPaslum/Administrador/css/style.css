@@ -1,9 +1,4 @@
-/*
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-*/
+
 html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
@@ -301,7 +296,6 @@ li#menu-academico{
 		}
 .item_add {
   color: #fff;
- 
   border:none;
 }	
 	
@@ -433,7 +427,7 @@ a.order:hover{
 }
 
 .total-item h3 {
-  color: #333;
+  color:#000;
   font-size: 1.1em;
   margin-bottom: 1em;
 }
@@ -1529,8 +1523,6 @@ h3.sub-tittle {
 }
 .button {
 	border: none;
-	background: #45A43E;
-	color: #FEF503;
 	float: right;
 	padding: 7px 15px;
 	font-size: 12px;
@@ -1539,7 +1531,7 @@ h3.sub-tittle {
 	text-transform:uppercase;
 }
 .button:hover {
-	background:#333;
+	
 }
 .price-text{
 	padding:5% 0;
@@ -3107,8 +3099,8 @@ span.brand {
 .form-control1, .form-control_2.input-sm{
   border: 1px solid #ccc;
   padding: 5px 8px;
-  color: #616161;
-  background: #fff;
+  color: #000;
+  background:#000;          
   box-shadow: none !important;
   width: 100%;
   font-size: 0.85em;
@@ -3202,7 +3194,7 @@ button.note-color-btn {
 }
 .forms h4 {
     font-size: 1.3em;
-    color: #FFFFFF;
+    color: #000;
 }
 .form-title {
     padding: 0.3em 2em;
@@ -3607,7 +3599,7 @@ button.btn.btn-default.tip {
     margin-left: 0px!important;
 }
 .form-control {
-    color: #C5C5CF !important;
+    color: #000 !important;
 }
 input[type="date"] {
     width: 95%;
