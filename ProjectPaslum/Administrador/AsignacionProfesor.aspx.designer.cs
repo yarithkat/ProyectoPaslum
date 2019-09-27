@@ -58,22 +58,22 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddlMateriaGrupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMateriaGrupo;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control ddlGrupoGrupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlGrupoGrupo;
         
         /// <summary>
         /// Control Button3.
@@ -92,5 +92,41 @@ namespace ProjectPaslum.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button4;
+        
+        /// <summary>
+        /// Control GridView1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// Control SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// Control GridView2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView2;
+        
+        /// <summary>
+        /// Control SqlDataSource3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
     }
 }
