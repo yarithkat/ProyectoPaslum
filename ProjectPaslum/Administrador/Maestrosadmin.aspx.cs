@@ -13,7 +13,9 @@ namespace ProjectPaslum.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
         }
+
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
         {
             var sex = cmbSexo.SelectedItem.Value;
