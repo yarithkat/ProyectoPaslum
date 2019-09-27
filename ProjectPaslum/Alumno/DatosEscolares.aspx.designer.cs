@@ -13,6 +13,24 @@ namespace ProjectPaslum.Alumno {
     public partial class DatosEscolares {
         
         /// <summary>
+        /// Control LabCarrera.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabCarrera;
+        
+        /// <summary>
+        /// Control DropCarrera.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropCarrera;
+        
+        /// <summary>
         /// Control LabNombre.
         /// </summary>
         /// <remarks>
@@ -49,21 +67,21 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.DropDownList DropCuatrimestre;
         
         /// <summary>
-        /// Control LabCarrera.
+        /// Control lbAlumno.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabCarrera;
+        protected global::System.Web.UI.WebControls.Label lbAlumno;
         
         /// <summary>
-        /// Control DropCarrera.
+        /// Control GridView2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropCarrera;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
     }
 }
