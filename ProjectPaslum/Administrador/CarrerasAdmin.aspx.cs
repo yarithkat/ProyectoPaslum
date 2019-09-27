@@ -25,6 +25,7 @@ namespace ProjectPaslum.Administrador
             alum.strNombre = txtNombreAgregar.Text.ToUpper();
             alum.strClave = txtClaveAgregar.Text.ToUpper();
             alum.strArea = carre;
+            alum.bStatus = "1";
             ControllerCarrera ctrlCar = new ControllerCarrera();
             ctrlCar.InsertarCarrera(alum);
             this.Response.Redirect("./CarrerasAdmin.aspx", true);
