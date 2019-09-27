@@ -110,7 +110,8 @@
                     <li><a href="CuatriAdmin.aspx"  class="icon-pencil"><span> Cuatrimestres</span></a></li>
                     <li><a href="Materiadmin.aspx"  class="icon-pencil"><span> Materias</span></a></li>
                     <li><a href="GruposAdmin.aspx"  class="icon-pencil"><span> Grupos</span></a></></li>
-                   
+                    <li><a href="AsignacionProfesor.aspx"  class="icon-pencil"><span> Asignación</span></a></></li>
+
                 </ul>
             </div>
         </div>
