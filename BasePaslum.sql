@@ -212,6 +212,8 @@ select * from TblGrupo;
 select * from TblAlumnoMateria;
 select * from TblCatalogoParcial;
 select * from TblCatalogoEvaluacion
+select * from TblAsignacionMateria
+select * from TblAsignacionGrupo
 
 SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
@@ -254,3 +256,32 @@ inner join TblCuatri c
 on a.idCuatri = c.id
 inner join TblMateria m
 on m.idCuatri = c.id;
+
+select p.strNombre as profesor, m.strNombre as materia
+from TblAsignacionMateria a
+inner join TblProfesor p
+on a.idProfesor = p.id
+inner join TblMateria m
+on a.idProfesor = m.id
+
+
+
+/*********Consulta para la asignación de grupos************/
+select g.strNombre as 'Nombre Grupo', 
+p.strNombre as 'Profesor', p.strApellidoP as 'Apellido Paterno', p.strApellidoM as 'Apellido Materno',
+m.strNombre as 'Materia', c.strNombre 'Carrera'
+from TblAsignacionGrupo ag
+inner join TblGrupo g
+on ag.idGrupo = g.id
+
+inner join TblAsignacionMateria am
+on ag.idAsignacionMateria = am.id
+
+inner join TblProfesor p
+on am.idProfesor = p.id
+
+inner join TblMateria m
+on am.idMateria = m.id
+
+inner join TblCarrera c
+on m.idCarrera = c.id

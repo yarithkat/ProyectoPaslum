@@ -75,7 +75,7 @@
                              
                          <div class="col-xs-4"> 
                             Materias:
-                                  <asp:DropDownList ID="ddlMateria" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>
                         </div>
                          </div>
                           </div>
@@ -87,9 +87,9 @@
                       
                       <div class="modal-footer">
                                 <asp:Button ID="Button1" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="Button2" runat="server" CssClass="btn btn-success" Text="Aceptar"  />
-                   
-                            </div>
+                                <asp:Button ID="Button2" runat="server" class="btn btn-success" Text="Aceptar"  OnClick="Button2_Click" />
+                  
+                   </div>
             </div>
         </div>
           </div>

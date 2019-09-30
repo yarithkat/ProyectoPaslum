@@ -168,7 +168,7 @@ from TblAsignacionMateria a
 inner join TblProfesor p
 on a.idProfesor = p.id
 inner join TblMateria m
-on a.idProfesor = m.id"></asp:SqlDataSource>
+on a.idMateria = m.id"></asp:SqlDataSource>
 
             </div>
         </div>
@@ -212,18 +212,14 @@ m.strNombre as 'Materia', c.strNombre 'Carrera'
 from TblAsignacionGrupo ag
 inner join TblGrupo g
 on ag.idGrupo = g.id
-
 inner join TblAsignacionMateria am
 on ag.idAsignacionMateria = am.id
-
 inner join TblProfesor p
 on am.idProfesor = p.id
-
 inner join TblMateria m
 on am.idMateria = m.id
-
 inner join TblCarrera c
-on m.idCarrera = c.id"></asp:SqlDataSource>
+on g.idCarrera= c.id"></asp:SqlDataSource>
 
             </div>
         </div>

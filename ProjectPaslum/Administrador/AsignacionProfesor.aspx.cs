@@ -40,7 +40,7 @@ namespace ProjectPaslum.Administrador
         protected void LlenarProfesor()
         {
             ControllerAsignarMateria CtrlAsignarP = new ControllerAsignarMateria();
-            List<TblProfesor> profesor = CtrlAsignarP.ConsultaProfesor();
+            var profesor = CtrlAsignarP.ConsultaProfesor();
             ddlProfesor.Items.Add("Seleccionar");
             ddlProfesor.DataSource = profesor;
             ddlProfesor.DataValueField = "id";
@@ -64,13 +64,13 @@ namespace ProjectPaslum.Administrador
         protected void LlenarAsigMateria()
         {
             ControllerAsignarGrupo CtrlAsignarM = new ControllerAsignarGrupo();
-            List<TblAsignacionMateria> asigmateria = CtrlAsignarM.ConsultaAsigMateria();
+            var asigmateria = CtrlAsignarM.ConsultaAsigMateria();
             ddlMateriaGrupo.Items.Add("Seleccionar");
             ddlMateriaGrupo.DataSource = asigmateria;
             ddlMateriaGrupo.DataValueField = "id";
             ddlMateriaGrupo.DataTextField = "id";
             ddlMateriaGrupo.DataBind();
-
+                   
         }
 
         protected void LlenarGrupo()
