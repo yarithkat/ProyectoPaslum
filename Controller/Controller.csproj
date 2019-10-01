@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerAlumno.cs" />
+    <Compile Include="ControllerAsignarGrupo.cs" />
+    <Compile Include="ControllerAsignarMateria.cs" />
     <Compile Include="ControllerAutenticacion.cs" />
     <Compile Include="ControllerCarrera.cs" />
     <Compile Include="ControllerCuatri.cs" />

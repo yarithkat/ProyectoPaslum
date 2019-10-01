@@ -36,10 +36,15 @@ namespace Controller
         {
             return contexto.TblGrupo.ToList<TblGrupo>();
         }
-
-        public List<TblAsignacionMateria> ConsultaAsigMateria()
+        public object ConsultaAsigMateria()
         {
-            return contexto.TblAsignacionMateria.ToList<TblAsignacionMateria>();
+            return contexto.TblAsignacionMateria
+                .Select(p => new
+                {
+                    id = p.id,
+                    strNombre = (p.id)
+                })
+                .ToList();
         }
     }
 }
