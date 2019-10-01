@@ -5,7 +5,10 @@
 <html lang="en">
 
     <head>
-    <title>Paslum</title>
+    <title>PASLUM</title>
+    <link rel="shortcut icon" href="images/Iconos/icon_pas.png"/>
+  
+     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -28,7 +31,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
     
-<style type="text/css">
+<style>
    body{
     margin: 0;
     padding: 0;
@@ -121,6 +124,7 @@ h1{
 			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
 			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
 						    <span class="text">PASLUM</span>
+                           
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
@@ -137,7 +141,7 @@ h1{
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
-	    	<a class="navbar-brand" href="index.html">Paslum</a>
+	    	<a class="navbar-brand" href="IndexPaslum.aspx"><img src="images/Iconos/icon_logo.png" /></a> 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>

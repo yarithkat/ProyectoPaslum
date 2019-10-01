@@ -287,6 +287,8 @@
     <Content Include="images\Iconos\IconEditar.png" />
     <Content Include="images\Iconos\IconEliminar.png" />
     <Content Include="images\Iconos\IconGuardar.png" />
+    <Content Include="images\Iconos\icon_logo.png" />
+    <Content Include="images\Iconos\icon_pas.png" />
     <Content Include="IndexPaslum.aspx" />
     <Content Include="images\.DS_Store" />
     <Content Include="fonts\flaticon\.DS_Store" />
@@ -317,45 +319,13 @@
     <Content Include="Alumno\scss\style.scss" />
     <Content Include="Profesor\DatosPersonales.aspx" />
     <Content Include="Profesor\estilos.css" />
+    <Content Include="Profesor\Evaluaciones.aspx" />
+    <Content Include="Profesor\Parciales.aspx" />
     <Content Include="Profesor\PaseLista.aspx" />
     <Content Include="Profesor\PrincipalProfesor.aspx" />
     <Content Include="Profesor\Profesor.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="images\bg_1.jpg" />
-    <Content Include="images\bg_2.jpg" />
-    <Content Include="images\bg_3.jpg" />
-    <Content Include="images\bg_4.jpg" />
-    <Content Include="images\bg_5.jpg" />
-    <Content Include="images\course-1.jpg" />
-    <Content Include="images\course-2.jpg" />
-    <Content Include="images\course-3.jpg" />
-    <Content Include="images\course-4.jpg" />
-    <Content Include="images\course-5.jpg" />
-    <Content Include="images\course-6.jpg" />
-    <Content Include="images\dept-5.jpg" />
-    <Content Include="images\image_1.jpg" />
-    <Content Include="images\image_2.jpg" />
-    <Content Include="images\image_3.jpg" />
-    <Content Include="images\image_4.jpg" />
-    <Content Include="images\image_5.jpg" />
-    <Content Include="images\image_6.jpg" />
     <Content Include="images\loc.png" />
-    <Content Include="images\person_1.jpg" />
-    <Content Include="images\person_2.jpg" />
-    <Content Include="images\person_3.jpg" />
-    <Content Include="images\person_4.jpg" />
-    <Content Include="images\staff-1.jpg" />
-    <Content Include="images\staff-2.jpg" />
-    <Content Include="images\staff-3.jpg" />
-    <Content Include="images\staff-4.jpg" />
-    <Content Include="images\teacher-1.jpg" />
-    <Content Include="images\teacher-2.jpg" />
-    <Content Include="images\teacher-3.jpg" />
-    <Content Include="images\teacher-4.jpg" />
-    <Content Include="images\teacher-5.jpg" />
-    <Content Include="images\teacher-6.jpg" />
-    <Content Include="images\teacher-7.jpg" />
-    <Content Include="images\teacher-8.jpg" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\google-map.js" />
@@ -756,6 +726,20 @@
     </Compile>
     <Compile Include="Profesor\DatosPersonales.aspx.designer.cs">
       <DependentUpon>DatosPersonales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Evaluaciones.aspx.cs">
+      <DependentUpon>Evaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Evaluaciones.aspx.designer.cs">
+      <DependentUpon>Evaluaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Parciales.aspx.cs">
+      <DependentUpon>Parciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Parciales.aspx.designer.cs">
+      <DependentUpon>Parciales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor\PaseLista.aspx.cs">
       <DependentUpon>PaseLista.aspx</DependentUpon>

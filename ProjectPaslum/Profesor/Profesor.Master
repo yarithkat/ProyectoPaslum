@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Paslum</title>
+    <title>PASLUM</title>
+     <link rel="shortcut icon" href="../images/Iconos/icon_pas.png"/>
 
     <link href="estilos.css" rel="stylesheet" />
     <script type="text/javascript">
@@ -81,8 +82,8 @@
                                     <li><a href="#" class="icon-book">&nbsp; Revision de lista</a></li>
                                 </ul>
                                 </li>
-                            <li><a href="#" class="icon-calendar-o"> Calendario de evaluciones</a></li>
-                              <li><a href="Parciales.aspx" class="ion-ios-bookmark">Parciales</a></li>
+                            <li><a href="#" class="icon-calendar">&nbsp;Evaluciones</a></li>
+                              <li><a href="Parciales.aspx" class="icon-bookmark">&nbsp;Parciales</a></li>
                         </ul>
                         <!--//End drop down-->
 
