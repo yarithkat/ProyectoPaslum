@@ -62,7 +62,6 @@
                                <div class="col-xs-6">
                                Fecha Inicio:
                            <asp:TextBox id="Inicio" runat="server" TextMode="Date" required="required"></asp:TextBox>
-                           <asp:Calendar ID="calInicio" runat="server" required="required"></asp:Calendar>
                             
                         </div>
                         </div>
@@ -71,7 +70,6 @@
                                <div class="col-xs-6">
                                 Fecha Fin:
                             <asp:TextBox id="Fin" runat="server" TextMode="Date" required="required"></asp:TextBox>
-                            <asp:Calendar ID="calFin" runat="server" required="required"></asp:Calendar>
                                 
                             </div>
                                 </div>

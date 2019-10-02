@@ -62,10 +62,10 @@
                         <br />
                         <br />
                         <div class="form-grouo">
-                            <div class="col-xs-3">
+                            <div class="col-xs-7">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                          </div>
                       

@@ -18,30 +18,53 @@
  
 <div id="grupoTablas" title=".">
   <ul>
-    <li><a href="#tab-1">EVALUACIONES</a></li>
-    <li><a href="#tab-2"></a></li>
+    <li><a href="#tab-1">PARCIALES</a></li>
+    <li><a href="#tab-2">EVALUACIONES</a></li>
   </ul>
   <div id="tab-1">
        <div class="form-group">
                     <div class="col-xs-3">
+                        Nombre:
+                        <asp:TextBox runat="server" ID="TxtNombre" class="form-control"  type="text" ForeColor="Black"></asp:TextBox>
+                        
+                    </div>
+           </div>
+           <div class="form-group">
+                    <div class="col-xs-3">
                         Descripcion:
-                        <asp:TextBox runat="server" ID="TxtDescripcion" class="form-control" required="required" type="text" ForeColor="Black"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="TxtDescripcion" class="form-control" type="text" ForeColor="Black"></asp:TextBox>
                         
                     </div>
                 </div>
        <div class="form-group">
                     <div class="col-xs-3">
                         Porcentaje %:
-                        <asp:TextBox runat="server" ID="TxtPorcentaje" class="form-control" required="required" type="text" ForeColor="Black"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="TxtPorcentaje" class="form-control"  type="number" ForeColor="Black"></asp:TextBox>
                         
                     </div>
                 </div>
     
-              <asp:Button ID="BtnAceptar" class="btn btn-info" runat="server" Text="Aceptar" ></asp:Button>
+              <asp:Button ID="BtnAceptar" class="btn btn-info" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" ></asp:Button>
 
   </div>
   <div id="tab-2">
-    <p>Visualizar todo el historial </p>
+      
+     <div class="form-group">
+            <div class="col-xs-6">
+                Parcial:
+                <asp:DropDownList ID="ddlParcial" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>   
+            </div>
+                <br/>
+     </div>
+     <div class="form-group">
+                    <div class="col-xs-3">
+                        Descripcion de la actividad:
+                        <asp:TextBox runat="server" ID="TxtDescripcionActividad" class="form-control" type="text" ForeColor="Black"></asp:TextBox>
+                        
+                    </div>
+           </div>
+    
+              <asp:Button ID="Button1" class="btn btn-info" runat="server" Text="Aceptar" OnClick="Button1_Click" ></asp:Button>
   </div>
 </div>
 </asp:Content>

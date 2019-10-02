@@ -47,6 +47,8 @@
     <Compile Include="ControllerAutenticacion.cs" />
     <Compile Include="ControllerCarrera.cs" />
     <Compile Include="ControllerCuatri.cs" />
+    <Compile Include="ControllerEvaluacion.cs" />
+    <Compile Include="ControllerParcial.cs" />
     <Compile Include="ControllerGrupo.cs" />
     <Compile Include="ControllerMaestro.cs" />
     <Compile Include="ControllerMateria.cs" />

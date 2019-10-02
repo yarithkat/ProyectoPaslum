@@ -13,7 +13,13 @@ namespace ProjectPaslum.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+
         }
 
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
@@ -71,8 +77,6 @@ namespace ProjectPaslum.Administrador
             prof.TblUser = login;
 
             return prof;
-
-
         }
     }
 }

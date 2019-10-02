@@ -26,120 +26,10 @@
                         </a>
                     </div>
                 </div>&nbsp;&nbsp;
-                <div class="button">
-                    <!-- Asignación -->
-                           <div class="form-group">
-                            <div class="col-xs-5">
-                            <div class="dropdown" >
-                                <button runat="server" id="cmbAsignacion" class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
-                                  ASIGNACIONES <span class="caret"></span>
-                                </button>
-                                       <div class="dropdown-menu" >
-                                 <a class="dropdown-item" data-toggle="modal"  href="#addAsignacionMateria">Materias</a> 
-                                <div class="dropdown-divider"></div>
-                                     <a class="dropdown-item" data-toggle="modal"  href="#addAsignacionGrupo">Grupos</a>
-                        </div>
-            
-      
-        </div>
-                            </div>
-                            </div>
-                         </div>
                   </div> 
-                        </div>          
+           </div>          
    </div>
-       <!-- Agregar Modal Asignacion Materia-->
-       <div class="modal fade" id="addAsignacionMateria">
-        <div class="left">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-               
-                    <div class="modal-header">
-                        <h4 class="modal-title">ASIGNAR MATERIAS </h4>
-                         <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
-                                ×
-                            </button>
-                    </div>
-                
-                    <div class="modal-body">
-                         <div class="form-group">
-                         <div class="col-xs-6">
-                              Profesor:
-                             <asp:DropDownList ID="ddlProfesor" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>   
-                        </div>
-                               <br/>
-                               </div>
-                           <br/>
-                         <div class="form-group">
-                             
-                         <div class="col-xs-4"> 
-                            Materias:
-                            <asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>
-                        </div>
-                         </div>
-                          </div>
-                          <br/>
-                          <br/>                       
-                          <br/>
-                          <br/>
-                          <br/>
-                      
-                      <div class="modal-footer">
-                                <asp:Button ID="Button1" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="Button2" runat="server" class="btn btn-success" Text="Aceptar"  OnClick="Button2_Click" />
-                  
-                   </div>
-            </div>
-        </div>
-          </div>
-               </div>
-     <!-- Agregar Modal Asignacion Materia-->
-       <div class="modal fade" id="addAsignacionGrupo">
-        <div class="left">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-               
-                    <div class="modal-header">
-                        <h4 class="modal-title">ASIGNAR GRUPO </h4>
-                         <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
-                                ×
-                            </button>
-                    </div>
-                
-                    <div class="modal-body">
-                         <div class="form-group">
-                         <div class="col-xs-6">
-                              Asignaciones:
-                             <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>   
-                        </div>
-                               <br/>
-                               </div>
-                           <br/>
-                         <div class="form-group">
-                             
-                         <div class="col-xs-4"> 
-                            Grupo:
-                                  <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
-                        </div>
-                         </div>
-                          </div>
-                          <br/>
-                          <br/>                       
-                          <br/>
-                          <br/>
-                          <br/>
-                      
-                      <div class="modal-footer">
-                                <asp:Button ID="Button3" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="Button4" runat="server" CssClass="btn btn-success" Text="Aceptar"  />
-                   
-                            </div>
-            </div>
-        </div>
-          </div>
-               </div>
+    
        <!-- Agregar Modal Maestros-->
        <div class="modal fade" tabindex="-1" role="dialog" id="addMaestroModal">
        <div class="left">
@@ -197,7 +87,7 @@
                 <div class="form-group">
                     <div class="col-xs-3">
                         Sexo
-                        <div class="dropdown">
+                        <div class="dropdown" >
                             <asp:DropDownList ID="cmbSexo" runat="server">
                                 <asp:ListItem Selected="True" Value="SELECCIONA"> --SELECCIONA-- </asp:ListItem>
                                 <asp:ListItem Value="HOMBRE"> Hombre </asp:ListItem>
@@ -419,7 +309,7 @@
                                 <ItemStyle HorizontalAlign="Center" Width="50px" />
                             </asp:TemplateField>
 
-                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                        <asp:BoundField DataField="id" HeaderText="Clave" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                         <asp:BoundField DataField="strNombre" HeaderText="Nombre" SortExpression="strNombre" />
                         <asp:BoundField DataField="strApellidoP" HeaderText="Apellido P." SortExpression="strApellidoP" />
                         <asp:BoundField DataField="strApellidoM" HeaderText="Apellido M." SortExpression="strApellidoM" />

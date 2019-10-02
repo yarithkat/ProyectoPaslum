@@ -19,13 +19,10 @@ namespace ProjectPaslum.Administrador
 
         protected void btnaceptar_Click(object sender, EventArgs e)
         {
-            var inicio = calInicio.SelectedDate;
-            var fin = calFin.SelectedDate;
-
             TblCuatri cuat = new TblCuatri();
             cuat.strNombre = txtNombre.Text.ToUpper();
-            cuat.strFechaInicio = inicio;
-            cuat.strFechaFin = fin;
+            cuat.strFechaInicio = DateTime.Parse(Inicio.Text);
+            cuat.strFechaFin = DateTime.Parse(Fin.Text); ;
             ControllerCuatri ctrlCuat = new ControllerCuatri();
             ctrlCuat.InsertarCuatri(cuat);
             this.Response.Redirect("./CuatriAdmin.aspx", true);

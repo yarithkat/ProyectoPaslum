@@ -85,7 +85,7 @@
                                    <br />
                                 Sexo
                             <div class="dropdown">
-                                       <asp:DropDownList ID="cmbSexo" runat="server" required="required">
+                                    <asp:DropDownList ID="cmbSexo" runat="server" required="required" CssClass=" form-control">
                                     <asp:ListItem Selected="True" Value="SELECCIONA"> --SELECCIONA-- </asp:ListItem>
                                      <asp:ListItem Value="HOMBRE"> Hombre </asp:ListItem>
                                     <asp:ListItem Value="MUJER"> Mujer </asp:ListItem>
@@ -110,7 +110,7 @@
                             <div class="col-xs-3">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                             </div>
 
@@ -118,7 +118,7 @@
                             <div class="col-xs-3">
                                  <br />
                                 Cuatri
-                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                             </div>
                              

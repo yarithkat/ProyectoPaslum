@@ -82,7 +82,7 @@
                                     <li><a href="#" class="icon-book">&nbsp; Revision de lista</a></li>
                                 </ul>
                                 </li>
-                            <li><a href="#" class="icon-calendar">&nbsp;Evaluciones</a></li>
+                            <li><a href="Evaluaciones.aspx" class="icon-calendar">&nbsp;Evaluciones</a></li>
                               <li><a href="Parciales.aspx" class="icon-bookmark">&nbsp;Parciales</a></li>
                         </ul>
                         <!--//End drop down-->

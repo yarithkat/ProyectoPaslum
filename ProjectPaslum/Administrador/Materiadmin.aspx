@@ -92,16 +92,16 @@
                             <div class="col-xs-4">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                          </div>
                        
                          <!-- Seleccion de Carrera  -->
                         <div class="form-group">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                                  <br />
                                 Cuatrimestre
-                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                          </div>
                         <br /> <br />  <br /> <br />
@@ -130,11 +130,10 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" AllowPaging="True" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
                     <Columns>
                         
-                        <asp:BoundField DataField="strNombre" HeaderText="strNombre" SortExpression="strNombre" />
-                        <asp:BoundField DataField="strDescripcion" HeaderText="strDescripcion" SortExpression="strDescripcion" />
-                        <asp:BoundField DataField="strnombre1" HeaderText="strnombre1" SortExpression="strnombre1" />
-
-                        <asp:BoundField DataField="strnombre2" HeaderText="strnombre2" SortExpression="strnombre2" />
+                        <asp:BoundField DataField="strNombre" HeaderText="Materia" SortExpression="strNombre" />
+                        <asp:BoundField DataField="strDescripcion" HeaderText="Descripcion" SortExpression="strDescripcion" />
+                        <asp:BoundField DataField="strnombre1" HeaderText="Carrera" SortExpression="strnombre1" />
+                        <asp:BoundField DataField="strnombre2" HeaderText="Cuatrimestre" SortExpression="strnombre2" />
 
                     </Columns>
                      <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -148,7 +147,7 @@
                         <SortedDescendingHeaderStyle BackColor="#00547E" />
                 </asp:GridView>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString5 %>" SelectCommand="select m.strNombre, m.strDescripcion, c.strnombre,cu.strnombre 
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="select m.strNombre, m.strDescripcion, c.strnombre,cu.strnombre 
 from TblMateria m
 inner join TblCarrera c 
 on m.idCarrera = c.id

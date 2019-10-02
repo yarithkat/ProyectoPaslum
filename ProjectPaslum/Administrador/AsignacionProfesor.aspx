@@ -58,7 +58,7 @@
                          <div class="form-group">
                          <div class="col-xs-6">
                               Profesor:
-                             <asp:DropDownList ID="ddlProfesor" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>   
+                             <asp:DropDownList ID="ddlProfesor" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>   
                         </div>
                                <br/>
                                </div>
@@ -67,7 +67,7 @@
                              
                          <div class="col-xs-4"> 
                             Materias:
-                                  <asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>
+                                  <asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>
                         </div>
                          </div>
                           </div>
@@ -104,7 +104,7 @@
                          <div class="form-group">
                          <div class="col-xs-6">
                               Materia:
-                             <asp:DropDownList ID="ddlMateriaGrupo" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>   
+                             <asp:DropDownList ID="ddlMateriaGrupo" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>   
                         </div>
                                <br/>
                                </div>
@@ -113,7 +113,7 @@
                              
                          <div class="col-xs-4"> 
                             Grupo:
-                                  <asp:DropDownList ID="ddlGrupoGrupo" runat="server" AppendDataBoundItems="True"  Height="100%"></asp:DropDownList>
+                                  <asp:DropDownList ID="ddlGrupoGrupo" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>
                         </div>
                          </div>
                           </div>
