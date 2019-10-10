@@ -3107,7 +3107,7 @@ span.brand {
 .form-control1, .form-control_2.input-sm{
   border: 1px solid #ccc;
   padding: 5px 8px;
-  color: #616161;
+  color: #000;  
   background: #fff;
   box-shadow: none !important;
   width: 100%;
@@ -3607,7 +3607,7 @@ button.btn.btn-default.tip {
     margin-left: 0px!important;
 }
 .form-control {
-    color: #C5C5CF !important;
+    color: #000 !important;
 }
 input[type="date"] {
     width: 95%;

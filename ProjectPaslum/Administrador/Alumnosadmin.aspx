@@ -8,7 +8,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
          <style>
     #mdialTamanio{
-      width: 150% !important;
+      width: 180% !important;
     }
   </style>
     <div class="content">
@@ -34,7 +34,7 @@
       <!-- Agregar Modal alumno-->   
     <div class="modal fade" tabindex="-1" role="dialog" id="addAlumnoModal">
        <div class="left">
-             <div class="modal-dialog modal-sm"  id="mdialTamanio">
+             <div class="modal-dialog"  id="mdialTamanio">
         <div class="modal-content">
                
                     <div class="modal-header">
@@ -45,7 +45,7 @@
                    
                          </div>
                 
-                    <div class="modal-body" style = "position:relative; overflow: scroll; height: 550px; ">
+                    <div class="modal-body" style = "position:relative; overflow: scroll;">
                         <div class="form-group">
                                 <div class="col-xs-10">
                                        <br />
@@ -56,14 +56,14 @@
                        
                         <br/>
                         <div class="form-group">
-                              <div class="col-xs-6">
+                              <div class="col-xs-5">
                                      <br />
                                 Apellido Paterno
                             <asp:TextBox  id="txtPaternoAgregar" class="form-control" required="required" type="text" runat="server"></asp:TextBox>
                         </div>
                              </div>
                         <div class="form-group">
-                               <div class="col-xs-6">
+                               <div class="col-xs-5">
                                       <br />
                                Apellido Materno
                             <asp:TextBox runat="server" id="txtMaternoAgregar" class="form-control" required="required" type="text" > </asp:TextBox>
@@ -105,35 +105,39 @@
                             <asp:FileUpload ID="FotoAlumno" runat="server" required="required" CssClass="form-control input-sm" />  
                            </div>
                     </div>
-                        
-                        <div class="form-grouo">
-                            <div class="col-xs-3">
+                         <br/>
+                        <div class="form-group">
+                            <div class="col-xs-6">
                                  <br />
                                 Carrera
                                 <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                             </div>
-
-                        <div class="form-grouo">
-                            <div class="col-xs-3">
+                        <div class="form-group">
+                            <div class="col-xs-6">
                                  <br />
                                 Cuatri
                                 <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                             </div>
-                             
+                          <br/> 
+                         <br/>
                           <!-- Telefonos -->
-                        <div class="form-group">
+                           <div class="form-group">
+                               <br/>
                          <div class="col-xs-3">
-                                <br />
+                              
                                                 <label>Celular: </label>
                                                 <asp:TextBox ID="txtTelCelular" runat="server" required="required" CssClass="form-control input-sm" TextMode="Phone">
                                                 </asp:TextBox>
                                                   <asp:RegularExpressionValidator ID="validarcelular" runat="server" ControlToValidate="txtTelCelular"
                                                     ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                                                </div>
+                              </div>
+                           <div class="form-group">
+                               <br/>
                          <div class="col-xs-3">
-                             <br />
+                             
                                                 <label>Casa: </label>
                                                 <asp:TextBox ID="txtTelCasa" runat="server" CssClass="form-control input-sm" TextMode="Phone">
                                                 </asp:TextBox>
@@ -141,8 +145,11 @@
                                                     ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                                            
                                              </div>
+                          </div>
+                           <div class="form-group">
+                               <br/>
                          <div class="col-xs-3">
-                                           <br /> 
+                                        
                                                 <label>Otro: </label>
                                                 <asp:TextBox ID="txtTelotro" runat="server" CssClass="form-control input-sm" TextMode="Phone">
                                                 </asp:TextBox>
@@ -152,10 +159,10 @@
                                              </div>
 
                     </div>
-                  
+                      
                           <!-- datos User -->
                          <div class="form-group">
-                              <div class="col-xs-6">
+                              <div class="col-xs-10">
                                      <br />
                                 Correo
                                
@@ -165,9 +172,10 @@
                         
                           
                     </div>
+                         <br/>
                           <!-- Direccion -->
                          <div class="form-group">
-                                                 <div class="col-xs-3">
+                                                 <div class="col-xs-6">
                                                      <br />
                                                Estado:
                                                 <asp:TextBox ID="txtDirecEstado" runat="server" required="required" CssClass="form-control input-sm" >
@@ -175,27 +183,32 @@
                                              </div> 
                                               </div>
                          <div class="form-group">
-                        <div class="col-xs-3">
+                        <div class="col-xs-6">
                                 <br />
                                                 Municipio: 
                                                 <asp:TextBox ID="txtDirecMunicipio" runat="server" required="required" CssClass="form-control input-sm" >
                                                 </asp:TextBox>
                                             </div>
                                                  </div>
-                         <div class="col-xs-3">
+                           <br/>
+                         <div class="form-group">
+                         <div class="col-xs-6">
                                <br />
                                                Colonia: 
                                                 <asp:TextBox ID="txtDirecColonia" runat="server" required="required" CssClass="form-control input-sm">
                                                 </asp:TextBox>
                                              </div>
+                               </div>
                          <div class="form-group">
-                                                 <div class="col-xs-3">
+                                                 <div class="col-xs-6">
                                                      <br />
                                                 Calle: 
                                                 <asp:TextBox ID="txtDirecCalle" runat="server" required="required" CssClass="form-control input-sm" >
                                                 </asp:TextBox>
                                              </div>
                                                    </div>
+                         <br/>
+                         <br/>
                          <div class="form-group">
                                                 <div class="col-xs-2">
                                                     <br />
@@ -221,7 +234,7 @@
                                                 </div>  
                                                    </div>  
                          <div class="form-group">
-                                               <div class="col-xs-3">
+                                               <div class="col-xs-6">
                                                    <br />
                                               Referencias: 
                                                 <asp:TextBox ID="TxtReferencia" runat="server" CssClass="form-control input-sm">
@@ -235,6 +248,8 @@
                          <br /> <br />  <br /> <br />
                          <br /> <br />  <br /> <br />
                         <br /> <br />  
+                    </div>
+        
                     <div class="modal-footer">
                             <div class="modalfooter">
                           
@@ -244,10 +259,10 @@
                       
                             </div>
             </div>
+                    </div>
         </div>
-          </div>
-                  </div>
-           </div>
+     
+           </div>     
     
     <%-- Editar o eliminar Carrera --%>   
     <div class="panel panel-default">
