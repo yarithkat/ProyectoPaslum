@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProjectPaslum.Profesor
 {
-    public partial class Parciales : System.Web.UI.Page
+    public partial class Justificantes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

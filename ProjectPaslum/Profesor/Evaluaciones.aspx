@@ -16,7 +16,7 @@
 </script>
 
  
-<div id="grupoTablas" title=".">
+<div id="grupoTablas">
   <ul>
     <li><a href="#tab-1">PARCIALES</a></li>
     <li><a href="#tab-2">EVALUACIONES</a></li>
