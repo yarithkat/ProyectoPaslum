@@ -383,3 +383,6 @@ C:\Users\RodrigoM\Pictures\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.dll
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.pdb
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\ProjectPaslum\bin\MessagingToolkit.QRCode.dll
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.dll
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\ProjectPaslum\obj\Debug\ProjectPaslum.pdb
