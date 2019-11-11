@@ -39,7 +39,7 @@ namespace ProjectPaslum.Administrador
 
             TblGrupo grupo = new TblGrupo();
             grupo.strNombre = txtNombre.Text.ToUpper();
-            grupo.strCapacidad = txtcapacidad.Text;
+            grupo.strCapacidad = int.Parse(txtcapacidad.Text);
             grupo.idCarrera = int.Parse(carrera);
             ControllerGrupo ctrlGrupo = new ControllerGrupo();
             ctrlGrupo.InsertarGrupo(grupo);

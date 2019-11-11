@@ -317,10 +317,10 @@
     <Content Include="Administrador\IndexAdministrador.master" />
     <Content Include="Alumno\Alumno.Master" />
     <Content Include="Alumno\scss\style.scss" />
+    <Content Include="Profesor\Calificaciones.aspx" />
     <Content Include="Profesor\DatosPersonales.aspx" />
     <Content Include="Profesor\estilos.css" />
     <Content Include="Profesor\Evaluaciones.aspx" />
-    <Content Include="Profesor\Parciales.aspx" />
     <Content Include="Profesor\PaseLista.aspx" />
     <Content Include="Profesor\PrincipalProfesor.aspx" />
     <Content Include="Profesor\Profesor.Master" />
@@ -720,6 +720,13 @@
     <Compile Include="Administrador\PrincipalAdministrador.aspx.designer.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\Calificaciones.aspx.cs">
+      <DependentUpon>Calificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Calificaciones.aspx.designer.cs">
+      <DependentUpon>Calificaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\DatosPersonales.aspx.cs">
       <DependentUpon>DatosPersonales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -733,13 +740,6 @@
     </Compile>
     <Compile Include="Profesor\Evaluaciones.aspx.designer.cs">
       <DependentUpon>Evaluaciones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profesor\Parciales.aspx.cs">
-      <DependentUpon>Parciales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profesor\Parciales.aspx.designer.cs">
-      <DependentUpon>Parciales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor\PaseLista.aspx.cs">
       <DependentUpon>PaseLista.aspx</DependentUpon>

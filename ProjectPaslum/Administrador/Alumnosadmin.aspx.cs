@@ -11,12 +11,15 @@ namespace ProjectPaslum.Administrador
 {
     public partial class Alumnosadmin : System.Web.UI.Page
     {
+        PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 this.LlenarCarrera();
                 this.LlenarCuatri();
+                alertError.Visible = false;
+                alertBien.Visible = false;
             }
 
         }
@@ -29,7 +32,10 @@ namespace ProjectPaslum.Administrador
             ddlCarrera.DataValueField = "id";
             ddlCarrera.DataTextField = "strNombre";
             ddlCarrera.DataBind();
-
+        }
+        protected void ddlCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
 
         private void LlenarCuatri()
@@ -43,11 +49,24 @@ namespace ProjectPaslum.Administrador
             ddlCuatri.DataBind();
 
         }
+
+        protected void ddlCarrera_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            var grupo = (from grup in contexto.TblGrupo where grup.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue) select grup).ToList();
+            ddlGrupo.DataSource = grupo;
+            ddlGrupo.DataValueField = "id";
+            ddlGrupo.DataTextField = "strNombre";
+            ddlGrupo.DataBind();
+            ddlGrupo.Items.Insert(0, new ListItem("Seleccionar", "0"));
+        }
+
         protected void btnAceptarAgregar_Click(object sender, EventArgs e)
         {
+            
             var sex = cmbSexo.SelectedItem.Value;
             var carrera = ddlCarrera.SelectedValue;
             var cuatri = ddlCuatri.SelectedValue;
+            var grupo = ddlGrupo.SelectedValue;            
 
             if (FotoAlumno.HasFile)
             {
@@ -64,8 +83,29 @@ namespace ProjectPaslum.Administrador
                 alum.bitFoto = path;
                 alum.idCarrera = int.Parse(carrera);
                 alum.idCuatri = int.Parse(cuatri);
-                ControllerAlumno ctrlAlum = new ControllerAlumno();
-                ctrlAlum.InsertarAlum(GetDatosVista(alum));
+                alum.idGrupo = int.Parse(grupo);
+
+                var maximo = (from max in contexto.TblGrupo
+                              where max.id == Convert.ToInt32(ddlGrupo.SelectedValue)
+                              select  max.strCapacidad ).FirstOrDefault();
+
+                var cuenta = (from cue in contexto.TblAlumno
+                              where cue.idGrupo == Convert.ToInt32(ddlGrupo.SelectedValue)
+                              && cue.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue)
+                              select cue.idGrupo).Count();
+                
+                var cuenta1 = cuenta + 1;
+                if (maximo >= cuenta1)
+                {
+                    ControllerAlumno ctrlAlum = new ControllerAlumno();
+                    ctrlAlum.InsertarAlum(GetDatosVista(alum));
+                    alertBien.Visible = true;
+                }
+                else
+                {
+                    alertError.Visible = true;
+                }
+                
             }
             this.Response.Redirect("./Alumnosadmin.aspx", true);
         }
@@ -101,5 +141,7 @@ namespace ProjectPaslum.Administrador
             return alum;
 
         }
+
+
     }
 }

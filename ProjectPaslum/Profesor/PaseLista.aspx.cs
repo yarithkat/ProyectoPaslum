@@ -14,15 +14,19 @@ namespace ProjectPaslum.Profesor
 {
     public partial class PaseLista : System.Web.UI.Page
     {
+        PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] != null)
+            if (!IsPostBack)
             {
-                lbId.Text = Session["id"].ToString();
-                this.LlenarCarrera();
-                this.LlenarGrupo();
-                this.LlenarMateria();
-            }           
+                if (Session["id"] != null)
+                {
+                    lbId.Text = Session["id"].ToString();
+                    this.LlenarCarrera();
+                    this.LlenarGrupo();
+                    loadDrop(Convert.ToInt32(Session["id"].ToString()));
+                }
+            }                      
         }
         private void LlenarCarrera()
         {
@@ -48,16 +52,28 @@ namespace ProjectPaslum.Profesor
 
         }
 
-        private void LlenarMateria()
+        private void loadDrop(int idProfe)
         {
-            ControllerQr CtrlAsignarM = new ControllerQr();
-            List<TblMateria> materia = CtrlAsignarM.ConsultaMateria();
-            ddlMateria.Items.Add("Seleccionar");
-            ddlMateria.DataSource = materia;
-            ddlMateria.DataValueField = "id";
-            ddlMateria.DataTextField = "strNombre";
-            ddlMateria.DataBind();
+            try
+            {
+                var gfg = (from am in contexto.TblAsignacionMateria
+                           join m in contexto.TblMateria
+                           on am.idMateria equals m.id
+                           join p in contexto.TblProfesor on am.idProfesor equals p.id
+                           where p.id == idProfe
+                           select m).ToList();
 
+                ddlMateria.DataValueField = "id";
+                ddlMateria.DataTextField = "strNombre";
+                ddlMateria.DataSource = gfg;
+                ddlMateria.DataBind();
+                ddlMateria.Items.Insert(0, new ListItem("--SELECCIONAR--", "0"));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         protected void btnGenerar_Click(object sender, EventArgs e)
         {
@@ -86,7 +102,7 @@ namespace ProjectPaslum.Profesor
             qr.fecha = fechact;
             qr.idCarrera = int.Parse(carrera);
             qr.idGrupo = int.Parse(grupo);
-            qr.idMateria = int.Parse(materia);
+            qr.idAsignacion = int.Parse(materia);
             qr.idProfesor = Int32.Parse(lbId.Text);
             ControllerQr ctrlQr = new ControllerQr();
             ctrlQr.InsertarQr(qr);

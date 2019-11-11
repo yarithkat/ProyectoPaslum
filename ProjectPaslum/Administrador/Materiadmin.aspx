@@ -59,34 +59,7 @@
                             <asp:TextBox runat="server" ID="txtDescrip" class="form-control" required="" type="text"></asp:TextBox>
                         </div>
                     </div>
-                        <!-- Notas
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label>Describir nota: </label>
-
-                                <asp:TextBox ID="txtDescribirNota" Rows="5" TextMode="multiline" runat="server"> </asp:TextBox>
-                            </div>
-
-
-                        </div>
-                        <br />
-                          -->
-                          <!-- Seleccion de parcial  
-                           <div class="form-group">
-                            <div class="col-xs-5">
-                                Tipo de parcial
-                            <div class="dropdown">
-                                <button runat="server" id="cmbParcial" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                                   --- Seleccione-- <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  
-                                </ul>
-                            </div>
-                            </div>
-                               
-                        </div>-->
-
+                     
                          <!-- Seleccion de Carrera  -->
                         <div class="form-group">
                             <div class="col-xs-4">
