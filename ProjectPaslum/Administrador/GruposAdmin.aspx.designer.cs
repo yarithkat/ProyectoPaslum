@@ -22,6 +22,24 @@ namespace ProjectPaslum.Administrador {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
+        /// Control alertError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertError;
+        
+        /// <summary>
+        /// Control alertBien.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertBien;
+        
+        /// <summary>
         /// Control txtNombre.
         /// </summary>
         /// <remarks>

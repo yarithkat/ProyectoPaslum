@@ -60,14 +60,14 @@ namespace ProjectPaslum.Profesor
             var porc = (from por in contexto.TblCatalogoParcial
                         where por.idAsignacionMaeria == Convert.ToInt32(ddlMateria.SelectedValue)
                         select por.intPorcentaje).Sum();
-            porc = Int32.Parse(lbAcumulado.Text);
 
             if (porc == 100)
             {
                 alertError.Visible = true;
             }
             else
-            {                
+            {
+                porc = Int32.Parse(lbAcumulado.Text);
                 TblCatalogoParcial parcial = new TblCatalogoParcial();
                 parcial.strNombre = TxtNombre.Text.ToUpper();
                 parcial.strDescripcion = TxtDescripcion.Text.ToUpper();

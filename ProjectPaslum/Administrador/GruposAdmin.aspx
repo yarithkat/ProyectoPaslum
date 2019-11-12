@@ -37,7 +37,12 @@
                 <div class="left">
         <div class="modal-dialog">
             <div class="modal-content">
-               
+                 <div class="alert alert-success text-center" runat="server" id="alertError">
+                              <p class="h2"><i class="fa fa-save"></i>&nbsp;No se puede guardar, la clase esta llena</p>
+                        </div>
+                        <div class="alert alert-success text-center" runat="server" id="alertBien">
+                              <p class="h2"><i class="fa fa-save"></i>&nbsp;Se guardo con exito</p>
+                        </div>
                     <div class="modal-header">
                         <h4 class="modal-title">AGREGAR GRUPO </h4>
                          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
@@ -65,7 +70,7 @@
                             <div class="col-xs-7">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control" AutoPostBack="true"></asp:DropDownList>      
                               </div>
                          </div>
                       

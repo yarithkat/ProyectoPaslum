@@ -11,6 +11,7 @@ namespace ProjectPaslum.Administrador
 {
     public partial class Materiadmin : System.Web.UI.Page
     {
+        PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -48,8 +49,17 @@ namespace ProjectPaslum.Administrador
         {
             var carrera = ddlCarrera.SelectedValue;
             var cuatri = ddlCuatri.SelectedValue;
+            var repetido = (from rep in contexto.TblMateria
+                            select new { rep.strNombre, rep.idCarrera, rep.idCuatri }).FirstOrDefault();
 
-            TblMateria mat = new TblMateria();
+            if (repetido.strNombre == txtNombre.Text.ToUpper() && 
+                repetido.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue))
+            {
+
+            }
+            else
+            {
+                TblMateria mat = new TblMateria();
                 mat.strNombre = txtNombre.Text.ToUpper();
                 mat.strDescripcion = txtDescrip.Text.ToUpper();
                 mat.bStatus = "1";
@@ -57,7 +67,8 @@ namespace ProjectPaslum.Administrador
                 mat.idCuatri = int.Parse(cuatri);
                 ControllerMateria ctrlMate = new ControllerMateria();
                 ctrlMate.InsertarMateria(mat);
-                this.Response.Redirect("./Materiadmin.aspx", true);
+            }
+            this.Response.Redirect("./Materiadmin.aspx", true);
         }
     }
 }

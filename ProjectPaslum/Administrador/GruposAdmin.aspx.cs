@@ -12,12 +12,16 @@ namespace ProjectPaslum.Administrador
 {
     public partial class GruposAdmin : System.Web.UI.Page
     {
+        PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 this.LlenarCarrera();
             }
+
+            alertError.Visible = false;
+            alertBien.Visible = false;
 
         }
 
@@ -36,14 +40,27 @@ namespace ProjectPaslum.Administrador
         protected void btnaceptar_Click(object sender, EventArgs e)
         {
             var carrera = ddlCarrera.SelectedValue;
+            var repetido = (from rep in contexto.TblGrupo
+                          where rep.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue)
+                          select rep.strNombre).FirstOrDefault();
 
-            TblGrupo grupo = new TblGrupo();
-            grupo.strNombre = txtNombre.Text.ToUpper();
-            grupo.strCapacidad = int.Parse(txtcapacidad.Text);
-            grupo.idCarrera = int.Parse(carrera);
-            ControllerGrupo ctrlGrupo = new ControllerGrupo();
-            ctrlGrupo.InsertarGrupo(grupo);
+            if (repetido == txtNombre.Text.ToUpper())
+            {
+                alertError.Visible = true;
+            }
+            else
+            {
+                TblGrupo grupo = new TblGrupo();
+                grupo.strNombre = txtNombre.Text.ToUpper();
+                grupo.strCapacidad = int.Parse(txtcapacidad.Text);
+                grupo.idCarrera = int.Parse(carrera);
+                ControllerGrupo ctrlGrupo = new ControllerGrupo();
+                ctrlGrupo.InsertarGrupo(grupo);
+                alertBien.Visible = true;
+            }
+
             this.Response.Redirect("./GruposAdmin.aspx", true);
+
 
         }
     }

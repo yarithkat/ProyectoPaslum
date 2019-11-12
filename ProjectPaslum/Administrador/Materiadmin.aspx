@@ -65,7 +65,7 @@
                             <div class="col-xs-4">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control" AutoPostBack="true"></asp:DropDownList>      
                               </div>
                          </div>
                        
