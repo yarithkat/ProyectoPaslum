@@ -47,6 +47,7 @@ namespace ProjectPaslum.Administrador
             if (repetido == txtNombre.Text.ToUpper())
             {
                 alertError.Visible = true;
+
             }
             else
             {
@@ -59,8 +60,7 @@ namespace ProjectPaslum.Administrador
                 alertBien.Visible = true;
             }
 
-            this.Response.Redirect("./GruposAdmin.aspx", true);
-
+           
 
         }
     }
