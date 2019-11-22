@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectPaslum", "ProjectPaslum\ProjectPaslum.csproj", "{44031C58-A238-4CE3-BB30-C800F01EC437}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{2B1AE017-B74A-4F81-9999-71EEEE6F5D57}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{CB3BFF00-7F52-411B-875B-C88AFC967F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\WebServices.csproj", "{52C9D93B-6654-4EDA-9B6E-3BBF18FBB82F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CB3BFF00-7F52-411B-875B-C88AFC967F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB3BFF00-7F52-411B-875B-C88AFC967F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB3BFF00-7F52-411B-875B-C88AFC967F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C9D93B-6654-4EDA-9B6E-3BBF18FBB82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C9D93B-6654-4EDA-9B6E-3BBF18FBB82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C9D93B-6654-4EDA-9B6E-3BBF18FBB82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C9D93B-6654-4EDA-9B6E-3BBF18FBB82F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

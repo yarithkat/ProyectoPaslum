@@ -32,5 +32,26 @@ namespace Modelo.Properties {
                 return ((string)(this["pase_listaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PK8G35S;Initial Catalog=pase_lista;User ID=sa;Password=1234")]
+        public string pase_listaConnectionString1 {
+            get {
+                return ((string)(this["pase_listaConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql8.gear.host;Initial Catalog=paselistadb;Persist Security In" +
+            "fo=True;User ID=paselistadb;Password=Yg2ged--F2Sc")]
+        public string ConexionProduccion {
+            get {
+                return ((string)(this["ConexionProduccion"]));
+            }
+        }
     }
 }

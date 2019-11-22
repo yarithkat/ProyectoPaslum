@@ -16,3 +16,9 @@ C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\bin\Debug\Modelo.pdb
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.dll
 C:\Users\RodrigoM\Pictures\ProyectoPaslum\Modelo\obj\Debug\Modelo.pdb
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\bin\Debug\Modelo.dll
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\bin\Debug\Modelo.pdb
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Debug\Modelo.dll
+C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Debug\Modelo.pdb

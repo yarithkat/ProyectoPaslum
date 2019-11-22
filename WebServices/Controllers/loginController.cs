@@ -4,11 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Modelo;
 
 namespace WebServices.Controllers
-{
-    public class loginController : ApiController
+{ 
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+public class loginController : ApiController
     {
         public struct Usuario
         {
@@ -32,8 +34,6 @@ namespace WebServices.Controllers
                     var objTemp = new Usuario();
                     objTemp.ID = UsuUsuario.id;
                     objTemp.usuarios = UsuUsuario.strusuario;
-                    objTemp.Pass = UsuUsuario.strpass;
-                  
                     return objTemp;
                 }
                 else
