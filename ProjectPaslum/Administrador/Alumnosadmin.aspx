@@ -6,6 +6,7 @@
     <link href="css/modales.css" rel="stylesheet" />
     
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    
          <style>
     #mdialTamanio{
       width: 180% !important;
@@ -13,6 +14,12 @@
   </style>
     <div class="content">
             <div class="table-title">
+                <div class="alert alert-success text-center" runat="server" id="alertError">
+                              <p class="h2"><i class="fa fa-save"></i>&nbsp;No se puede guardar, la clase esta llena</p>
+                        </div>
+                        <div class="alert alert-success text-center" runat="server" id="alertBien">
+                              <p class="h2"><i class="fa fa-save"></i>&nbsp;Se guardo con exito</p>
+                        </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <h2>Administrar
@@ -46,7 +53,10 @@
                          </div>
                 
                     <div class="modal-body" style = "position:relative; overflow: scroll;">
-                        <div class="form-group">
+                       
+                        
+                         <div class="form-group">
+                            <asp:Label ID="lbMaximo" runat="server" Text="Label" Visible="false"></asp:Label>
                                 <div class="col-xs-10">
                                        <br />
                           Nombre(s)
@@ -110,13 +120,20 @@
                             <div class="col-xs-6">
                                  <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" CssClass="form-control dropdown-toggle"  Height="100%" OnSelectedIndexChanged="ddlCarrera_SelectedIndexChanged1" AutoPostBack="true"></asp:DropDownList>      
                               </div>
-                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-xs-6">
                                  <br />
-                                Cuatri
+                                Grupo
+                                <asp:DropDownList ID="ddlGrupo" runat="server"   Height="100%" CssClass=" form-control"  ></asp:DropDownList>      
+                              </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                 <br />
+                                Cuatrimestre
                                 <asp:DropDownList ID="ddlCuatri" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
                               </div>
                             </div>

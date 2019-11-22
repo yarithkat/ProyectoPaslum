@@ -13,13 +13,14 @@ namespace ProjectPaslum.Administrador
 {
     public partial class AsignacionProfesor : System.Web.UI.Page
     {
+        PaslumBaseDatoDataContext contexto = new PaslumBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 this.LlenarProfesor();
                 this.LlenarMateria();
-                this.LlenarGrupo();
+                this.LlenarCarrera();
                 this.LlenarAsigMateria();
             }
         }
@@ -64,24 +65,38 @@ namespace ProjectPaslum.Administrador
         protected void LlenarAsigMateria()
         {
             ControllerAsignarGrupo CtrlAsignarM = new ControllerAsignarGrupo();
-            var asigmateria = CtrlAsignarM.ConsultaAsigMateria();
-            ddlMateriaGrupo.Items.Add("Seleccionar");
-            ddlMateriaGrupo.DataSource = asigmateria;
-            ddlMateriaGrupo.DataValueField = "id";
-            ddlMateriaGrupo.DataTextField = "id";
-            ddlMateriaGrupo.DataBind();
-                   
+            try
+            {
+                var gfg = (from am in contexto.TblAsignacionMateria
+                           join m in contexto.TblMateria
+                           on am.idMateria equals m.id
+                           join p in contexto.TblProfesor 
+                           on am.idProfesor equals p.id
+                           select m).ToList();
+
+                ddlMateriaGrupo.DataValueField = "id";
+                ddlMateriaGrupo.DataTextField = "strNombre";
+                ddlMateriaGrupo.DataSource = gfg;
+                ddlMateriaGrupo.DataBind();
+                ddlMateriaGrupo.Items.Insert(0, new ListItem("Seleccionar", "0"));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
-        protected void LlenarGrupo()
+        protected void LlenarCarrera()
         {
-            ControllerAsignarGrupo CtrlAsignarG = new ControllerAsignarGrupo();
-            List<TblGrupo> grupo = CtrlAsignarG.ConsultaGrupo();
-            ddlGrupoGrupo.Items.Add("Seleccionar");
-            ddlGrupoGrupo.DataSource = grupo;
-            ddlGrupoGrupo.DataValueField = "id";
-            ddlGrupoGrupo.DataTextField = "strNombre";
-            ddlGrupoGrupo.DataBind();
+            ControllerAlumno CtrlAsignarC = new ControllerAlumno();
+            List<TblCarrera> carrera = CtrlAsignarC.ConsultaCarrera();
+            ddlCarrera.Items.Add("Seleccionar");
+            ddlCarrera.DataSource = carrera;
+            ddlCarrera.DataValueField = "id";
+            ddlCarrera.DataTextField = "strNombre";
+            ddlCarrera.DataBind();
 
         }
 
@@ -96,6 +111,18 @@ namespace ProjectPaslum.Administrador
             ControllerAsignarGrupo ctrlAsigGrupo = new ControllerAsignarGrupo();
             ctrlAsigGrupo.InsertarAsignacionGrupo(asignacionGrupo);
             this.Response.Redirect("./AsignacionProfesor.aspx", true);
+        }
+
+        protected void ddlGrupoGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var grupo = (from grup in contexto.TblGrupo
+                         where grup.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue) select grup).ToList();
+            ddlGrupoGrupo.Items.Add("Seleccionar");
+            ddlGrupoGrupo.DataSource = grupo;
+            ddlGrupoGrupo.DataValueField = "id";
+            ddlGrupoGrupo.DataTextField = "strNombre";
+            ddlGrupoGrupo.DataBind();
+
         }
     }
 }

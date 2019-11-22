@@ -155,6 +155,7 @@ namespace ProjectPaslum
                     Session["municipio"] = alumnoDir.municipio;
                     Session["forTel"] = alumno.idTelefono;
                     Session["forDom"] = alumno.idDireccion;
+                    Session["forGrupo"] = alumno.idGrupo;
                     Response.Redirect("./Alumno/PrincipalAlumno.aspx", true);
                 }
             }
@@ -162,7 +163,7 @@ namespace ProjectPaslum
             {
                 //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Usuario o contraseña incorrecta');</script>");
                 Response.Redirect("IndexPaslum.aspx", true);
-                this.Response.Write("<script lenguage='JavaScript'>windows.alert('Fallo')</script>");
+                this.Response.Write("<script> lenguage='JavaScript'>windows.alert('Fallo')</script>");
             }
         }
     }

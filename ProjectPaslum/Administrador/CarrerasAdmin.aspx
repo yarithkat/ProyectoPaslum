@@ -51,24 +51,15 @@
                 
                     <div class="modal-body">
                         <div class="form-group">
-                                <div class="col-xs-10">
-  
-                        <br/>
-                          Clave
-                            <asp:TextBox runat="server" id="txtClaveAgregar" class="form-control" required="" type="text" ></asp:TextBox>
-                        </div>
-                                 </div>
-                     
-                        <div class="form-group">
-                              <div class="col-xs-6">
-                                    
+                              <div class="col-xs-10">                                    
                         <br/>
                                 Nombre
                             <asp:TextBox  id="txtNombreAgregar" class="form-control" required="" type="text" runat="server"></asp:TextBox>
                         </div>
-                             </div>
+                        </div>
+                        <br/>
                         <div class="form-group">
-                               <div class="col-xs-6">
+                               <div class="col-xs-10">
                                      
                         <br/>
                                Area
