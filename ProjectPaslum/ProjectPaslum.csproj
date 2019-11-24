@@ -322,7 +322,6 @@
     <Content Include="Profesor\estilos.css" />
     <Content Include="Profesor\Evaluaciones.aspx" />
     <Content Include="Profesor\Justificantes.aspx" />
-    <Content Include="Profesor\Parciales.aspx" />
     <Content Include="Profesor\PaseLista.aspx" />
     <Content Include="Profesor\PrincipalProfesor.aspx" />
     <Content Include="Profesor\Profesor.Master" />
@@ -749,13 +748,6 @@
     </Compile>
     <Compile Include="Profesor\Justificantes.aspx.designer.cs">
       <DependentUpon>Justificantes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profesor\Parciales.aspx.cs">
-      <DependentUpon>Parciales.aspx</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Profesor\Parciales.aspx.designer.cs">
-      <DependentUpon>Parciales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor\PaseLista.aspx.cs">
       <DependentUpon>PaseLista.aspx</DependentUpon>

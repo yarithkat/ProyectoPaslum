@@ -111,8 +111,8 @@
                         <br />
                         <div class="form-group">
                             <div class="col-xs-6">
-                                Materia:
-                             <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control"></asp:DropDownList>
+                                Carrera:
+                             <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control" AutoPostBack="true"></asp:DropDownList>
                             </div>
                             <br />
                         </div>

@@ -22,34 +22,58 @@ namespace ProjectPaslum.Profesor
                 if (Session["id"] != null)
                 {
                     lbId.Text = Session["id"].ToString();
-                    this.LlenarCarrera();
-                    this.LlenarGrupo();
+                    LlenarCarrera(Convert.ToInt32(Session["id"].ToString()));
+                    LlenarGrupo(Convert.ToInt32(Session["id"].ToString()));
                     loadDrop(Convert.ToInt32(Session["id"].ToString()));
                 }
             }                      
         }
-        private void LlenarCarrera()
+        private void LlenarCarrera(int idProfe)
         {
-            ControllerQr CtrlAsignarC = new ControllerQr();
-            List<TblCarrera> carrera = CtrlAsignarC.ConsultaCarrera();
-            ddlCarrera.Items.Add("Seleccionar");
-            ddlCarrera.DataSource = carrera;
-            ddlCarrera.DataValueField = "id";
-            ddlCarrera.DataTextField = "strNombre";
-            ddlCarrera.DataBind();
+            try
+            {
+                var car = (from ag in contexto.TblAsignacionGrupo
+                           join g in contexto.TblGrupo
+                           on ag.idGrupo equals g.id
+                           join am in contexto.TblAsignacionMateria 
+                           on ag.idAsignacionMateria equals am.id
+                           join p in contexto.TblProfesor 
+                           on am.idProfesor equals p.id
+                           join m in contexto.TblMateria 
+                           on am.idMateria equals m.id
+                           join c in contexto.TblCarrera 
+                           on g.idCarrera equals c.id
+                           where p.id == idProfe
+                           select c).ToList();
 
+                ddlCarrera.Items.Add("Seleccionar");
+                ddlCarrera.DataSource = car;
+                ddlCarrera.DataValueField = "id";
+                ddlCarrera.DataTextField = "strNombre";
+                ddlCarrera.DataBind();
+                ddlMateria.Items.Insert(0, new ListItem("Seleccionar", "0"));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        private void LlenarGrupo()
+        private void LlenarGrupo(int idProfe)
         {
-            ControllerQr CtrlAsignarG = new ControllerQr();
-            List<TblGrupo> grupo = CtrlAsignarG.ConsultaGrupo();
-            ddlGrupo.Items.Add("Seleccionar");
+            var grupo = (from asgr in contexto.TblAsignacionGrupo
+                         join asmat in contexto.TblAsignacionMateria
+                         on asgr.idAsignacionMateria equals asmat.id
+                         join gru in contexto.TblGrupo
+                         on asgr.idGrupo equals gru.id
+                         where asmat.idProfesor == idProfe
+                         select gru).ToList();
             ddlGrupo.DataSource = grupo;
             ddlGrupo.DataValueField = "id";
             ddlGrupo.DataTextField = "strNombre";
             ddlGrupo.DataBind();
-
+            ddlGrupo.Items.Insert(0, new ListItem("Seleccionar", "0"));
         }
 
         private void loadDrop(int idProfe)
@@ -67,7 +91,7 @@ namespace ProjectPaslum.Profesor
                 ddlMateria.DataTextField = "strNombre";
                 ddlMateria.DataSource = gfg;
                 ddlMateria.DataBind();
-                ddlMateria.Items.Insert(0, new ListItem("--SELECCIONAR--", "0"));
+                ddlMateria.Items.Insert(0, new ListItem("Seleccionar", "0"));
             }
             catch (Exception)
             {
