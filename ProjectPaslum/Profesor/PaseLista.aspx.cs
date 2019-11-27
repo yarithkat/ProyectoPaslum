@@ -51,7 +51,6 @@ namespace ProjectPaslum.Profesor
                 ddlCarrera.DataValueField = "id";
                 ddlCarrera.DataTextField = "strNombre";
                 ddlCarrera.DataBind();
-                ddlMateria.Items.Insert(0, new ListItem("Seleccionar", "0"));
             }
             catch (Exception)
             {

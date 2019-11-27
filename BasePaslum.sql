@@ -16,10 +16,6 @@ strMotivo varchar(50),
 strArchivo varchar(200)
 );
 
-create table TblNota(
-id int not null identity(1,1),
-strDescripcion varchar(1000),
-constraint pk_Notas primary key (id));
 
 create table TblCarrera(
 id int not null identity(1,1),
@@ -65,11 +61,9 @@ id int not null identity(1,1),
 strNombre varchar(200),
 strDescripcion varchar(200),
 bStatus varchar(10),
-idNota int,
 idCarrera int,
 idCuatri int,
 constraint pk_Materia primary key(id),
-constraint fkIdNota_Materia foreign key(idNota) references TblNota(id),
 constraint fkIdCarrera_Materia foreign key(idCarrera) references TblCarrera(id),
 constraint fkIdCuatri_Materia foreign key(idCuatri) references TblCuatri(id),
 );
@@ -141,6 +135,17 @@ constraint fkIdMateria_Asistencia foreign key(idMateria) references TblMateria(i
 constraint fkIdAlumno_Asistencia foreign key(idAlumno) references TblAlumno(id),
 constraint fkIdJustificante_Asistencia foreign key(idJustificante) references TblJustificante(id),
 );
+
+create table TblNota(
+id int not null identity(1,1),
+strTitulo varchar(1000),
+strDescripcion varchar(1000),
+fecha datetime,
+idProfesor int,
+idMateria int,
+constraint pk_Notas primary key (id),
+constraint fkIdProfesor_Nota foreign key(idProfesor) references TblProfesor(id),
+constraint fkIdMateria_Nota foreign key(idMateria) references TblMateria(id));
 
 create table TblAlumnoMateria(
 id int not null identity(1,1),
@@ -215,6 +220,8 @@ constraint fkIdParcial_Calificacion foreign key(idCatalogoParcial) references Tb
 constraint fkIdAlumno_Calificacion foreign key(idAlumno) references TblAlumno(id),
 );
 
+
+
 select * from TblDireccion;
 select * from TblTelefono;
 select * from TblProfesor;
@@ -232,12 +239,8 @@ select * from TblAsignacionMateria
 select * from TblAsignacionGrupo
 select * from TblCalificacion
 
-SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
-	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
-	   pro.strEspecialidad, tel.strcelular, tel.strtelCasa 
-FROM TblProfesor as pro
-inner join TblTelefono  as tel 
-on pro.idTelefono = tel.id;
+
+select * from tblas
 
 select al.id, al.strNombre, al.strApellidoP, al.strApellidoM,
 		us.strusuario, us.strpass,
@@ -261,9 +264,9 @@ on m.idCarrera = c.id
 inner join TblCuatri cu
 on m.idCuatri = cu.id;
 
-update TblCarrera 
-set bStatus = 1
-where id = 2;
+select * 
+from TblMateria
+where strArea = 1 and strNombre='GRUPO 1'
 
 select a.strNombre, m.strNombre, m.strDescripcion
 from TblAlumno a
@@ -357,65 +360,59 @@ on am.idMateria = m.id
 where cp.idAsignacionMaeria = 3
 group by cp.idAsignacionMaeria, m.strNombre
 
+/****Consulta para ver la suma de los parciales***/
+select cp.strNombre,cp.intPorcentaje,cp.strDescripcion as 'Descripción'
+from TblCatalogoParcial cp
+join TblAsignacionMateria am
+on cp.idAsignacionMaeria = am.id
+where cp.idAsignacionMaeria = 1
+group by cp.idAsignacionMaeria, cp.strNombre, cp.strDescripcion,cp.intPorcentaje
+
+select * from TblCatalogoParcial
+
+/****Consulta para ver los justificantes**/
+select jus.strArchivo, jus.strMotivo,
+mat.strNombre,
+alum.strNombre, alum.strApellidoP, alum.strApellidoM
+from TblAsistencia asis
+inner join TblJustificante jus
+on asis.idJustificante = jus.id
+
+inner join TblMateria mat
+on asis.idMateria = mat.id
+
+inner join TblAlumno alum
+on asis.idAlumno = alum.id
+
+inner join TblAsignacionMateria asima
+on asima.idMateria = mat.id
+
+where asima.id = 1 
 
 /****Consulta para asingnar las calificaciones***/
+select * from TblCatalogoParcial
+select * from TblCalificacion
+select * from TblAlumno
+select * from TblAsignacionMateria
 
-select a.strNombre, a.strApellidoP,a.strApellidoM,
-c.valCalificacion, g.strNombre as 'grupo',cp.strNombre as 'parcial'
-from TblAlumno a
-inner join TblCalificacion c 
-on c.idAlumno = a.id
-inner join TblCatalogoParcial cp
-on c.idCatalogoParcial = cp.id
+select * from TblAsignacionGrupo where idGrupo=1;
+select al.strNombre as 'Alumno', al.strApellidoM as 'Apellido P', al.strApellidoP as 'Apellido M',
+car.strNombre as 'Carrera',g.strNombre as 'Grupo', 
+cp.strNombre as 'Parcial', cal.valCalificacion as 'cal'
+from TblAlumno al
 inner join TblGrupo g
-on a.idGrupo = g.id
-where g.id = '1' and cp.id = '1'
-
-
-select a.strNombre, a.strApellidoP,a.strApellidoM, cp.strNombre,
-g.strNombre as 'GRUPO', cal.valCalificacion as 'CALIFICACION'
-from TblAlumno a
-inner join TblGrupo g
-on a.idGrupo = g.id
+	on al.idGrupo = g.id
 inner join TblCarrera car
-on a.idCarrera = car.id
-inner join TblAsignacionGrupo ag
-on g.id = ag.idGrupo
-inner join TblAsignacionMateria am
-on am.id = ag.idAsignacionMateria
-inner join TblCatalogoParcial cp
-on cp.idAsignacionMaeria = am.id
-inner join TblCalificacion cal
-on cal.idCatalogoParcial = cp.id
-where g.id = 1 and car.id = 1 and cp.id=1
-
-
-select c.valCalificacion as 'Calificacion', cp.strNombre 'Parcial',
-g.strNombre as 'Grupo', al.strNombre as 'Alumno', al.strApellidoM as 'Apellido P', al.strApellidoP as 'Apellido M',
-car.strNombre, ma.strNombre as 'Materia'
-from TblCalificacion c
-inner join TblCatalogoParcial cp
-on c.idCatalogoParcial = cp.id
-
-inner join TblAsignacionMateria am
-on cp.idAsignacionMaeria = am.id
-
-inner join TblAsignacionGrupo ag
-on ag.idAsignacionMateria = am.id
-
-inner join TblGrupo g
-on g.id = ag.idGrupo
-
-inner join TblAlumno al
-on al.idGrupo = g.id
-
-inner join TblCarrera car
-on car.id = al.idCarrera
-
-inner join TblMateria ma
-on ma.id = am.idMateria
-
-where car.id = 1, cal.
+	on al.idCarrera = car.id
+left join TblAsignacionGrupo ag
+	on ag.idGrupo = g.id 
+left join TblAsignacionMateria am
+	on ag.idAsignacionMateria = am.id 
+left join TblCatalogoParcial cp
+	on cp.idAsignacionMaeria = am.id
+left join TblCalificacion cal
+	on cal.idCatalogoParcial = cp.id
+where al.idGrupo = 1 and cp.id=1
 
 /*******Conulta numero de alumnos*****/
 select count(al.idGrupo) as 'Num. Alum', g.strCapacidad as 'Max.'
@@ -443,6 +440,40 @@ on cp.idAsignacionMaeria = am.id
 inner join TblCalificacion as cal
 on cal.idCatalogoParcial = cp.id
 where cal.idAlumno = 1 and al.id = 1
+
+
+/*****Consulta para ver el profesor de que carrerra****/
+
+select g.strNombre as 'Nombre Grupo', m.strNombre as 'Materia', c.strNombre 'Carrera',
+p.strNombre as 'Profesor', p.strApellidoP as 'Apellido Paterno', p.strApellidoM as 'Apellido Materno'
+from TblAsignacionGrupo ag
+inner join TblGrupo g
+on ag.idGrupo = g.id
+
+inner join TblAsignacionMateria am
+on ag.idAsignacionMateria = am.id
+
+inner join TblProfesor p
+on am.idProfesor = p.id
+
+inner join TblMateria m
+on am.idMateria = m.id
+
+inner join TblCarrera c
+on g.idCarrera = c.id
+
+where p.id = 1
+
+
+select *
+from TblAsignacionGrupo asgr
+inner join TblAsignacionMateria asma
+on asgr.idAsignacionMateria = asma.id
+where asma.idProfesor = 1
+
+
+
+/***************************************************************/
 
 select * from TblAlumnoMateria
 select * from TblAsignacionMateria
@@ -478,8 +509,8 @@ Insert into TblCarrera values ('2','MERCA','MERCADOTECNIA','1')
 Insert into TblCuatri values ('CUATRIMESTRE 1','2019-01-01','2019-04-20')
 Insert into TblCuatri values ('CUATRIMESTRE 2','2019-05-01','2019-09-12')
 
-Insert into TblMateria values ('REDES','CISCO','1',NULL,1,1)
-Insert into TblMateria values ('PROGRAMACIÓN','ARBOLES','1',NULL,1,2)
+Insert into TblMateria values ('REDES','CISCO','1',1,1)
+Insert into TblMateria values ('PROGRAMACIÓN','ARBOLES','1',1,2)
 
 Insert into TblGrupo values('GRUPO 1','50','1');
 Insert into TblGrupo values('GRUPO 2','50','1');
@@ -491,6 +522,6 @@ Insert into TblAlumno values ('YARITH','MUCIÑO', 'SANCHEZ','21','MUJER','yarith@
 
 Insert into TblAlumnoMateria values(1,1,'');
 
-Insert into TblAsignacionMateria values(1,1);
+Insert into TblAsignacionGrupo values(2,1);
 
 Insert into TblCalificacion values(10,1,1);

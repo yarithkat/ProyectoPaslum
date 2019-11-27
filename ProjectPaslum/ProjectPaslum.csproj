@@ -322,6 +322,7 @@
     <Content Include="Profesor\estilos.css" />
     <Content Include="Profesor\Evaluaciones.aspx" />
     <Content Include="Profesor\Justificantes.aspx" />
+    <Content Include="Profesor\NotaInfo.aspx" />
     <Content Include="Profesor\PaseLista.aspx" />
     <Content Include="Profesor\PrincipalProfesor.aspx" />
     <Content Include="Profesor\Profesor.Master" />
@@ -749,6 +750,13 @@
     <Compile Include="Profesor\Justificantes.aspx.designer.cs">
       <DependentUpon>Justificantes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\NotaInfo.aspx.cs">
+      <DependentUpon>NotaInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\NotaInfo.aspx.designer.cs">
+      <DependentUpon>NotaInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\PaseLista.aspx.cs">
       <DependentUpon>PaseLista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -798,6 +806,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="images\AlumRegistrado\" />
     <Folder Include="images\ProfeRegistrado\" />
+    <Folder Include="Profesor\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">
