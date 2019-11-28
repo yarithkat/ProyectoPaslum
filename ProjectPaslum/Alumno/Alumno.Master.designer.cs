@@ -31,13 +31,13 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// Control txtNumLista.
+        /// Control txtMotivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumLista;
+        protected global::System.Web.UI.WebControls.TextBox txtMotivo;
         
         /// <summary>
         /// Control FileUPArchivo.
@@ -49,40 +49,13 @@ namespace ProjectPaslum.Alumno {
         protected global::System.Web.UI.WebControls.FileUpload FileUPArchivo;
         
         /// <summary>
-        /// Control Label5.
+        /// Control fechajus.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// Control RBFamiliar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RBFamiliar;
-        
-        /// <summary>
-        /// Control RBSalud.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RBSalud;
-        
-        /// <summary>
-        /// Control RBPersonal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RBPersonal;
+        protected global::System.Web.UI.WebControls.TextBox fechajus;
         
         /// <summary>
         /// Control Button1.

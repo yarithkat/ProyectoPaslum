@@ -68,25 +68,23 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">       
-                            <asp:Label ID="Label3" runat="server" Text="No.Lista"></asp:Label>
-                            <asp:TextBox ID="txtNumLista" runat="server"></asp:TextBox>
+                            <asp:Label ID="Label3" runat="server" Text="Motivo"></asp:Label>
+                            <asp:TextBox ID="txtMotivo" runat="server"></asp:TextBox>
                              </div>
                             <div class="form-group">
                        	    <asp:FileUpload ID="FileUPArchivo" runat="server" />
                             </div>
-                        <div class="modal-body">
-                            <asp:Label ID="Label5" runat="server" Text="Seleccionar Motivo:"></asp:Label>
-                            <br />
-                            <asp:RadioButton ID="RBFamiliar" runat="server" Text="Familiar" Checked="True" GroupName="RadioGroup1" />
-                            <br />
-                            <asp:RadioButton ID="RBSalud" runat="server" Text="Salud" Checked="True" GroupName="RadioGroup1" />
-                            <br />
-                            <asp:RadioButton ID="RBPersonal" runat="server" Text="Personal" Checked="True" GroupName="RadioGroup1" />
-                        </div>
+                            <div class="form-group">
+                                    <div class="col-xs-6">
+                                    Fecha a justificar:
+                                <asp:TextBox id="fechajus" runat="server" TextMode="Date" required="required"></asp:TextBox>
+                            
+                            </div>
+                            </div>
                     </div>
                     <div class="modal-footer">
                         <asp:Button ID="Button1" runat="server" Text="Cancelar" />
-                        <asp:Button ID="Button2" runat="server" Text="Guardar" />
+                        <asp:Button ID="Button2" runat="server" Text="Guardar" class="btn btn-success" OnClick="Button2_Click" />
                     </div>
                 </div>
             </div>

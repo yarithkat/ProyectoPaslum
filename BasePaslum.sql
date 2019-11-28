@@ -13,7 +13,9 @@ constraint pk_Cuatri primary key(id)
 create table TblJustificante(
 id  int not null primary key identity(1,1), 
 strMotivo varchar(50),
-strArchivo varchar(200)
+strArchivo varchar(max),
+fecha date,
+fechaJusti date
 );
 
 
@@ -238,9 +240,19 @@ select * from TblCatalogoEvaluacion
 select * from TblAsignacionMateria
 select * from TblAsignacionGrupo
 select * from TblCalificacion
+select * from TblNota
+select * from TblAsistencia
+select * from TblJustificante
 
+select p.strNombre, p.strApellidoP, p.strApellidoM,
+m.strNombre,n.strTitulo, n.strDescripcion,n.fecha
+from TblNota n
+inner join TblProfesor p
+on p.id = n.idProfesor
+inner join TblMateria m
+on m.id = n.idMateria
+ORDER BY n.fecha DESC
 
-select * from tblas
 
 select al.id, al.strNombre, al.strApellidoP, al.strApellidoM,
 		us.strusuario, us.strpass,
@@ -471,8 +483,20 @@ inner join TblAsignacionMateria asma
 on asgr.idAsignacionMateria = asma.id
 where asma.idProfesor = 1
 
+/**********Asitencia****************/
 
+select asis.dteFecha, jus.strMotivo, jus.strArchivo , ma.strNombre, jus.fecha
+from TblAsistencia asis
+left join TblJustificante jus
+on asis.idJustificante = jus.id
+left join TblMateria ma
+on ma.id = asis.idMateria
+left join TblAlumno alu
+on alu.id = asis.idAlumno
 
+select * from TblJustificante
+select * from TblAsistencia
+select * from tblQR
 /***************************************************************/
 
 select * from TblAlumnoMateria
@@ -520,8 +544,8 @@ Insert into TblAlumno values ('NORMA','ADAME', 'ROSAS','21','MUJER','norma@gmail
 Insert into TblAlumno values ('KATIA','PARRA', 'MARTINEZ','21','MUJER','katia@gmail.com','',4,4,4,1,1,1)
 Insert into TblAlumno values ('YARITH','MUCIÑO', 'SANCHEZ','21','MUJER','yarith@gmail.com','',5,5,5,2,2,2)
 
-Insert into TblAlumnoMateria values(1,1,'');
-
-Insert into TblAsignacionGrupo values(2,1);
+Insert into TblAsignacionMateria values (1,1)
+Insert into TblAsignacionGrupo values(1,1);
 
 Insert into TblCalificacion values(10,1,1);
+
