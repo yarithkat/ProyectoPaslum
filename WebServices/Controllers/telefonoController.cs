@@ -65,7 +65,7 @@ namespace WebServices.Controllers
         }
 
         // PUT: api/Sala/5
-        public bool Put(int id, [FromBody]TblTelefono _TelTelefono)
+        public bool Put(int id, [FromBody]TelTelefono _TelTelefono)
         {
             try
             {
@@ -74,9 +74,9 @@ namespace WebServices.Controllers
                     var result = dcTemp.GetTable<TblTelefono>().Where(c => c.id == id).FirstOrDefault();
                     if (result != null)
                     {
-                        result.strcelular = _TelTelefono.strcelular;
-                        result.strtelCasa = _TelTelefono.strtelCasa;
-                        result.strotro = _TelTelefono.strotro;
+                        result.strcelular = _TelTelefono.strCelular;
+                        result.strtelCasa = _TelTelefono.strTelCasa;
+                        result.strotro = _TelTelefono.strOtro;
                         dcTemp.SubmitChanges();
                         //ediater
                     }

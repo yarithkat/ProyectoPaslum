@@ -53,5 +53,16 @@ namespace Modelo.Properties {
                 return ((string)(this["ConexionProduccion"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql8.gear.host;Initial Catalog=paselista;Persist Security Info" +
+            "=True;User ID=paselista;Password=Qp02~~Yd4MD3")]
+        public string paselistaConnectionString {
+            get {
+                return ((string)(this["paselistaConnectionString"]));
+            }
+        }
     }
 }

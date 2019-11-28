@@ -35,10 +35,7 @@ namespace WebServices.Controllers
             public string strDireccionNoEx { get; set; }
             public string strDireccionNoInt { get; set; }
             public string strCuatri { get; set; }
-            //public TblDireccion direccion;
-            //public TblTelefono telefono;
-            //public TblCarrera carrera { get; set; }
-            //public TblCuatri cuatri;
+            public string strGrupo { get; set; }
 
         }
 
@@ -68,11 +65,11 @@ namespace WebServices.Controllers
                     objTemp.strDireccionNoInt = AluAlumno.TblDireccion.strnumInt;
                     objTemp.strCarrera = AluAlumno.TblCarrera.strNombre;
                     objTemp.strCuatri = AluAlumno.TblCuatri.strNombre;
+                    objTemp.strGrupo = AluAlumno.TblGrupo.strNombre;
                     objTemp.intIdTelefono = AluAlumno.idTelefono.Value;
                     objTemp.strTelefonoCasa = AluAlumno.TblTelefono.strtelCasa;
                     objTemp.strTelefonoCelular = AluAlumno.TblTelefono.strcelular;
                     objTemp.strOtro = AluAlumno.TblTelefono.strotro;
-                    //objTemp.carrera = AluAlumno.TblCarrera;
                     return objTemp;
                 }
                 else
@@ -82,7 +79,7 @@ namespace WebServices.Controllers
             }
         }
 
-        public bool Put(int id, TblAlumno _Alumno)
+        public bool Put(int id, [FromBody]Alumno _Alumno)
         {
             try
             {
@@ -91,7 +88,7 @@ namespace WebServices.Controllers
                     var result = dcTemp.GetTable<TblAlumno>().Where(c => c.id == id).FirstOrDefault();
                     if (result != null)
                     {
-                        result.strCorreo = _Alumno.strCorreo;
+                        result.strCorreo = _Alumno.correo;
                         dcTemp.SubmitChanges();
                         //ediater
                     }
