@@ -12,6 +12,11 @@
       width: 180% !important;
     }
   </style>
+    <script type="text/javascript">
+        function Aviso() {
+            confirm("¿Decea Agregar el Nuevo Registro?");
+        }
+    </script>
     <div class="content">
             <div class="table-title">
                 <div class="alert alert-success text-center" runat="server" id="alertError">
@@ -271,7 +276,7 @@
                             <div class="modalfooter">
                           
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
+                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" OnClientClick="return Aviso();" />
                             </div>
                       
                             </div>
@@ -316,7 +321,7 @@
                         <SortedDescendingHeaderStyle BackColor="#00547E" />
                    
                 </asp:GridView>
-                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                      SelectCommand="select al.id, al.strNombre, al.strApellidoP, al.strApellidoM, 
 		us.strusuario, us.strpass,
 		car.strNombre, car.strArea		
@@ -325,7 +330,7 @@ inner join TblUser as us
 on al.idUser = us.id
 inner join TblCarrera as car
 on al.idCarrera = car.id
-order by al.id desc;"></asp:SqlDataSource>
+order by al.id desc;" ConnectionString="Data Source=DESKTOP-7R6DCPD;Initial Catalog=pase_lista;User ID=sa;Password=1234"></asp:SqlDataSource>
                  </div>
             </div>
         </div>

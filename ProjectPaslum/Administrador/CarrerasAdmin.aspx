@@ -12,7 +12,11 @@
       width: 150% !important;
     }
   </style>   
-    
+    <script type="text/javascript">
+        function Aviso() {
+            confirm("¿Decea Agregar el Nuevo Registro?");
+        }
+    </script>
     <div class="content">
             <div class="table-title">
                 <div class="row">
@@ -87,7 +91,7 @@
                       
                       <div class="modal-footer">
                                 <asp:Button ID="btncancel" runat="server" Text="Cancelar" class="btn btn-primary" data-dismiss="modal" />
-                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" />
+                                <asp:Button ID="btnAceptarAgregar" runat="server" CssClass="btn btn-success" Text="Aceptar" OnClick="btnAceptarAgregar_Click" OnClientClick="return Aviso();" />
                    
                             </div>
             </div>
@@ -131,7 +135,7 @@
                         <SortedDescendingHeaderStyle BackColor="#00547E" />
                    
                 </asp:GridView>
-                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" 
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-7R6DCPD;Initial Catalog=pase_lista;User ID=sa;Password=1234" 
                      SelectCommand="SELECT id, strNombre, strArea, strClave FROM TblCarrera WHERE (bStatus = 1)" 
                      DeleteCommand="UPDATE TblCarrera SET bStatus = '0' WHERE (id = @id)" 
                      UpdateCommand="UPDATE TblCarrera SET strNombre = @strNombre, strArea = @strArea WHERE (id = @id)">
