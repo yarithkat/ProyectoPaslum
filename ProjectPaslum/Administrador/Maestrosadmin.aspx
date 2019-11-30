@@ -10,11 +10,6 @@
       width: 200% !important;
     }
   </style>
-    <script type="text/javascript">
-        function Aviso() {
-            confirm("¿Decea Agregar el Nuevo Registro?");
-        }
-    </script>
     <div class="content">
         <div class="table-title">
             <div class="row">
@@ -277,7 +272,7 @@
                 <div class="modal-footer">
                     <div class="modalfooter">
                         <asp:Button ID="btncancel" runat="server" Text="Cancelar" CssClass="btn btn-primary" data-dismiss="modal" />
-                        <asp:Button ID="btnAceptarAgregar" runat="server" Text="Aceptar" OnClick="btnAceptarAgregar_Click" class="btn btn-success" OnClientClick="return Aviso();" />
+                        <asp:Button ID="btnAceptarAgregar" runat="server" Text="Aceptar" OnClick="btnAceptarAgregar_Click" class="btn btn-success"/>
 
                     </div>
                 </div>
@@ -336,7 +331,7 @@
                         <SortedDescendingHeaderStyle BackColor="#00547E" />
                 </asp:GridView>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-7R6DCPD;Initial Catalog=pase_lista;User ID=sa;Password=1234" SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="SELECT pro.id ,pro.strNombre, pro.strApellidoP, 
 	   pro.strApellidoM, pro.strCorreo, pro.strCedula,
 	   pro.strEspecialidad, tel.strcelular, tel.strtelCasa 
 FROM TblProfesor as pro

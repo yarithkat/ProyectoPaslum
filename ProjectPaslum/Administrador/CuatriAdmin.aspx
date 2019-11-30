@@ -9,11 +9,7 @@
       width: 150% !important;
     }
   </style>
-  <script type="text/javascript">
-        function Aviso() {
-            confirm("¿Decea Agregar el Nuevo Registro?");
-        }
-    </script>
+  
     <div class="content">
             <div class="table-title">
                 <div class="row">
@@ -94,7 +90,7 @@
                             <div class="modalfooter">
                            
                                   <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary"  Text="Cancelar" data-dismiss="modal"  />
-                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar" OnClick="btnaceptar_Click" OnClientClick="return Aviso();" />
+                                 <asp:Button ID="btnaceptar" runat="server" class="btn btn-success"  Text="Aceptar" OnClick="btnaceptar_Click" />
                           
                         </div>
                             </div>
@@ -132,7 +128,7 @@
                         <SortedDescendingHeaderStyle BackColor="#00547E" />
                 </asp:GridView>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-7R6DCPD;Initial Catalog=pase_lista;User ID=sa;Password=1234" SelectCommand="SELECT strNombre, strFechaInicio, strFechaFin FROM TblCuatri"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pase_listaConnectionString %>" SelectCommand="SELECT strNombre, strFechaInicio, strFechaFin FROM TblCuatri"></asp:SqlDataSource>
 
             </div>
         </div>

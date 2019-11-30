@@ -70,25 +70,6 @@ namespace Controller
             }
         }
 
-        public bool InsertarJusticante(TblJustificante _TBL_Just)
-        {
-            bool respuesta = false;
-            try
-            {
-                contexto.TblJustificante.InsertOnSubmit(_TBL_Just);
-                contexto.SubmitChanges();
-                respuesta = true;
-
-            }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine(ex.ToString());
-                respuesta = false;
-
-            }
-            return respuesta;
-
-        }
     }
 }
 

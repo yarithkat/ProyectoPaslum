@@ -9,11 +9,7 @@
       width: 150% !important;
     }
   </style>
-      <script type="text/javascript">
-        function Aviso() {
-            confirm("¿Decea Agregar el Nuevo Registro?");
-        }
-    </script>
+
     <div class="content">
         <div class="table-title">
             <div class="row">
@@ -29,6 +25,25 @@
                             <i class="icon-add"></i>
                             <asp:Label ID="Label1" runat="server" Text="Agregar nuevo grupo"></asp:Label>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contenido ALERT-->
+    <div class="modal fade" id="AlertgrupoModal">
+        <div class="left">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <br />
+                        <h4 class="modal-title">EL REGISTRO FUE AGREGADO CORRECTAMENTE</h4>
+                        <br />
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-6">
+                            Nombre
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +86,7 @@
                             <div class="col-xs-7">
                                 <br />
                                 Carrera
-                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control"></asp:DropDownList>      
+                                <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True"  Height="100%" CssClass=" form-control" AutoPostBack="true"></asp:DropDownList>      
                               </div>
                          </div>
                       
@@ -83,7 +98,9 @@
                         <div class="modal-footer">
                             <div class="modalfooter">
                                 <asp:Button ID="btncancel" runat="server" CssClass="btn btn-primary" Text="Cancelar" data-dismiss="modal" />
-                                <asp:Button ID="btnaceptar" data-toggle="modal" runat="server" class="btn btn-success" Text="Aceptar" OnClick="btnaceptar_Click" OnClientClick="return Aviso();" />
+                                <a data-toggle="modal" href="#AlertgrupoModal">
+                                    <asp:Button ID="btnaceptar" data-toggle="modal" runat="server" class="btn btn-success" Text="Aceptar" OnClick="btnaceptar_Click" />
+                                </a>
                             </div>
                         </div>
                     </div>
