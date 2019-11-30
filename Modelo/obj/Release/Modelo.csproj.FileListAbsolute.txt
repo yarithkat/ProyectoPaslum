@@ -3,4 +3,3 @@ C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\bin\Release\Modelo.dll
 C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\bin\Release\Modelo.pdb
 C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Release\Modelo.dll
 C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Release\Modelo.pdb
-C:\Users\oscar\Documents\GitHub\ProyectoPaslum\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache

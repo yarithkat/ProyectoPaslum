@@ -66,15 +66,6 @@ namespace Modelo
     partial void InsertTblGrupo(TblGrupo instance);
     partial void UpdateTblGrupo(TblGrupo instance);
     partial void DeleteTblGrupo(TblGrupo instance);
-    partial void InsertTblJustificante(TblJustificante instance);
-    partial void UpdateTblJustificante(TblJustificante instance);
-    partial void DeleteTblJustificante(TblJustificante instance);
-    partial void InsertTblMateria(TblMateria instance);
-    partial void UpdateTblMateria(TblMateria instance);
-    partial void DeleteTblMateria(TblMateria instance);
-    partial void InsertTblNota(TblNota instance);
-    partial void UpdateTblNota(TblNota instance);
-    partial void DeleteTblNota(TblNota instance);
     partial void InsertTblProfesor(TblProfesor instance);
     partial void UpdateTblProfesor(TblProfesor instance);
     partial void DeleteTblProfesor(TblProfesor instance);
@@ -87,6 +78,15 @@ namespace Modelo
     partial void InsertTblUser(TblUser instance);
     partial void UpdateTblUser(TblUser instance);
     partial void DeleteTblUser(TblUser instance);
+    partial void InsertTblMateria(TblMateria instance);
+    partial void UpdateTblMateria(TblMateria instance);
+    partial void DeleteTblMateria(TblMateria instance);
+    partial void InsertTblJustificante(TblJustificante instance);
+    partial void UpdateTblJustificante(TblJustificante instance);
+    partial void DeleteTblJustificante(TblJustificante instance);
+    partial void InsertTblNota(TblNota instance);
+    partial void UpdateTblNota(TblNota instance);
+    partial void DeleteTblNota(TblNota instance);
     #endregion
 		
 		public PaslumBaseDatoDataContext() : 
@@ -215,30 +215,6 @@ namespace Modelo
 			}
 		}
 		
-		public System.Data.Linq.Table<TblJustificante> TblJustificante
-		{
-			get
-			{
-				return this.GetTable<TblJustificante>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TblMateria> TblMateria
-		{
-			get
-			{
-				return this.GetTable<TblMateria>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TblNota> TblNota
-		{
-			get
-			{
-				return this.GetTable<TblNota>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TblProfesor> TblProfesor
 		{
 			get
@@ -268,6 +244,30 @@ namespace Modelo
 			get
 			{
 				return this.GetTable<TblUser>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TblMateria> TblMateria
+		{
+			get
+			{
+				return this.GetTable<TblMateria>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TblJustificante> TblJustificante
+		{
+			get
+			{
+				return this.GetTable<TblJustificante>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TblNota> TblNota
+		{
+			get
+			{
+				return this.GetTable<TblNota>();
 			}
 		}
 	}
@@ -1443,9 +1443,9 @@ namespace Modelo
 		
 		private EntitySet<TblQR> _TblQR;
 		
-		private EntityRef<TblMateria> _TblMateria;
-		
 		private EntityRef<TblProfesor> _TblProfesor;
+		
+		private EntityRef<TblMateria> _TblMateria;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -1464,8 +1464,8 @@ namespace Modelo
 			this._TblAsignacionGrupo = new EntitySet<TblAsignacionGrupo>(new Action<TblAsignacionGrupo>(this.attach_TblAsignacionGrupo), new Action<TblAsignacionGrupo>(this.detach_TblAsignacionGrupo));
 			this._TblCatalogoParcial = new EntitySet<TblCatalogoParcial>(new Action<TblCatalogoParcial>(this.attach_TblCatalogoParcial), new Action<TblCatalogoParcial>(this.detach_TblCatalogoParcial));
 			this._TblQR = new EntitySet<TblQR>(new Action<TblQR>(this.attach_TblQR), new Action<TblQR>(this.detach_TblQR));
-			this._TblMateria = default(EntityRef<TblMateria>);
 			this._TblProfesor = default(EntityRef<TblProfesor>);
+			this._TblMateria = default(EntityRef<TblMateria>);
 			OnCreated();
 		}
 		
@@ -1576,40 +1576,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsignacionMateria", Storage="_TblMateria", ThisKey="idMateria", OtherKey="id", IsForeignKey=true)]
-		public TblMateria TblMateria
-		{
-			get
-			{
-				return this._TblMateria.Entity;
-			}
-			set
-			{
-				TblMateria previousValue = this._TblMateria.Entity;
-				if (((previousValue != value) 
-							|| (this._TblMateria.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TblMateria.Entity = null;
-						previousValue.TblAsignacionMateria.Remove(this);
-					}
-					this._TblMateria.Entity = value;
-					if ((value != null))
-					{
-						value.TblAsignacionMateria.Add(this);
-						this._idMateria = value.id;
-					}
-					else
-					{
-						this._idMateria = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TblMateria");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblProfesor_TblAsignacionMateria", Storage="_TblProfesor", ThisKey="idProfesor", OtherKey="id", IsForeignKey=true)]
 		public TblProfesor TblProfesor
 		{
@@ -1640,6 +1606,40 @@ namespace Modelo
 						this._idProfesor = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TblProfesor");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsignacionMateria", Storage="_TblMateria", ThisKey="idMateria", OtherKey="id", IsForeignKey=true)]
+		public TblMateria TblMateria
+		{
+			get
+			{
+				return this._TblMateria.Entity;
+			}
+			set
+			{
+				TblMateria previousValue = this._TblMateria.Entity;
+				if (((previousValue != value) 
+							|| (this._TblMateria.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblMateria.Entity = null;
+						previousValue.TblAsignacionMateria.Remove(this);
+					}
+					this._TblMateria.Entity = value;
+					if ((value != null))
+					{
+						value.TblAsignacionMateria.Add(this);
+						this._idMateria = value.id;
+					}
+					else
+					{
+						this._idMateria = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblMateria");
 				}
 			}
 		}
@@ -1719,9 +1719,9 @@ namespace Modelo
 		
 		private EntityRef<TblAlumno> _TblAlumno;
 		
-		private EntityRef<TblJustificante> _TblJustificante;
-		
 		private EntityRef<TblMateria> _TblMateria;
+		
+		private EntityRef<TblJustificante> _TblJustificante;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -1742,8 +1742,8 @@ namespace Modelo
 		public TblAsistencia()
 		{
 			this._TblAlumno = default(EntityRef<TblAlumno>);
-			this._TblJustificante = default(EntityRef<TblJustificante>);
 			this._TblMateria = default(EntityRef<TblMateria>);
+			this._TblJustificante = default(EntityRef<TblJustificante>);
 			OnCreated();
 		}
 		
@@ -1893,40 +1893,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblJustificante_TblAsistencia", Storage="_TblJustificante", ThisKey="idJustificante", OtherKey="id", IsForeignKey=true)]
-		public TblJustificante TblJustificante
-		{
-			get
-			{
-				return this._TblJustificante.Entity;
-			}
-			set
-			{
-				TblJustificante previousValue = this._TblJustificante.Entity;
-				if (((previousValue != value) 
-							|| (this._TblJustificante.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TblJustificante.Entity = null;
-						previousValue.TblAsistencia.Remove(this);
-					}
-					this._TblJustificante.Entity = value;
-					if ((value != null))
-					{
-						value.TblAsistencia.Add(this);
-						this._idJustificante = value.id;
-					}
-					else
-					{
-						this._idJustificante = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TblJustificante");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsistencia", Storage="_TblMateria", ThisKey="idMateria", OtherKey="id", IsForeignKey=true)]
 		public TblMateria TblMateria
 		{
@@ -1957,6 +1923,40 @@ namespace Modelo
 						this._idMateria = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TblMateria");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblJustificante_TblAsistencia", Storage="_TblJustificante", ThisKey="idJustificante", OtherKey="id", IsForeignKey=true)]
+		public TblJustificante TblJustificante
+		{
+			get
+			{
+				return this._TblJustificante.Entity;
+			}
+			set
+			{
+				TblJustificante previousValue = this._TblJustificante.Entity;
+				if (((previousValue != value) 
+							|| (this._TblJustificante.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblJustificante.Entity = null;
+						previousValue.TblAsistencia.Remove(this);
+					}
+					this._TblJustificante.Entity = value;
+					if ((value != null))
+					{
+						value.TblAsistencia.Add(this);
+						this._idJustificante = value.id;
+					}
+					else
+					{
+						this._idJustificante = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblJustificante");
 				}
 			}
 		}
@@ -2218,9 +2218,9 @@ namespace Modelo
 		
 		private EntitySet<TblGrupo> _TblGrupo;
 		
-		private EntitySet<TblMateria> _TblMateria;
-		
 		private EntitySet<TblQR> _TblQR;
+		
+		private EntitySet<TblMateria> _TblMateria;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -2242,8 +2242,8 @@ namespace Modelo
 		{
 			this._TblAlumno = new EntitySet<TblAlumno>(new Action<TblAlumno>(this.attach_TblAlumno), new Action<TblAlumno>(this.detach_TblAlumno));
 			this._TblGrupo = new EntitySet<TblGrupo>(new Action<TblGrupo>(this.attach_TblGrupo), new Action<TblGrupo>(this.detach_TblGrupo));
-			this._TblMateria = new EntitySet<TblMateria>(new Action<TblMateria>(this.attach_TblMateria), new Action<TblMateria>(this.detach_TblMateria));
 			this._TblQR = new EntitySet<TblQR>(new Action<TblQR>(this.attach_TblQR), new Action<TblQR>(this.detach_TblQR));
+			this._TblMateria = new EntitySet<TblMateria>(new Action<TblMateria>(this.attach_TblMateria), new Action<TblMateria>(this.detach_TblMateria));
 			OnCreated();
 		}
 		
@@ -2373,19 +2373,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCarrera_TblMateria", Storage="_TblMateria", ThisKey="id", OtherKey="idCarrera")]
-		public EntitySet<TblMateria> TblMateria
-		{
-			get
-			{
-				return this._TblMateria;
-			}
-			set
-			{
-				this._TblMateria.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCarrera_TblQR", Storage="_TblQR", ThisKey="id", OtherKey="idCarrera")]
 		public EntitySet<TblQR> TblQR
 		{
@@ -2396,6 +2383,19 @@ namespace Modelo
 			set
 			{
 				this._TblQR.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCarrera_TblMateria", Storage="_TblMateria", ThisKey="id", OtherKey="idCarrera")]
+		public EntitySet<TblMateria> TblMateria
+		{
+			get
+			{
+				return this._TblMateria;
+			}
+			set
+			{
+				this._TblMateria.Assign(value);
 			}
 		}
 		
@@ -2443,18 +2443,6 @@ namespace Modelo
 			entity.TblCarrera = null;
 		}
 		
-		private void attach_TblMateria(TblMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblCarrera = this;
-		}
-		
-		private void detach_TblMateria(TblMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblCarrera = null;
-		}
-		
 		private void attach_TblQR(TblQR entity)
 		{
 			this.SendPropertyChanging();
@@ -2462,6 +2450,18 @@ namespace Modelo
 		}
 		
 		private void detach_TblQR(TblQR entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblCarrera = null;
+		}
+		
+		private void attach_TblMateria(TblMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblCarrera = this;
+		}
+		
+		private void detach_TblMateria(TblMateria entity)
 		{
 			this.SendPropertyChanging();
 			entity.TblCarrera = null;
@@ -3633,699 +3633,6 @@ namespace Modelo
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblJustificante")]
-	public partial class TblJustificante : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strMotivo;
-		
-		private string _strArchivo;
-		
-		private EntitySet<TblAsistencia> _TblAsistencia;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrMotivoChanging(string value);
-    partial void OnstrMotivoChanged();
-    partial void OnstrArchivoChanging(string value);
-    partial void OnstrArchivoChanged();
-    #endregion
-		
-		public TblJustificante()
-		{
-			this._TblAsistencia = new EntitySet<TblAsistencia>(new Action<TblAsistencia>(this.attach_TblAsistencia), new Action<TblAsistencia>(this.detach_TblAsistencia));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMotivo", DbType="VarChar(50)")]
-		public string strMotivo
-		{
-			get
-			{
-				return this._strMotivo;
-			}
-			set
-			{
-				if ((this._strMotivo != value))
-				{
-					this.OnstrMotivoChanging(value);
-					this.SendPropertyChanging();
-					this._strMotivo = value;
-					this.SendPropertyChanged("strMotivo");
-					this.OnstrMotivoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strArchivo", DbType="VarChar(200)")]
-		public string strArchivo
-		{
-			get
-			{
-				return this._strArchivo;
-			}
-			set
-			{
-				if ((this._strArchivo != value))
-				{
-					this.OnstrArchivoChanging(value);
-					this.SendPropertyChanging();
-					this._strArchivo = value;
-					this.SendPropertyChanged("strArchivo");
-					this.OnstrArchivoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblJustificante_TblAsistencia", Storage="_TblAsistencia", ThisKey="id", OtherKey="idJustificante")]
-		public EntitySet<TblAsistencia> TblAsistencia
-		{
-			get
-			{
-				return this._TblAsistencia;
-			}
-			set
-			{
-				this._TblAsistencia.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TblAsistencia(TblAsistencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblJustificante = this;
-		}
-		
-		private void detach_TblAsistencia(TblAsistencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblJustificante = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblMateria")]
-	public partial class TblMateria : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strNombre;
-		
-		private string _strDescripcion;
-		
-		private string _bStatus;
-		
-		private System.Nullable<int> _idNota;
-		
-		private System.Nullable<int> _idCarrera;
-		
-		private System.Nullable<int> _idCuatri;
-		
-		private EntitySet<TblAlumnoMateria> _TblAlumnoMateria;
-		
-		private EntitySet<TblAsignacionMateria> _TblAsignacionMateria;
-		
-		private EntitySet<TblAsistencia> _TblAsistencia;
-		
-		private EntityRef<TblCarrera> _TblCarrera;
-		
-		private EntityRef<TblCuatri> _TblCuatri;
-		
-		private EntityRef<TblNota> _TblNota;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrNombreChanging(string value);
-    partial void OnstrNombreChanged();
-    partial void OnstrDescripcionChanging(string value);
-    partial void OnstrDescripcionChanged();
-    partial void OnbStatusChanging(string value);
-    partial void OnbStatusChanged();
-    partial void OnidNotaChanging(System.Nullable<int> value);
-    partial void OnidNotaChanged();
-    partial void OnidCarreraChanging(System.Nullable<int> value);
-    partial void OnidCarreraChanged();
-    partial void OnidCuatriChanging(System.Nullable<int> value);
-    partial void OnidCuatriChanged();
-    #endregion
-		
-		public TblMateria()
-		{
-			this._TblAlumnoMateria = new EntitySet<TblAlumnoMateria>(new Action<TblAlumnoMateria>(this.attach_TblAlumnoMateria), new Action<TblAlumnoMateria>(this.detach_TblAlumnoMateria));
-			this._TblAsignacionMateria = new EntitySet<TblAsignacionMateria>(new Action<TblAsignacionMateria>(this.attach_TblAsignacionMateria), new Action<TblAsignacionMateria>(this.detach_TblAsignacionMateria));
-			this._TblAsistencia = new EntitySet<TblAsistencia>(new Action<TblAsistencia>(this.attach_TblAsistencia), new Action<TblAsistencia>(this.detach_TblAsistencia));
-			this._TblCarrera = default(EntityRef<TblCarrera>);
-			this._TblCuatri = default(EntityRef<TblCuatri>);
-			this._TblNota = default(EntityRef<TblNota>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNombre", DbType="VarChar(200)")]
-		public string strNombre
-		{
-			get
-			{
-				return this._strNombre;
-			}
-			set
-			{
-				if ((this._strNombre != value))
-				{
-					this.OnstrNombreChanging(value);
-					this.SendPropertyChanging();
-					this._strNombre = value;
-					this.SendPropertyChanged("strNombre");
-					this.OnstrNombreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDescripcion", DbType="VarChar(200)")]
-		public string strDescripcion
-		{
-			get
-			{
-				return this._strDescripcion;
-			}
-			set
-			{
-				if ((this._strDescripcion != value))
-				{
-					this.OnstrDescripcionChanging(value);
-					this.SendPropertyChanging();
-					this._strDescripcion = value;
-					this.SendPropertyChanged("strDescripcion");
-					this.OnstrDescripcionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bStatus", DbType="VarChar(10)")]
-		public string bStatus
-		{
-			get
-			{
-				return this._bStatus;
-			}
-			set
-			{
-				if ((this._bStatus != value))
-				{
-					this.OnbStatusChanging(value);
-					this.SendPropertyChanging();
-					this._bStatus = value;
-					this.SendPropertyChanged("bStatus");
-					this.OnbStatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNota", DbType="Int")]
-		public System.Nullable<int> idNota
-		{
-			get
-			{
-				return this._idNota;
-			}
-			set
-			{
-				if ((this._idNota != value))
-				{
-					if (this._TblNota.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidNotaChanging(value);
-					this.SendPropertyChanging();
-					this._idNota = value;
-					this.SendPropertyChanged("idNota");
-					this.OnidNotaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCarrera", DbType="Int")]
-		public System.Nullable<int> idCarrera
-		{
-			get
-			{
-				return this._idCarrera;
-			}
-			set
-			{
-				if ((this._idCarrera != value))
-				{
-					if (this._TblCarrera.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidCarreraChanging(value);
-					this.SendPropertyChanging();
-					this._idCarrera = value;
-					this.SendPropertyChanged("idCarrera");
-					this.OnidCarreraChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCuatri", DbType="Int")]
-		public System.Nullable<int> idCuatri
-		{
-			get
-			{
-				return this._idCuatri;
-			}
-			set
-			{
-				if ((this._idCuatri != value))
-				{
-					if (this._TblCuatri.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidCuatriChanging(value);
-					this.SendPropertyChanging();
-					this._idCuatri = value;
-					this.SendPropertyChanged("idCuatri");
-					this.OnidCuatriChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAlumnoMateria", Storage="_TblAlumnoMateria", ThisKey="id", OtherKey="idMateria")]
-		public EntitySet<TblAlumnoMateria> TblAlumnoMateria
-		{
-			get
-			{
-				return this._TblAlumnoMateria;
-			}
-			set
-			{
-				this._TblAlumnoMateria.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsignacionMateria", Storage="_TblAsignacionMateria", ThisKey="id", OtherKey="idMateria")]
-		public EntitySet<TblAsignacionMateria> TblAsignacionMateria
-		{
-			get
-			{
-				return this._TblAsignacionMateria;
-			}
-			set
-			{
-				this._TblAsignacionMateria.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsistencia", Storage="_TblAsistencia", ThisKey="id", OtherKey="idMateria")]
-		public EntitySet<TblAsistencia> TblAsistencia
-		{
-			get
-			{
-				return this._TblAsistencia;
-			}
-			set
-			{
-				this._TblAsistencia.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCarrera_TblMateria", Storage="_TblCarrera", ThisKey="idCarrera", OtherKey="id", IsForeignKey=true)]
-		public TblCarrera TblCarrera
-		{
-			get
-			{
-				return this._TblCarrera.Entity;
-			}
-			set
-			{
-				TblCarrera previousValue = this._TblCarrera.Entity;
-				if (((previousValue != value) 
-							|| (this._TblCarrera.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TblCarrera.Entity = null;
-						previousValue.TblMateria.Remove(this);
-					}
-					this._TblCarrera.Entity = value;
-					if ((value != null))
-					{
-						value.TblMateria.Add(this);
-						this._idCarrera = value.id;
-					}
-					else
-					{
-						this._idCarrera = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TblCarrera");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCuatri_TblMateria", Storage="_TblCuatri", ThisKey="idCuatri", OtherKey="id", IsForeignKey=true)]
-		public TblCuatri TblCuatri
-		{
-			get
-			{
-				return this._TblCuatri.Entity;
-			}
-			set
-			{
-				TblCuatri previousValue = this._TblCuatri.Entity;
-				if (((previousValue != value) 
-							|| (this._TblCuatri.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TblCuatri.Entity = null;
-						previousValue.TblMateria.Remove(this);
-					}
-					this._TblCuatri.Entity = value;
-					if ((value != null))
-					{
-						value.TblMateria.Add(this);
-						this._idCuatri = value.id;
-					}
-					else
-					{
-						this._idCuatri = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TblCuatri");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblNota_TblMateria", Storage="_TblNota", ThisKey="idNota", OtherKey="id", IsForeignKey=true)]
-		public TblNota TblNota
-		{
-			get
-			{
-				return this._TblNota.Entity;
-			}
-			set
-			{
-				TblNota previousValue = this._TblNota.Entity;
-				if (((previousValue != value) 
-							|| (this._TblNota.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TblNota.Entity = null;
-						previousValue.TblMateria.Remove(this);
-					}
-					this._TblNota.Entity = value;
-					if ((value != null))
-					{
-						value.TblMateria.Add(this);
-						this._idNota = value.id;
-					}
-					else
-					{
-						this._idNota = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TblNota");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TblAlumnoMateria(TblAlumnoMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = this;
-		}
-		
-		private void detach_TblAlumnoMateria(TblAlumnoMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = null;
-		}
-		
-		private void attach_TblAsignacionMateria(TblAsignacionMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = this;
-		}
-		
-		private void detach_TblAsignacionMateria(TblAsignacionMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = null;
-		}
-		
-		private void attach_TblAsistencia(TblAsistencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = this;
-		}
-		
-		private void detach_TblAsistencia(TblAsistencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblMateria = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblNota")]
-	public partial class TblNota : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strDescripcion;
-		
-		private EntitySet<TblAlumnoMateria> _TblAlumnoMateria;
-		
-		private EntitySet<TblMateria> _TblMateria;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrDescripcionChanging(string value);
-    partial void OnstrDescripcionChanged();
-    #endregion
-		
-		public TblNota()
-		{
-			this._TblAlumnoMateria = new EntitySet<TblAlumnoMateria>(new Action<TblAlumnoMateria>(this.attach_TblAlumnoMateria), new Action<TblAlumnoMateria>(this.detach_TblAlumnoMateria));
-			this._TblMateria = new EntitySet<TblMateria>(new Action<TblMateria>(this.attach_TblMateria), new Action<TblMateria>(this.detach_TblMateria));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDescripcion", DbType="VarChar(1000)")]
-		public string strDescripcion
-		{
-			get
-			{
-				return this._strDescripcion;
-			}
-			set
-			{
-				if ((this._strDescripcion != value))
-				{
-					this.OnstrDescripcionChanging(value);
-					this.SendPropertyChanging();
-					this._strDescripcion = value;
-					this.SendPropertyChanged("strDescripcion");
-					this.OnstrDescripcionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblNota_TblAlumnoMateria", Storage="_TblAlumnoMateria", ThisKey="id", OtherKey="idNotas")]
-		public EntitySet<TblAlumnoMateria> TblAlumnoMateria
-		{
-			get
-			{
-				return this._TblAlumnoMateria;
-			}
-			set
-			{
-				this._TblAlumnoMateria.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblNota_TblMateria", Storage="_TblMateria", ThisKey="id", OtherKey="idNota")]
-		public EntitySet<TblMateria> TblMateria
-		{
-			get
-			{
-				return this._TblMateria;
-			}
-			set
-			{
-				this._TblMateria.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TblAlumnoMateria(TblAlumnoMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblNota = this;
-		}
-		
-		private void detach_TblAlumnoMateria(TblAlumnoMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblNota = null;
-		}
-		
-		private void attach_TblMateria(TblMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblNota = this;
-		}
-		
-		private void detach_TblMateria(TblMateria entity)
-		{
-			this.SendPropertyChanging();
-			entity.TblNota = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblProfesor")]
 	public partial class TblProfesor : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4361,6 +3668,8 @@ namespace Modelo
 		private EntitySet<TblAsignacionMateria> _TblAsignacionMateria;
 		
 		private EntitySet<TblQR> _TblQR;
+		
+		private EntitySet<TblNota> _TblNota;
 		
 		private EntityRef<TblDireccion> _TblDireccion;
 		
@@ -4404,6 +3713,7 @@ namespace Modelo
 		{
 			this._TblAsignacionMateria = new EntitySet<TblAsignacionMateria>(new Action<TblAsignacionMateria>(this.attach_TblAsignacionMateria), new Action<TblAsignacionMateria>(this.detach_TblAsignacionMateria));
 			this._TblQR = new EntitySet<TblQR>(new Action<TblQR>(this.attach_TblQR), new Action<TblQR>(this.detach_TblQR));
+			this._TblNota = new EntitySet<TblNota>(new Action<TblNota>(this.attach_TblNota), new Action<TblNota>(this.detach_TblNota));
 			this._TblDireccion = default(EntityRef<TblDireccion>);
 			this._TblTelefono = default(EntityRef<TblTelefono>);
 			this._TblUser = default(EntityRef<TblUser>);
@@ -4708,6 +4018,19 @@ namespace Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblProfesor_TblNota", Storage="_TblNota", ThisKey="id", OtherKey="idProfesor")]
+		public EntitySet<TblNota> TblNota
+		{
+			get
+			{
+				return this._TblNota;
+			}
+			set
+			{
+				this._TblNota.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblDireccion_TblProfesor", Storage="_TblDireccion", ThisKey="idDireccion", OtherKey="id", IsForeignKey=true)]
 		public TblDireccion TblDireccion
 		{
@@ -4849,6 +4172,18 @@ namespace Modelo
 		}
 		
 		private void detach_TblQR(TblQR entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblProfesor = null;
+		}
+		
+		private void attach_TblNota(TblNota entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblProfesor = this;
+		}
+		
+		private void detach_TblNota(TblNota entity)
 		{
 			this.SendPropertyChanging();
 			entity.TblProfesor = null;
@@ -5602,6 +4937,860 @@ namespace Modelo
 		{
 			this.SendPropertyChanging();
 			entity.TblUser = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblMateria")]
+	public partial class TblMateria : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strNombre;
+		
+		private string _strDescripcion;
+		
+		private string _bStatus;
+		
+		private System.Nullable<int> _idCarrera;
+		
+		private System.Nullable<int> _idCuatri;
+		
+		private EntitySet<TblAlumnoMateria> _TblAlumnoMateria;
+		
+		private EntitySet<TblAsignacionMateria> _TblAsignacionMateria;
+		
+		private EntitySet<TblAsistencia> _TblAsistencia;
+		
+		private EntitySet<TblNota> _TblNota;
+		
+		private EntityRef<TblCarrera> _TblCarrera;
+		
+		private EntityRef<TblCuatri> _TblCuatri;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrNombreChanging(string value);
+    partial void OnstrNombreChanged();
+    partial void OnstrDescripcionChanging(string value);
+    partial void OnstrDescripcionChanged();
+    partial void OnbStatusChanging(string value);
+    partial void OnbStatusChanged();
+    partial void OnidCarreraChanging(System.Nullable<int> value);
+    partial void OnidCarreraChanged();
+    partial void OnidCuatriChanging(System.Nullable<int> value);
+    partial void OnidCuatriChanged();
+    #endregion
+		
+		public TblMateria()
+		{
+			this._TblAlumnoMateria = new EntitySet<TblAlumnoMateria>(new Action<TblAlumnoMateria>(this.attach_TblAlumnoMateria), new Action<TblAlumnoMateria>(this.detach_TblAlumnoMateria));
+			this._TblAsignacionMateria = new EntitySet<TblAsignacionMateria>(new Action<TblAsignacionMateria>(this.attach_TblAsignacionMateria), new Action<TblAsignacionMateria>(this.detach_TblAsignacionMateria));
+			this._TblAsistencia = new EntitySet<TblAsistencia>(new Action<TblAsistencia>(this.attach_TblAsistencia), new Action<TblAsistencia>(this.detach_TblAsistencia));
+			this._TblNota = new EntitySet<TblNota>(new Action<TblNota>(this.attach_TblNota), new Action<TblNota>(this.detach_TblNota));
+			this._TblCarrera = default(EntityRef<TblCarrera>);
+			this._TblCuatri = default(EntityRef<TblCuatri>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNombre", DbType="VarChar(200)")]
+		public string strNombre
+		{
+			get
+			{
+				return this._strNombre;
+			}
+			set
+			{
+				if ((this._strNombre != value))
+				{
+					this.OnstrNombreChanging(value);
+					this.SendPropertyChanging();
+					this._strNombre = value;
+					this.SendPropertyChanged("strNombre");
+					this.OnstrNombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDescripcion", DbType="VarChar(200)")]
+		public string strDescripcion
+		{
+			get
+			{
+				return this._strDescripcion;
+			}
+			set
+			{
+				if ((this._strDescripcion != value))
+				{
+					this.OnstrDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._strDescripcion = value;
+					this.SendPropertyChanged("strDescripcion");
+					this.OnstrDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bStatus", DbType="VarChar(10)")]
+		public string bStatus
+		{
+			get
+			{
+				return this._bStatus;
+			}
+			set
+			{
+				if ((this._bStatus != value))
+				{
+					this.OnbStatusChanging(value);
+					this.SendPropertyChanging();
+					this._bStatus = value;
+					this.SendPropertyChanged("bStatus");
+					this.OnbStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCarrera", DbType="Int")]
+		public System.Nullable<int> idCarrera
+		{
+			get
+			{
+				return this._idCarrera;
+			}
+			set
+			{
+				if ((this._idCarrera != value))
+				{
+					if (this._TblCarrera.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidCarreraChanging(value);
+					this.SendPropertyChanging();
+					this._idCarrera = value;
+					this.SendPropertyChanged("idCarrera");
+					this.OnidCarreraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCuatri", DbType="Int")]
+		public System.Nullable<int> idCuatri
+		{
+			get
+			{
+				return this._idCuatri;
+			}
+			set
+			{
+				if ((this._idCuatri != value))
+				{
+					if (this._TblCuatri.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidCuatriChanging(value);
+					this.SendPropertyChanging();
+					this._idCuatri = value;
+					this.SendPropertyChanged("idCuatri");
+					this.OnidCuatriChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAlumnoMateria", Storage="_TblAlumnoMateria", ThisKey="id", OtherKey="idMateria")]
+		public EntitySet<TblAlumnoMateria> TblAlumnoMateria
+		{
+			get
+			{
+				return this._TblAlumnoMateria;
+			}
+			set
+			{
+				this._TblAlumnoMateria.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsignacionMateria", Storage="_TblAsignacionMateria", ThisKey="id", OtherKey="idMateria")]
+		public EntitySet<TblAsignacionMateria> TblAsignacionMateria
+		{
+			get
+			{
+				return this._TblAsignacionMateria;
+			}
+			set
+			{
+				this._TblAsignacionMateria.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblAsistencia", Storage="_TblAsistencia", ThisKey="id", OtherKey="idMateria")]
+		public EntitySet<TblAsistencia> TblAsistencia
+		{
+			get
+			{
+				return this._TblAsistencia;
+			}
+			set
+			{
+				this._TblAsistencia.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblNota", Storage="_TblNota", ThisKey="id", OtherKey="idMateria")]
+		public EntitySet<TblNota> TblNota
+		{
+			get
+			{
+				return this._TblNota;
+			}
+			set
+			{
+				this._TblNota.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCarrera_TblMateria", Storage="_TblCarrera", ThisKey="idCarrera", OtherKey="id", IsForeignKey=true)]
+		public TblCarrera TblCarrera
+		{
+			get
+			{
+				return this._TblCarrera.Entity;
+			}
+			set
+			{
+				TblCarrera previousValue = this._TblCarrera.Entity;
+				if (((previousValue != value) 
+							|| (this._TblCarrera.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblCarrera.Entity = null;
+						previousValue.TblMateria.Remove(this);
+					}
+					this._TblCarrera.Entity = value;
+					if ((value != null))
+					{
+						value.TblMateria.Add(this);
+						this._idCarrera = value.id;
+					}
+					else
+					{
+						this._idCarrera = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblCarrera");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblCuatri_TblMateria", Storage="_TblCuatri", ThisKey="idCuatri", OtherKey="id", IsForeignKey=true)]
+		public TblCuatri TblCuatri
+		{
+			get
+			{
+				return this._TblCuatri.Entity;
+			}
+			set
+			{
+				TblCuatri previousValue = this._TblCuatri.Entity;
+				if (((previousValue != value) 
+							|| (this._TblCuatri.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblCuatri.Entity = null;
+						previousValue.TblMateria.Remove(this);
+					}
+					this._TblCuatri.Entity = value;
+					if ((value != null))
+					{
+						value.TblMateria.Add(this);
+						this._idCuatri = value.id;
+					}
+					else
+					{
+						this._idCuatri = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblCuatri");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TblAlumnoMateria(TblAlumnoMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = this;
+		}
+		
+		private void detach_TblAlumnoMateria(TblAlumnoMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = null;
+		}
+		
+		private void attach_TblAsignacionMateria(TblAsignacionMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = this;
+		}
+		
+		private void detach_TblAsignacionMateria(TblAsignacionMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = null;
+		}
+		
+		private void attach_TblAsistencia(TblAsistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = this;
+		}
+		
+		private void detach_TblAsistencia(TblAsistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = null;
+		}
+		
+		private void attach_TblNota(TblNota entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = this;
+		}
+		
+		private void detach_TblNota(TblNota entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblMateria = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblJustificante")]
+	public partial class TblJustificante : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strMotivo;
+		
+		private string _strArchivo;
+		
+		private System.Nullable<System.DateTime> _fecha;
+		
+		private System.Nullable<System.DateTime> _fechaJusti;
+		
+		private EntitySet<TblAsistencia> _TblAsistencia;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrMotivoChanging(string value);
+    partial void OnstrMotivoChanged();
+    partial void OnstrArchivoChanging(string value);
+    partial void OnstrArchivoChanged();
+    partial void OnfechaChanging(System.Nullable<System.DateTime> value);
+    partial void OnfechaChanged();
+    partial void OnfechaJustiChanging(System.Nullable<System.DateTime> value);
+    partial void OnfechaJustiChanged();
+    #endregion
+		
+		public TblJustificante()
+		{
+			this._TblAsistencia = new EntitySet<TblAsistencia>(new Action<TblAsistencia>(this.attach_TblAsistencia), new Action<TblAsistencia>(this.detach_TblAsistencia));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMotivo", DbType="VarChar(50)")]
+		public string strMotivo
+		{
+			get
+			{
+				return this._strMotivo;
+			}
+			set
+			{
+				if ((this._strMotivo != value))
+				{
+					this.OnstrMotivoChanging(value);
+					this.SendPropertyChanging();
+					this._strMotivo = value;
+					this.SendPropertyChanged("strMotivo");
+					this.OnstrMotivoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strArchivo", DbType="VarChar(MAX)")]
+		public string strArchivo
+		{
+			get
+			{
+				return this._strArchivo;
+			}
+			set
+			{
+				if ((this._strArchivo != value))
+				{
+					this.OnstrArchivoChanging(value);
+					this.SendPropertyChanging();
+					this._strArchivo = value;
+					this.SendPropertyChanged("strArchivo");
+					this.OnstrArchivoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="Date")]
+		public System.Nullable<System.DateTime> fecha
+		{
+			get
+			{
+				return this._fecha;
+			}
+			set
+			{
+				if ((this._fecha != value))
+				{
+					this.OnfechaChanging(value);
+					this.SendPropertyChanging();
+					this._fecha = value;
+					this.SendPropertyChanged("fecha");
+					this.OnfechaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fechaJusti", DbType="Date")]
+		public System.Nullable<System.DateTime> fechaJusti
+		{
+			get
+			{
+				return this._fechaJusti;
+			}
+			set
+			{
+				if ((this._fechaJusti != value))
+				{
+					this.OnfechaJustiChanging(value);
+					this.SendPropertyChanging();
+					this._fechaJusti = value;
+					this.SendPropertyChanged("fechaJusti");
+					this.OnfechaJustiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblJustificante_TblAsistencia", Storage="_TblAsistencia", ThisKey="id", OtherKey="idJustificante")]
+		public EntitySet<TblAsistencia> TblAsistencia
+		{
+			get
+			{
+				return this._TblAsistencia;
+			}
+			set
+			{
+				this._TblAsistencia.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TblAsistencia(TblAsistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblJustificante = this;
+		}
+		
+		private void detach_TblAsistencia(TblAsistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblJustificante = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblNota")]
+	public partial class TblNota : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strTitulo;
+		
+		private string _strDescripcion;
+		
+		private System.Nullable<System.DateTime> _fecha;
+		
+		private System.Nullable<int> _idProfesor;
+		
+		private System.Nullable<int> _idMateria;
+		
+		private EntitySet<TblAlumnoMateria> _TblAlumnoMateria;
+		
+		private EntityRef<TblMateria> _TblMateria;
+		
+		private EntityRef<TblProfesor> _TblProfesor;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrTituloChanging(string value);
+    partial void OnstrTituloChanged();
+    partial void OnstrDescripcionChanging(string value);
+    partial void OnstrDescripcionChanged();
+    partial void OnfechaChanging(System.Nullable<System.DateTime> value);
+    partial void OnfechaChanged();
+    partial void OnidProfesorChanging(System.Nullable<int> value);
+    partial void OnidProfesorChanged();
+    partial void OnidMateriaChanging(System.Nullable<int> value);
+    partial void OnidMateriaChanged();
+    #endregion
+		
+		public TblNota()
+		{
+			this._TblAlumnoMateria = new EntitySet<TblAlumnoMateria>(new Action<TblAlumnoMateria>(this.attach_TblAlumnoMateria), new Action<TblAlumnoMateria>(this.detach_TblAlumnoMateria));
+			this._TblMateria = default(EntityRef<TblMateria>);
+			this._TblProfesor = default(EntityRef<TblProfesor>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTitulo", DbType="VarChar(1000)")]
+		public string strTitulo
+		{
+			get
+			{
+				return this._strTitulo;
+			}
+			set
+			{
+				if ((this._strTitulo != value))
+				{
+					this.OnstrTituloChanging(value);
+					this.SendPropertyChanging();
+					this._strTitulo = value;
+					this.SendPropertyChanged("strTitulo");
+					this.OnstrTituloChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDescripcion", DbType="VarChar(1000)")]
+		public string strDescripcion
+		{
+			get
+			{
+				return this._strDescripcion;
+			}
+			set
+			{
+				if ((this._strDescripcion != value))
+				{
+					this.OnstrDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._strDescripcion = value;
+					this.SendPropertyChanged("strDescripcion");
+					this.OnstrDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fecha
+		{
+			get
+			{
+				return this._fecha;
+			}
+			set
+			{
+				if ((this._fecha != value))
+				{
+					this.OnfechaChanging(value);
+					this.SendPropertyChanging();
+					this._fecha = value;
+					this.SendPropertyChanged("fecha");
+					this.OnfechaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idProfesor", DbType="Int")]
+		public System.Nullable<int> idProfesor
+		{
+			get
+			{
+				return this._idProfesor;
+			}
+			set
+			{
+				if ((this._idProfesor != value))
+				{
+					if (this._TblProfesor.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidProfesorChanging(value);
+					this.SendPropertyChanging();
+					this._idProfesor = value;
+					this.SendPropertyChanged("idProfesor");
+					this.OnidProfesorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idMateria", DbType="Int")]
+		public System.Nullable<int> idMateria
+		{
+			get
+			{
+				return this._idMateria;
+			}
+			set
+			{
+				if ((this._idMateria != value))
+				{
+					if (this._TblMateria.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidMateriaChanging(value);
+					this.SendPropertyChanging();
+					this._idMateria = value;
+					this.SendPropertyChanged("idMateria");
+					this.OnidMateriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblNota_TblAlumnoMateria", Storage="_TblAlumnoMateria", ThisKey="id", OtherKey="idNotas")]
+		public EntitySet<TblAlumnoMateria> TblAlumnoMateria
+		{
+			get
+			{
+				return this._TblAlumnoMateria;
+			}
+			set
+			{
+				this._TblAlumnoMateria.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblMateria_TblNota", Storage="_TblMateria", ThisKey="idMateria", OtherKey="id", IsForeignKey=true)]
+		public TblMateria TblMateria
+		{
+			get
+			{
+				return this._TblMateria.Entity;
+			}
+			set
+			{
+				TblMateria previousValue = this._TblMateria.Entity;
+				if (((previousValue != value) 
+							|| (this._TblMateria.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblMateria.Entity = null;
+						previousValue.TblNota.Remove(this);
+					}
+					this._TblMateria.Entity = value;
+					if ((value != null))
+					{
+						value.TblNota.Add(this);
+						this._idMateria = value.id;
+					}
+					else
+					{
+						this._idMateria = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblMateria");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblProfesor_TblNota", Storage="_TblProfesor", ThisKey="idProfesor", OtherKey="id", IsForeignKey=true)]
+		public TblProfesor TblProfesor
+		{
+			get
+			{
+				return this._TblProfesor.Entity;
+			}
+			set
+			{
+				TblProfesor previousValue = this._TblProfesor.Entity;
+				if (((previousValue != value) 
+							|| (this._TblProfesor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblProfesor.Entity = null;
+						previousValue.TblNota.Remove(this);
+					}
+					this._TblProfesor.Entity = value;
+					if ((value != null))
+					{
+						value.TblNota.Add(this);
+						this._idProfesor = value.id;
+					}
+					else
+					{
+						this._idProfesor = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblProfesor");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TblAlumnoMateria(TblAlumnoMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblNota = this;
+		}
+		
+		private void detach_TblAlumnoMateria(TblAlumnoMateria entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblNota = null;
 		}
 	}
 }

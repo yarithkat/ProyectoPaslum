@@ -55,8 +55,8 @@
       <Association Name="TblAsignacionMateria_TblAsignacionGrupo" Member="TblAsignacionGrupo" ThisKey="id" OtherKey="idAsignacionMateria" Type="TblAsignacionGrupo" />
       <Association Name="TblAsignacionMateria_TblCatalogoParcial" Member="TblCatalogoParcial" ThisKey="id" OtherKey="idAsignacionMaeria" Type="TblCatalogoParcial" />
       <Association Name="TblAsignacionMateria_TblQR" Member="TblQR" ThisKey="id" OtherKey="idAsignacion" Type="TblQR" />
-      <Association Name="TblMateria_TblAsignacionMateria" Member="TblMateria" ThisKey="idMateria" OtherKey="id" Type="TblMateria" IsForeignKey="true" />
       <Association Name="TblProfesor_TblAsignacionMateria" Member="TblProfesor" ThisKey="idProfesor" OtherKey="id" Type="TblProfesor" IsForeignKey="true" />
+      <Association Name="TblMateria_TblAsignacionMateria" Member="TblMateria" ThisKey="idMateria" OtherKey="id" Type="TblMateria" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TblAsistencia" Member="TblAsistencia">
@@ -67,8 +67,8 @@
       <Column Name="idAlumno" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idJustificante" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TblAlumno_TblAsistencia" Member="TblAlumno" ThisKey="idAlumno" OtherKey="id" Type="TblAlumno" IsForeignKey="true" />
-      <Association Name="TblJustificante_TblAsistencia" Member="TblJustificante" ThisKey="idJustificante" OtherKey="id" Type="TblJustificante" IsForeignKey="true" />
       <Association Name="TblMateria_TblAsistencia" Member="TblMateria" ThisKey="idMateria" OtherKey="id" Type="TblMateria" IsForeignKey="true" />
+      <Association Name="TblJustificante_TblAsistencia" Member="TblJustificante" ThisKey="idJustificante" OtherKey="id" Type="TblJustificante" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TblCalificacion" Member="TblCalificacion">
@@ -90,8 +90,8 @@
       <Column Name="bStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="TblCarrera_TblAlumno" Member="TblAlumno" ThisKey="id" OtherKey="idCarrera" Type="TblAlumno" />
       <Association Name="TblCarrera_TblGrupo" Member="TblGrupo" ThisKey="id" OtherKey="idCarrera" Type="TblGrupo" />
-      <Association Name="TblCarrera_TblMateria" Member="TblMateria" ThisKey="id" OtherKey="idCarrera" Type="TblMateria" />
       <Association Name="TblCarrera_TblQR" Member="TblQR" ThisKey="id" OtherKey="idCarrera" Type="TblQR" />
+      <Association Name="TblCarrera_TblMateria" Member="TblMateria" ThisKey="id" OtherKey="idCarrera" Type="TblMateria" />
     </Type>
   </Table>
   <Table Name="dbo.TblCatalogoEvaluacion" Member="TblCatalogoEvaluacion">
@@ -151,39 +151,6 @@
       <Association Name="TblCarrera_TblGrupo" Member="TblCarrera" ThisKey="idCarrera" OtherKey="id" Type="TblCarrera" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TblJustificante" Member="TblJustificante">
-    <Type Name="TblJustificante">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strMotivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="strArchivo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Association Name="TblJustificante_TblAsistencia" Member="TblAsistencia" ThisKey="id" OtherKey="idJustificante" Type="TblAsistencia" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TblMateria" Member="TblMateria">
-    <Type Name="TblMateria">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="strDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="bStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="idNota" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="idCarrera" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="idCuatri" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TblMateria_TblAlumnoMateria" Member="TblAlumnoMateria" ThisKey="id" OtherKey="idMateria" Type="TblAlumnoMateria" />
-      <Association Name="TblMateria_TblAsignacionMateria" Member="TblAsignacionMateria" ThisKey="id" OtherKey="idMateria" Type="TblAsignacionMateria" />
-      <Association Name="TblMateria_TblAsistencia" Member="TblAsistencia" ThisKey="id" OtherKey="idMateria" Type="TblAsistencia" />
-      <Association Name="TblCarrera_TblMateria" Member="TblCarrera" ThisKey="idCarrera" OtherKey="id" Type="TblCarrera" IsForeignKey="true" />
-      <Association Name="TblCuatri_TblMateria" Member="TblCuatri" ThisKey="idCuatri" OtherKey="id" Type="TblCuatri" IsForeignKey="true" />
-      <Association Name="TblNota_TblMateria" Member="TblNota" ThisKey="idNota" OtherKey="id" Type="TblNota" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TblNota" Member="TblNota">
-    <Type Name="TblNota">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strDescripcion" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
-      <Association Name="TblNota_TblAlumnoMateria" Member="TblAlumnoMateria" ThisKey="id" OtherKey="idNotas" Type="TblAlumnoMateria" />
-      <Association Name="TblNota_TblMateria" Member="TblMateria" ThisKey="id" OtherKey="idNota" Type="TblMateria" />
-    </Type>
-  </Table>
   <Table Name="dbo.TblProfesor" Member="TblProfesor">
     <Type Name="TblProfesor">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -201,6 +168,7 @@
       <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TblProfesor_TblAsignacionMateria" Member="TblAsignacionMateria" ThisKey="id" OtherKey="idProfesor" Type="TblAsignacionMateria" />
       <Association Name="TblProfesor_TblQR" Member="TblQR" ThisKey="id" OtherKey="idProfesor" Type="TblQR" />
+      <Association Name="TblProfesor_TblNota" Member="TblNota" ThisKey="id" OtherKey="idProfesor" Type="TblNota" />
       <Association Name="TblDireccion_TblProfesor" Member="TblDireccion" ThisKey="idDireccion" OtherKey="id" Type="TblDireccion" IsForeignKey="true" />
       <Association Name="TblTelefono_TblProfesor" Member="TblTelefono" ThisKey="idTelefono" OtherKey="id" Type="TblTelefono" IsForeignKey="true" />
       <Association Name="TblUser_TblProfesor" Member="TblUser" ThisKey="idUser" OtherKey="id" Type="TblUser" IsForeignKey="true" />
@@ -239,6 +207,45 @@
       <Column Name="strtipoUsuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
       <Association Name="TblUser_TblAlumno" Member="TblAlumno" ThisKey="id" OtherKey="idUser" Type="TblAlumno" />
       <Association Name="TblUser_TblProfesor" Member="TblProfesor" ThisKey="id" OtherKey="idUser" Type="TblProfesor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblMateria" Member="TblMateria">
+    <Type Name="TblMateria">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="strDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="idCarrera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCuatri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblMateria_TblAlumnoMateria" Member="TblAlumnoMateria" ThisKey="id" OtherKey="idMateria" Type="TblAlumnoMateria" />
+      <Association Name="TblMateria_TblAsignacionMateria" Member="TblAsignacionMateria" ThisKey="id" OtherKey="idMateria" Type="TblAsignacionMateria" />
+      <Association Name="TblMateria_TblAsistencia" Member="TblAsistencia" ThisKey="id" OtherKey="idMateria" Type="TblAsistencia" />
+      <Association Name="TblMateria_TblNota" Member="TblNota" ThisKey="id" OtherKey="idMateria" Type="TblNota" />
+      <Association Name="TblCarrera_TblMateria" Member="TblCarrera" ThisKey="idCarrera" OtherKey="id" Type="TblCarrera" IsForeignKey="true" />
+      <Association Name="TblCuatri_TblMateria" Member="TblCuatri" ThisKey="idCuatri" OtherKey="id" Type="TblCuatri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblJustificante" Member="TblJustificante">
+    <Type Name="TblJustificante">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strArchivo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fechaJusti" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TblJustificante_TblAsistencia" Member="TblAsistencia" ThisKey="id" OtherKey="idJustificante" Type="TblAsistencia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblNota" Member="TblNota">
+    <Type Name="TblNota">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strTitulo" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="strDescripcion" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idProfesor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idMateria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblNota_TblAlumnoMateria" Member="TblAlumnoMateria" ThisKey="id" OtherKey="idNotas" Type="TblAlumnoMateria" />
+      <Association Name="TblMateria_TblNota" Member="TblMateria" ThisKey="idMateria" OtherKey="id" Type="TblMateria" IsForeignKey="true" />
+      <Association Name="TblProfesor_TblNota" Member="TblProfesor" ThisKey="idProfesor" OtherKey="id" Type="TblProfesor" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
