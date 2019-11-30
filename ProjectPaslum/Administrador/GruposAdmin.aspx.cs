@@ -19,7 +19,6 @@ namespace ProjectPaslum.Administrador
             {
                 this.LlenarCarrera();
             }
-
             alertError.Visible = false;
             alertBien.Visible = false;
 
@@ -57,7 +56,8 @@ namespace ProjectPaslum.Administrador
                 grupo.idCarrera = int.Parse(carrera);
                 ControllerGrupo ctrlGrupo = new ControllerGrupo();
                 ctrlGrupo.InsertarGrupo(grupo);
-                alertBien.Visible = true;
+
+                Response.Redirect("./GruposAdmin.aspx", true);
             }
 
            
