@@ -113,16 +113,16 @@ namespace ProjectPaslum.Administrador
             this.Response.Redirect("./AsignacionProfesor.aspx", true);
         }
 
-        protected void ddlGrupoGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlCarrera_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var grupo = (from grup in contexto.TblGrupo
-                         where grup.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue) select grup).ToList();
-            ddlGrupoGrupo.Items.Add("Seleccionar");
-            ddlGrupoGrupo.DataSource = grupo;
+            var grupo1 = (from grup in contexto.TblGrupo
+                          where grup.idCarrera == Convert.ToInt32(ddlCarrera.SelectedValue)
+                          select grup).ToList();
+            ddlGrupoGrupo.DataSource = grupo1;
             ddlGrupoGrupo.DataValueField = "id";
             ddlGrupoGrupo.DataTextField = "strNombre";
             ddlGrupoGrupo.DataBind();
-
+            ddlGrupoGrupo.Items.Insert(0, new ListItem("Seleccionar", "0"));
         }
     }
 }

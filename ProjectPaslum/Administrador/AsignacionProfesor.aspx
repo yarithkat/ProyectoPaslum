@@ -102,7 +102,7 @@
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <div class="col-xs-6">
+                            <div class="col-xs-8">
                                 Materia:
                              <asp:DropDownList ID="ddlMateriaGrupo" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control"></asp:DropDownList>
                             </div>
@@ -110,17 +110,17 @@
                         </div>
                         <br />
                         <div class="form-group">
-                            <div class="col-xs-6">
+                            <div class="col-xs-8">
                                 Carrera:
-                             <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control" AutoPostBack="true"></asp:DropDownList>
+                             <asp:DropDownList ID="ddlCarrera" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlCarrera_SelectedIndexChanged"></asp:DropDownList>
                             </div>
                             <br />
                         </div>
                         <br />
                         <div class="form-group">
-                            <div class="col-xs-4">
+                            <div class="col-xs-8">
                                 Grupo:
-                            <asp:DropDownList ID="ddlGrupoGrupo" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control" OnSelectedIndexChanged="ddlGrupoGrupo_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlGrupoGrupo" runat="server" AppendDataBoundItems="True" Height="100%" CssClass=" form-control" ></asp:DropDownList>
                             </div>
                         </div>
                     </div>
