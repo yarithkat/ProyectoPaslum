@@ -59,7 +59,7 @@ namespace ProjectPaslum.Administrador
                 ctrlGrupo.InsertarGrupo(grupo);
                 alertBien.Visible = true;
             }
-
+            Response.Redirect("./GruposAdmin.aspx", true);
            
 
         }

@@ -60,6 +60,27 @@ namespace Controller
                 contexto.SubmitChanges();
             }
         }
+
+        public bool InsertarNota(TblNota _TBL_Nota)
+        {
+            bool respuesta = false;
+            try
+            {
+                contexto.TblNota.InsertOnSubmit(_TBL_Nota);
+                contexto.SubmitChanges();
+                respuesta = true;
+
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex.ToString());
+                respuesta = false;
+
+            }
+            return respuesta;
+
+        }
+
     }
 }
 

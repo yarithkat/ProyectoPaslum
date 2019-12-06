@@ -20,9 +20,9 @@ namespace ProjectPaslum.Profesor
                 {
                     lbProfe.Text = Session["id"].ToString();
                     loadDrop(Convert.ToInt32(Session["id"].ToString()));
-
+                    this.LlenarParcial();
                 }
-                this.LlenarParcial();
+                
                 alertError.Visible = false;
                 alertBien.Visible = false;
             }
@@ -61,21 +61,28 @@ namespace ProjectPaslum.Profesor
                         where por.idAsignacionMaeria == Convert.ToInt32(ddlMateria.SelectedValue)
                         select por.intPorcentaje).Sum();
 
-            if (porc == 100)
+            if (porc == null)
             {
-                alertError.Visible = true;
+                if (porc == 100)
+                {
+                    alertError.Visible = true;
+                }
+                else
+                {
+
+                    TblCatalogoParcial parcial = new TblCatalogoParcial();
+                    parcial.strNombre = TxtNombre.Text.ToUpper();
+                    parcial.strDescripcion = TxtDescripcion.Text.ToUpper();
+                    parcial.intPorcentaje = Int32.Parse(TxtPorcentaje.Text);
+                    parcial.idAsignacionMaeria = int.Parse(mat);
+                    ControllerParcial ctrlParcial = new ControllerParcial();
+                    ctrlParcial.InsertarParcial(parcial);
+                    alertBien.Visible = true;
+                }
             }
             else
             {
                 porc = Int32.Parse(lbAcumulado.Text);
-                TblCatalogoParcial parcial = new TblCatalogoParcial();
-                parcial.strNombre = TxtNombre.Text.ToUpper();
-                parcial.strDescripcion = TxtDescripcion.Text.ToUpper();
-                parcial.intPorcentaje = Int32.Parse(TxtPorcentaje.Text);
-                parcial.idAsignacionMaeria = int.Parse(mat);
-                ControllerParcial ctrlParcial = new ControllerParcial();
-                ctrlParcial.InsertarParcial(parcial);
-                alertBien.Visible = true;
             }
 
             this.Response.Redirect("./Evaluaciones.aspx", true);
