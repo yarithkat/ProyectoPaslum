@@ -9,12 +9,24 @@
                 <h5 class="card-header"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Consultar Lista Asistencia</h5>
                 <div class="card-body">
                     <div class="form-group">
-                        <asp:Label ID="Label2" runat="server" Text="Semana"></asp:Label>
-                        <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                            <div class="col-xs-4">
+                             Inicio:
+                             <asp:TextBox id="Inicio" runat="server" TextMode="Date" required="required"></asp:TextBox>
+                            
+                             Fin:
+                             <asp:TextBox id="Fin" runat="server" TextMode="Date" required="required"></asp:TextBox>
+                            
+                            
+                             Materia:
+                             <asp:DropDownList id="ddlMateria" runat="server" AppendDataBoundItems="True" Height="50%" CssClass=" form-control" ></asp:DropDownList>
+                            
+                            </div>
                     </div>
+                    <asp:Label ID="lbAlumno" runat="server" Text="Label" Visible="false"></asp:Label>
                     <div class="form-group">
-                        <asp:Label ID="Label1" runat="server" Text="Mes"></asp:Label>
-                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                            <div class="col-xs-4">
+                             Numero de Asitencia: <asp:TextBox id="txtNumero" runat="server" Enabled="false"></asp:TextBox>                             
+                            </div>
                     </div>
                 </div>
             </div>

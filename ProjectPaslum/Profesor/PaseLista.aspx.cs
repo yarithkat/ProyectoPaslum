@@ -105,6 +105,7 @@ namespace ProjectPaslum.Profesor
             var carrera = ddlCarrera.SelectedValue;
             var grupo = ddlGrupo.SelectedValue;
             var materia = ddlMateria.SelectedValue;
+            var parcial = ddlParcial.SelectedValue;
             DateTime fechact = DateTime.Now;
 
             QRCodeEncoder encoder = new QRCodeEncoder();
@@ -127,10 +128,22 @@ namespace ProjectPaslum.Profesor
             qr.idGrupo = int.Parse(grupo);
             qr.idAsignacion = int.Parse(materia);
             qr.idProfesor = Int32.Parse(lbId.Text);
+            qr.idParcial = int.Parse(parcial);
             ControllerQr ctrlQr = new ControllerQr();
             ctrlQr.InsertarQr(qr);
 
 
+        }
+
+        protected void ddlMateria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ControllerEvaluacion CtrlAsignarE = new ControllerEvaluacion();
+            var evaluacion = CtrlAsignarE.ConsultaParciales();
+            ddlParcial.Items.Add("Seleccionar");
+            ddlParcial.DataSource = evaluacion;
+            ddlParcial.DataValueField = "id";
+            ddlParcial.DataTextField = "strNombre";
+            ddlParcial.DataBind();
         }
     }
 }

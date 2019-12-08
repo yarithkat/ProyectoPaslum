@@ -61,9 +61,13 @@ namespace ProjectPaslum.Profesor
                         where por.idAsignacionMaeria == Convert.ToInt32(ddlMateria.SelectedValue)
                         select por.intPorcentaje).Sum();
 
-            if (porc == null)
-            {
-                if (porc == 100)
+            var suma = porc+ Int32.Parse(TxtPorcentaje.Text);
+
+            
+            /*porc = Int32.Parse(lbAcumulado.ToString());*/
+
+
+                if (suma >= 101)
                 {
                     alertError.Visible = true;
                 }
@@ -78,11 +82,7 @@ namespace ProjectPaslum.Profesor
                     ControllerParcial ctrlParcial = new ControllerParcial();
                     ctrlParcial.InsertarParcial(parcial);
                     alertBien.Visible = true;
-                }
-            }
-            else
-            {
-                porc = Int32.Parse(lbAcumulado.Text);
+                
             }
 
             this.Response.Redirect("./Evaluaciones.aspx", true);

@@ -32,7 +32,15 @@
       <div class="col-xs-3">
          <br />
             Materia <asp:Label ID="lbId" runat="server" Text="Label" Visible="false"></asp:Label>
-&nbsp;<asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
+&nbsp;<asp:DropDownList ID="ddlMateria" runat="server" AppendDataBoundItems="True"  Height="100%" OnSelectedIndexChanged="ddlMateria_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>      
+        </div>
+     </div>
+
+        <div class="form-group">
+      <div class="col-xs-3">
+         <br />
+            Parcial 
+&nbsp;<asp:DropDownList ID="ddlParcial" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
         </div>
      </div>
         <asp:Button ID="btnGenerar" runat="server" Text="Generar" OnClick="btnGenerar_Click" />

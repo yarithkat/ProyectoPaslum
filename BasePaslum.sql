@@ -129,6 +129,7 @@ constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id)
 create table TblAsistencia(
 id int not null identity(1,1),
 dteFecha dateTime,
+codigo int,
 idMateria int,
 idAlumno int,
 idJustificante int,
@@ -170,22 +171,6 @@ constraint fkIdProfesor_Asignacion foreign key(idProfesor) references TblProfeso
 constraint fkIdMateria_Asignacion foreign key(idMateria) references TblMateria(id),
 );
 
-
-create table TblQR(
-id int not null identity(1,1),
-qr varchar(1000),
-fecha datetime,
-idProfesor int,
-idGrupo int,
-idAsignacion int,
-idCarrera int,
-constraint pk_QR primary key (id),
-constraint fkIdProfesor_QR foreign key(idProfesor) references TblProfesor(id),
-constraint fkIdGrupo_QR foreign key(idGrupo) references TblGrupo(id),
-constraint fkIdAsignacion_QR foreign key(idAsignacion) references TblAsignacionMateria(id),
-constraint fkIdCarrera_QR foreign key(idCarrera) references TblCarrera(id),
-);
-
 create table TblAsignacionGrupo(
 id int not null identity(1,1),
 idGrupo int,
@@ -203,6 +188,23 @@ intPorcentaje int,
 idAsignacionMaeria int,
 constraint pk_CatalogoPar primary key (id),
 constraint fkIdAsignacionMateria_CatalogoParcial foreign key(idAsignacionMaeria) references TblAsignacionMateria(id)
+);
+
+create table TblQR(
+id int not null identity(1,1),
+qr varchar(1000),
+fecha datetime,
+idProfesor int,
+idGrupo int,
+idAsignacion int,
+idCarrera int,
+idParcial int,
+constraint pk_QR primary key (id),
+constraint fkIdProfesor_QR foreign key(idProfesor) references TblProfesor(id),
+constraint fkIdGrupo_QR foreign key(idGrupo) references TblGrupo(id),
+constraint fkIdAsignacion_QR foreign key(idAsignacion) references TblAsignacionMateria(id),
+constraint fkIdCarrera_QR foreign key(idCarrera) references TblCarrera(id),
+constraint fkIdParcial_QR foreign key(idParcial) references TblCatalogoParcial(id),
 );
 
 create table TblCatalogoEvaluacion(
@@ -243,6 +245,12 @@ select * from TblCalificacion
 select * from TblNota
 select * from TblAsistencia
 select * from TblJustificante
+
+
+/*****Consulta de justificantes por grupo**/
+select * from TblJustificante
+
+
 
 select p.strNombre, p.strApellidoP, p.strApellidoM,
 m.strNombre,n.strTitulo, n.strDescripcion,n.fecha
@@ -506,46 +514,80 @@ select * from TblCatalogoParcial
 select * from tblCarrera
 select * from TblAlumno
 
-Insert into TblTelefono values ('5431','54123','6789');
-Insert into TblTelefono values ('7723271','9217312','7217372');
-Insert into TblTelefono values ('0231','3283','1324');
-Insert into TblTelefono values ('5431','54123','6789');
-Insert into TblTelefono values ('7723271','9217312','7217372');
+Insert into TblTelefono values ('1242124','54123','6789');
+Insert into TblTelefono values ('7723271','34524','7217372');
+Insert into TblTelefono values ('1242441','32346','1324');
+Insert into TblTelefono values ('2212144','54123','6789');
+Insert into TblTelefono values ('3143143','67657','7217372');
+Insert into TblTelefono values ('7645578','54123','6789');
+Insert into TblTelefono values ('7723271','12987','7217372');
+Insert into TblTelefono values ('8887647','47512','1324');
+Insert into TblTelefono values ('4564578','54123','6789');
+Insert into TblTelefono values ('7453636','66443','7217372');
 
 Insert into TblDireccion values ('HIDALGO','TEPEJI','SAN JUAN','NIGROMANTE','123','1','21','KINDER');
 Insert into TblDireccion values ('HIDALGO','TULA','EL CARMEN','CORONEL','123','1','21','PORTON');
 Insert into TblDireccion values ('HIDALGO','ATITALAQUIA','SAGRADO','MELCHOR OCAMPO','321','21','231','PORTON');
-Insert into TblDireccion values ('HIDALGO','TULA','EL CARMEN','CORONEL','123','1','21','PORTON');
+Insert into TblDireccion values ('HIDALGO','PACHUCA','LOS LAGOS','CORONEL','123','1','21','PORTON');
+Insert into TblDireccion values ('HIDALGO','REFINERIA','VILLAS','MELCHOR OCAMPO','321','21','231','PORTON');
+Insert into TblDireccion values ('HIDALGO','REFORMA','CORONEL','NIGROMANTE','123','1','21','KINDER');
+Insert into TblDireccion values ('HIDALGO','TULA','EMILIANO ZAPATA','CORONEL','123','1','21','PORTON');
+Insert into TblDireccion values ('HIDALGO','ATITALAQUIA','ALEGRIAS','MELCHOR OCAMPO','321','21','231','PORTON');
+Insert into TblDireccion values ('HIDALGO','TEPEJI','EL CARMEN','CORONEL','123','1','21','PORTON');
 Insert into TblDireccion values ('HIDALGO','ATITALAQUIA','SAGRADO','MELCHOR OCAMPO','321','21','231','PORTON');
 
-Insert into TblUser values ('rodrigo@gmail.com','1234','PROFESOR')
-Insert into TblUser values ('samuel@gmail.com','1234','PROFESOR')
-Insert into TblUser values ('norma@gmail.com','1234','ALUMNO')
-Insert into TblUser values ('katia@gmail.com','1234','ALUMNO')
-Insert into TblUser values ('yarith@gmail.com','1234','ALUMNO')
+Insert into TblUser values ('rodrigo@gmail.com','1234','PROFESOR');
+Insert into TblUser values ('edith@gmail.com','1234','PROFESOR');
+Insert into TblUser values ('samuel@gmail.com','1234','PROFESOR');
+Insert into TblUser values ('erick@gmail.com','1234','PROFESOR');
+Insert into TblUser values ('gladys@gmail.com','1234','PROFESOR');
+Insert into TblUser values ('katia@gmail.com','1234','ALUMNO');
+Insert into TblUser values ('norma@gmail.com','1234','ALUMNO');
+Insert into TblUser values ('moises@gmail.com','1234','ALUMNO');
+Insert into TblUser values ('sergio@gmail.com','1234','ALUMNO');
+Insert into TblUser values ('armando@gmail.com','1234','ALUMNO');
 
-Insert into TblProfesor values ('RODRIGO','MONTERO','OROZCO','21','HOMBRE','rodrigo@gmail.com','','BANSDBAS123','PROGRAMACIÓN',1,1,1)
-Insert into TblProfesor values ('SAMUEL','ESTEBAN', 'DIAZ','25','HOMBRE','samuel@gmail.com','','BANSDBAS123','BASE DE DATOS',2,2,2)
+Insert into TblProfesor values ('RODRIGO','MONTERO','OROZCO','21','HOMBRE','rodrigo@gmail.com','','BANSDBAS123','PROGRAMACIÓN',1,1,1);
+Insert into TblProfesor values ('EDITH','CAMPOS','SANZ','21','MUJER','edith@gmail.com','','BANSDBAS123','SOPORTE',1,1,1);
+Insert into TblProfesor values ('SAMUEL','ESTEBAN', 'DIAZ','25','HOMBRE','samuel@gmail.com','','BANSDBAS123','BASE DE DATOS',3,3,3);
+Insert into TblProfesor values ('ERICK','GUERREO', 'BRAVO','25','HOMBRE','erick@gmail.com','','BANSDBAS123','PROGRAMACIÓN',4,4,4);
+Insert into TblProfesor values ('GLADYS','CISNERO','VILLA','21','MUJER','gladys@gmail.com','','BANSDBAS123','REDES',5,5,5);
+
+Insert into TblAlumno values ('KATIA','PARRA', 'MARTINEZ','21','MUJER','katia@gmail.com','',7,7,7,1,1,1);
+Insert into TblAlumno values ('NORMA','ADAME', 'ROSAS','21','MUJER','norma@gmail.com','',6,6,6,1,1,1);
+Insert into TblAlumno values ('MOISES','PEÑA', 'OROZCO','21','HOMBRE','moises@gmail.com','',8,8,8,1,1,1);
+Insert into TblAlumno values ('SERGIO','PEREZ', 'MARTINEZ','21','HOMBRE','sergio@gmail.com','',9,9,9,2,2,2);
+Insert into TblAlumno values ('ARMANDO','RAMIREZ', 'HIDALGO','21','HOMBRE','armando@gmail.com','',10,10,10,2,2,2);
 
 Insert into TblCarrera values ('1','TICS','DESARROLLO DE SOFTWARE','1')
 Insert into TblCarrera values ('2','MERCA','MERCADOTECNIA','1')
+Insert into TblCarrera values ('3','PUBLICIDAD','VENTAS','1')
+Insert into TblCarrera values ('4','LOGISTICA','MERCADOTECNIA','1')
+Insert into TblCarrera values ('5','VIAJES','TRANSPORTE TERRESTRE','1')
 
 Insert into TblCuatri values ('CUATRIMESTRE 1','2019-01-01','2019-04-20')
 Insert into TblCuatri values ('CUATRIMESTRE 2','2019-05-01','2019-09-12')
 
 Insert into TblMateria values ('REDES','CISCO','1',1,1)
 Insert into TblMateria values ('PROGRAMACIÓN','ARBOLES','1',1,2)
+Insert into TblMateria values ('AUDITORIA','EMPRESA','1',1,1)
+Insert into TblMateria values ('INNOVACIÓN','TECNOLOGIA','1',1,2)
+Insert into TblMateria values ('SEGURIDAD','INFORMATICA','1',1,1)
 
 Insert into TblGrupo values('GRUPO 1','50','1');
 Insert into TblGrupo values('GRUPO 2','50','1');
 Insert into TblGrupo values('GRUPO 1','50','2');
-
-Insert into TblAlumno values ('NORMA','ADAME', 'ROSAS','21','MUJER','norma@gmail.com','',3,3,3,1,1,1)
-Insert into TblAlumno values ('KATIA','PARRA', 'MARTINEZ','21','MUJER','katia@gmail.com','',4,4,4,1,1,1)
-Insert into TblAlumno values ('YARITH','MUCIÑO', 'SANCHEZ','21','MUJER','yarith@gmail.com','',5,5,5,2,2,2)
+Insert into TblGrupo values('GRUPO 2','50','2');
 
 Insert into TblAsignacionMateria values (1,1)
+Insert into TblAsignacionMateria values (2,2)
+Insert into TblAsignacionMateria values (3,3)
+Insert into TblAsignacionMateria values (4,4)
+Insert into TblAsignacionMateria values (5,5)
+
 Insert into TblAsignacionGrupo values(1,1);
+Insert into TblAsignacionGrupo values(2,2);
 
 Insert into TblCalificacion values(10,1,1);
+
 
